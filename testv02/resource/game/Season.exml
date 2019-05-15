@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SeasonSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16a19d019cd" ></w:Config>
+	<e:Group id="Canvas" y="0" x="0">
+		<e:Button id="Spring" label="" y="0" anchorOffsetX="0" width="640" anchorOffsetY="0" height="1136" x="-1920">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="Spring_png" source.down="Spring_png" source.disabled="Spring_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="Summer" label="" x="-1280" y="0" anchorOffsetX="0" width="640" anchorOffsetY="0" height="1136">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="Summer_png" source.down="Summer_png" source.disabled="Summer_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="Autumn" label="" y="0" anchorOffsetX="0" width="640" anchorOffsetY="0" height="1136" x="-640">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="Autumn_png" source.down="Autumn_png" source.disabled="Autumn_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="Winter" label="" x="0" y="0" anchorOffsetX="0" width="640" anchorOffsetY="0" height="1136">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="Winter_png" source.down="Winter_png" source.disabled="Winter_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+</e:Skin>

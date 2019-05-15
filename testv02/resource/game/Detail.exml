@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DetailSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16a1af24088" ></w:Config>
+	<e:Image left="0" right="0" top="0" bottom="0" source="bg_png"/>
+	<e:Group id="season_group" x="38" y="201.33">
+		<e:Image id="season_detail" width="272" height="268" x="2" y="0" anchorOffsetX="0" anchorOffsetY="0" source="Lichun_png"/>
+		<e:Image id="season_detail0" width="272" height="268" x="296" y="0" anchorOffsetX="0" anchorOffsetY="0" source="Yushui_png"/>
+		<e:Image id="season_detail1" width="272" height="268" x="2" y="256" anchorOffsetX="0" anchorOffsetY="0" source="Jingzhe_png"/>
+		<e:Image id="season_detail2" width="272" height="268" x="296" y="256" anchorOffsetX="0" anchorOffsetY="0" source="Chunfen_png"/>
+		<e:Image id="season_detail3" width="272" height="268" x="0" y="504" anchorOffsetX="0" anchorOffsetY="0" source="Qingming_png"/>
+		<e:Image id="season_detail4" width="272" height="268" x="296" y="504" anchorOffsetX="0" anchorOffsetY="0" source="Guyu_png"/>
+	</e:Group>
+</e:Skin>

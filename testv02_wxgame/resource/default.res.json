@@ -1,0 +1,170 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,Autumn_png,Summer_png,Winter_png,bg_png,Spring_png,Chunfen_png,Guyu_png,Jingzhe_png,Lichun_png,Qingming_png,Yushui_png,Mangzhong_png,Xiaoman_png,Xiaoshu_png,Xiazhi_png,Dashu_png,Lixia_png,Hanlu_png,Liqiu_png,Qiufen_png,Shuangjiang_png,Bailu_png,Chushu_png,Dongzhi_png,Lidong_png,Xiaohan_png,Xiaoxue_png,Dahan_png,Daxue_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/game/Autumn.png",
+			"type": "image",
+			"name": "Autumn_png"
+		},
+		{
+			"url": "assets/game/Summer.png",
+			"type": "image",
+			"name": "Summer_png"
+		},
+		{
+			"url": "assets/game/Winter.png",
+			"type": "image",
+			"name": "Winter_png"
+		},
+		{
+			"url": "assets/game/bg.png",
+			"type": "image",
+			"name": "bg_png"
+		},
+		{
+			"url": "assets/game/Spring.png",
+			"type": "image",
+			"name": "Spring_png"
+		},
+		{
+			"url": "assets/game/Spring/Chunfen.png",
+			"type": "image",
+			"name": "Chunfen_png"
+		},
+		{
+			"url": "assets/game/Spring/Guyu.png",
+			"type": "image",
+			"name": "Guyu_png"
+		},
+		{
+			"url": "assets/game/Spring/Jingzhe.png",
+			"type": "image",
+			"name": "Jingzhe_png"
+		},
+		{
+			"url": "assets/game/Spring/Lichun.png",
+			"type": "image",
+			"name": "Lichun_png"
+		},
+		{
+			"url": "assets/game/Spring/Qingming.png",
+			"type": "image",
+			"name": "Qingming_png"
+		},
+		{
+			"url": "assets/game/Spring/Yushui.png",
+			"type": "image",
+			"name": "Yushui_png"
+		},
+		{
+			"url": "assets/game/Summer/Mangzhong.png",
+			"type": "image",
+			"name": "Mangzhong_png"
+		},
+		{
+			"url": "assets/game/Summer/Xiaoman.png",
+			"type": "image",
+			"name": "Xiaoman_png"
+		},
+		{
+			"url": "assets/game/Summer/Xiaoshu.png",
+			"type": "image",
+			"name": "Xiaoshu_png"
+		},
+		{
+			"url": "assets/game/Summer/Xiazhi.png",
+			"type": "image",
+			"name": "Xiazhi_png"
+		},
+		{
+			"url": "assets/game/Summer/Dashu.png",
+			"type": "image",
+			"name": "Dashu_png"
+		},
+		{
+			"url": "assets/game/Summer/Lixia.png",
+			"type": "image",
+			"name": "Lixia_png"
+		},
+		{
+			"url": "assets/game/Autumn/Hanlu.png",
+			"type": "image",
+			"name": "Hanlu_png"
+		},
+		{
+			"url": "assets/game/Autumn/Liqiu.png",
+			"type": "image",
+			"name": "Liqiu_png"
+		},
+		{
+			"url": "assets/game/Autumn/Qiufen.png",
+			"type": "image",
+			"name": "Qiufen_png"
+		},
+		{
+			"url": "assets/game/Autumn/Shuangjiang.png",
+			"type": "image",
+			"name": "Shuangjiang_png"
+		},
+		{
+			"url": "assets/game/Autumn/Bailu.png",
+			"type": "image",
+			"name": "Bailu_png"
+		},
+		{
+			"url": "assets/game/Autumn/Chushu.png",
+			"type": "image",
+			"name": "Chushu_png"
+		},
+		{
+			"url": "assets/game/Winter/Dongzhi.png",
+			"type": "image",
+			"name": "Dongzhi_png"
+		},
+		{
+			"url": "assets/game/Winter/Lidong.png",
+			"type": "image",
+			"name": "Lidong_png"
+		},
+		{
+			"url": "assets/game/Winter/Xiaohan.png",
+			"type": "image",
+			"name": "Xiaohan_png"
+		},
+		{
+			"url": "assets/game/Winter/Xiaoxue.png",
+			"type": "image",
+			"name": "Xiaoxue_png"
+		},
+		{
+			"url": "assets/game/Winter/Dahan.png",
+			"type": "image",
+			"name": "Dahan_png"
+		},
+		{
+			"url": "assets/game/Winter/Daxue.png",
+			"type": "image",
+			"name": "Daxue_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		}
+	]
+}
