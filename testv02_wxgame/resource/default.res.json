@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,Autumn_png,Summer_png,Winter_png,bg_png,Spring_png,Chunfen_png,Guyu_png,Jingzhe_png,Lichun_png,Qingming_png,Yushui_png,Mangzhong_png,Xiaoman_png,Xiaoshu_png,Xiazhi_png,Dashu_png,Lixia_png,Hanlu_png,Liqiu_png,Qiufen_png,Shuangjiang_png,Bailu_png,Chushu_png,Dongzhi_png,Lidong_png,Xiaohan_png,Xiaoxue_png,Dahan_png,Daxue_png",
+			"keys": "description_json,Autumn_png,Summer_png,Winter_png,bg_png,Spring_png,Chunfen_png,Guyu_png,Jingzhe_png,Lichun_png,Qingming_png,Yushui_png,Mangzhong_png,Xiaoman_png,Xiaoshu_png,Xiazhi_png,Dashu_png,Lixia_png,Hanlu_png,Liqiu_png,Qiufen_png,Shuangjiang_png,Bailu_png,Chushu_png,Dongzhi_png,Lidong_png,Xiaohan_png,Xiaoxue_png,Dahan_png,Daxue_png,abc_json,abc_png,Xiangao_png,Qiu_png,Qiu_json,16_png",
 			"name": "preload"
 		}
 	],
@@ -165,6 +165,36 @@
 			"url": "assets/Button/button_up.png",
 			"type": "image",
 			"name": "button_up_png"
+		},
+		{
+			"name": "abc_json",
+			"type": "json",
+			"url": "abc.json"
+		},
+		{
+			"name": "abc_png",
+			"type": "image",
+			"url": "abc.png"
+		},
+		{
+			"name": "Xiangao_png",
+			"type": "image",
+			"url": "assets/game/Xiangao.png"
+		},
+		{
+			"name": "Qiu_png",
+			"type": "image",
+			"url": "Qiu.png"
+		},
+		{
+			"name": "Qiu_json",
+			"type": "json",
+			"url": "Qiu.json"
+		},
+		{
+			"name": "16_png",
+			"type": "image",
+			"url": "assets/game/16.png"
 		}
 	]
 }

@@ -910,14 +910,33 @@ var egret = window.egret;window.skins={};
 
 	function SeasonSkin() {
 		_super.call(this);
-		this.skinParts = ["Spring","Summer","Autumn","Winter","Canvas"];
+		this.skinParts = ["bird","Spring","Summer","Autumn","Winter","Canvas"];
 		
 		this.height = 1136;
 		this.width = 640;
+		this.bird_i();
 		this.elementsContent = [this.Canvas_i()];
+		
+		eui.Binding.$bindProperties(this, ["hostComponent.image"],[0],this._TweenItem1,"target");
 	}
 	var _proto = SeasonSkin.prototype;
 
+	_proto.bird_i = function () {
+		var t = new egret.tween.TweenGroup();
+		this.bird = t;
+		t.items = [this._TweenItem1_i()];
+		return t;
+	};
+	_proto._TweenItem1_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem1 = t;
+		t.paths = [this._Set1_i()];
+		return t;
+	};
+	_proto._Set1_i = function () {
+		var t = new egret.tween.Set();
+		return t;
+	};
 	_proto.Canvas_i = function () {
 		var t = new eui.Group();
 		this.Canvas = t;
@@ -992,16 +1011,16 @@ var egret = window.egret;window.skins={};
 	var _proto = StartGameSkin.prototype;
 
 	_proto.btn_start_i = function () {
-		var t = new eui.Button();
+		var t = new eui.Image();
 		this.btn_start = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.enabled = true;
-		t.height = 655;
-		t.label = "StartGame";
-		t.width = 640;
-		t.x = 0;
-		t.y = 200;
+		t.fillMode = "scale";
+		t.height = 436.67;
+		t.horizontalCenter = -34.5;
+		t.source = "16_png";
+		t.verticalCenter = -349.5;
+		t.width = 570.73;
 		return t;
 	};
 	return StartGameSkin;

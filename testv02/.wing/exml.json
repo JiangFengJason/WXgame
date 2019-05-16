@@ -5,7 +5,7 @@
     "parentPath": ""
   },
   "global": {
-    "globalAutoLayerMarkEnable": true,
+    "globalAutoLayerMarkEnable": false,
     "globalBindingDataTestObj": [],
     "globalAdsorbEnable": true
   },

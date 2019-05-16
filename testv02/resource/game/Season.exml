@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="SeasonSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+<e:Skin class="SeasonSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*" >
+	<w:Declarations>
+		<tween:TweenGroup id="bird">
+			<tween:TweenItem target="{image}">
+				<tween:Set/>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
 	<w:Config id="16a19d019cd" ></w:Config>
 	<e:Group id="Canvas" y="0" x="0">
 		<e:Button id="Spring" label="" y="0" anchorOffsetX="0" width="640" anchorOffsetY="0" height="1136" x="-1920">

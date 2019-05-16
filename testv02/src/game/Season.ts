@@ -19,8 +19,8 @@ class Season extends eui.Component implements  eui.UIComponent {
     }
 	public constructor() {
 		super();
+		
 	}
-
 	protected partAdded(partName:string,instance:any):void
 	{
 		super.partAdded(partName,instance);
@@ -41,8 +41,23 @@ class Season extends eui.Component implements  eui.UIComponent {
 
 		var tw = egret.Tween.get( this.Canvas, { loop:false} );
 		tw.to( {x:1920}, 2000 ).call( function(){  } ).wait( 100 );
-	}
 
+		var data = RES.getRes("abc_json");
+        var txtr = RES.getRes("abc_png");
+        var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
+        var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData() );
+        this.Winter.addChild( mc1 );
+        mc1.gotoAndPlay( 1 ,-1);
+
+		var data = RES.getRes("Qiu_json");
+        var txtr = RES.getRes("Qiu_png");
+        var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
+        var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData() );
+        this.Autumn.addChild( mc1 );
+        mc1.gotoAndPlay( 1 ,-1);
+
+	}
+	
 	protected onTouch(e: egret.TouchEvent){
 		switch (e.type) {
 			case egret.TouchEvent.TOUCH_BEGIN:

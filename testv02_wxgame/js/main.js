@@ -229,27 +229,29 @@ var Main = (function (_super) {
     };
     Main.prototype.loadResource = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var e_1;
+            var loadingView, e_1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        _a.trys.push([0, 3, , 4]);
-                        //const loadingView = new LoadingUI();
-                        //this.stage.addChild(loadingView);
+                        _a.trys.push([0, 4, , 5]);
+                        loadingView = new LoadingUI();
+                        this.stage.addChild(loadingView);
                         return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
                     case 1:
-                        //const loadingView = new LoadingUI();
-                        //this.stage.addChild(loadingView);
                         _a.sent();
                         return [4 /*yield*/, this.loadTheme()];
                     case 2:
                         _a.sent();
-                        return [3 /*break*/, 4];
+                        return [4 /*yield*/, RES.loadGroup("preload", 0, loadingView)];
                     case 3:
+                        _a.sent();
+                        this.stage.removeChild(loadingView);
+                        return [3 /*break*/, 5];
+                    case 4:
                         e_1 = _a.sent();
                         console.error(e_1);
-                        return [3 /*break*/, 4];
-                    case 4: return [2 /*return*/];
+                        return [3 /*break*/, 5];
+                    case 5: return [2 /*return*/];
                 }
             });
         });
@@ -271,55 +273,6 @@ var Main = (function (_super) {
      */
     Main.prototype.createGameScene = function () {
         this.addChild(StartGame.getInstance());
-        // let sky = this.createBitmapByName("bg_jpg");
-        // this.addChild(sky);
-        // let stageW = this.stage.stageWidth;
-        // let stageH = this.stage.stageHeight;
-        // sky.width = stageW;
-        // sky.height = stageH;
-        // let topMask = new egret.Shape();
-        // topMask.graphics.beginFill(0x000000, 0.5);
-        // topMask.graphics.drawRect(0, 0, stageW, 172);
-        // topMask.graphics.endFill();
-        // topMask.y = 33;
-        // this.addChild(topMask);
-        // let icon: egret.Bitmap = this.createBitmapByName("egret_icon_png");
-        // this.addChild(icon);
-        // icon.x = 26;
-        // icon.y = 33;
-        // let line = new egret.Shape();
-        // line.graphics.lineStyle(2, 0xffffff);
-        // line.graphics.moveTo(0, 0);
-        // line.graphics.lineTo(0, 117);
-        // line.graphics.endFill();
-        // line.x = 172;
-        // line.y = 61;
-        // this.addChild(line);
-        // let colorLabel = new egret.TextField();
-        // colorLabel.textColor = 0xffffff;
-        // colorLabel.width = stageW - 172;
-        // colorLabel.textAlign = "center";
-        // colorLabel.text = "Hello Egret";
-        // colorLabel.size = 24;
-        // colorLabel.x = 172;
-        // colorLabel.y = 80;
-        // this.addChild(colorLabel);
-        // let textfield = new egret.TextField();
-        // this.addChild(textfield);
-        // textfield.alpha = 0;
-        // textfield.width = stageW - 172;
-        // textfield.textAlign = egret.HorizontalAlign.CENTER;
-        // textfield.size = 24;
-        // textfield.textColor = 0xffffff;
-        // textfield.x = 172;
-        // textfield.y = 135;
-        // this.textfield = textfield;
-        // let button = new eui.Button();
-        // button.label = "Click!";
-        // button.horizontalCenter = 0;
-        // button.verticalCenter = 0;
-        // this.addChild(button);
-        // button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
@@ -539,6 +492,18 @@ var Season = (function (_super) {
         this.Winter.addEventListener(egret.TouchEvent.TOUCH_END, this.onTouch, this);
         var tw = egret.Tween.get(this.Canvas, { loop: false });
         tw.to({ x: 1920 }, 2000).call(function () { }).wait(100);
+        var data = RES.getRes("abc_json");
+        var txtr = RES.getRes("abc_png");
+        var mcFactory = new egret.MovieClipDataFactory(data, txtr);
+        var mc1 = new egret.MovieClip(mcFactory.generateMovieClipData());
+        this.Winter.addChild(mc1);
+        mc1.gotoAndPlay(1, -1);
+        var data = RES.getRes("Qiu_json");
+        var txtr = RES.getRes("Qiu_png");
+        var mcFactory = new egret.MovieClipDataFactory(data, txtr);
+        var mc1 = new egret.MovieClip(mcFactory.generateMovieClipData());
+        this.Autumn.addChild(mc1);
+        mc1.gotoAndPlay(1, -1);
     };
     Season.prototype.onTouch = function (e) {
         switch (e.type) {
@@ -627,8 +592,17 @@ var StartGame = (function (_super) {
     };
     StartGame.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        //this.btn_start.addEventListener(egret.TouchEvent.TOUCH_TAP,this.toStartGame,this);
-        this.addChild(Season.getInstance());
+        var img = new egret.Bitmap;
+        img.texture = RES.getRes('16_png');
+        this.addChild(img);
+        console.log(img.hitTestPoint(300, 300, true));
+        //this.btn_start.addEventListener(egret.TouchEvent.TOUCH_TAP,this.getpoint,this);
+        // this.addChild(Season.getInstance());
+    };
+    StartGame.prototype.getpoint = function () {
+        if (this.btn_start.hitTestPoint(300, 300, true)) {
+            this.toStartGame();
+        }
     };
     StartGame.prototype.toStartGame = function () {
         this.addChild(Season.getInstance());
