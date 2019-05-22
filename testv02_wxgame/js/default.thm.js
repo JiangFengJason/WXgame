@@ -10,7 +10,7 @@ var egret = window.egret;window.skins={};
                 window.generateEUI = {};
                 generateEUI.paths = {};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","draw":"resource/game/draw.exml","StartGame":"resource/game/StartGame.exml","Season":"resource/game/Season.exml","Spring":"resource/game/Spring.exml","Summer":"resource/game/Summer.exml","Detail":"resource/game/Detail.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","draw":"resource/game/draw.exml","StartGame":"resource/game/StartGame.exml","Season":"resource/game/Season.exml","Spring":"resource/game/Spring.exml","Summer":"resource/game/Summer.exml","Detail":"resource/game/Detail.exml","Carve":"resource/game/Carve.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
 	__extends(ButtonSkin, _super);
 	function ButtonSkin() {
 		_super.call(this);
@@ -632,15 +632,230 @@ var egret = window.egret;window.skins={};
 		return t;
 	};
 	return VSliderSkin;
-})(eui.Skin);generateEUI.paths['resource/game/Detail.exml'] = window.DetailSkin = (function (_super) {
-	__extends(DetailSkin, _super);
-	function DetailSkin() {
+})(eui.Skin);generateEUI.paths['resource/game/Carve.exml'] = window.CarveSkin = (function (_super) {
+	__extends(CarveSkin, _super);
+	var CarveSkin$Skin1 = 	(function (_super) {
+		__extends(CarveSkin$Skin1, _super);
+		function CarveSkin$Skin1() {
+			_super.call(this);
+			this.skinParts = ["labelDisplay"];
+			
+			this.elementsContent = [this._Image1_i(),this.labelDisplay_i()];
+			this.states = [
+				new eui.State ("up",
+					[
+					])
+				,
+				new eui.State ("down",
+					[
+						new eui.SetProperty("_Image1","source","back_png")
+					])
+				,
+				new eui.State ("disabled",
+					[
+						new eui.SetProperty("_Image1","source","back_png")
+					])
+			];
+		}
+		var _proto = CarveSkin$Skin1.prototype;
+
+		_proto._Image1_i = function () {
+			var t = new eui.Image();
+			this._Image1 = t;
+			t.percentHeight = 100;
+			t.source = "back_png";
+			t.percentWidth = 100;
+			return t;
+		};
+		_proto.labelDisplay_i = function () {
+			var t = new eui.Label();
+			this.labelDisplay = t;
+			t.horizontalCenter = 0;
+			t.verticalCenter = 0;
+			return t;
+		};
+		return CarveSkin$Skin1;
+	})(eui.Skin);
+
+	var CarveSkin$Skin2 = 	(function (_super) {
+		__extends(CarveSkin$Skin2, _super);
+		function CarveSkin$Skin2() {
+			_super.call(this);
+			this.skinParts = ["labelDisplay"];
+			
+			this.elementsContent = [this._Image1_i(),this.labelDisplay_i()];
+			this.states = [
+				new eui.State ("up",
+					[
+					])
+				,
+				new eui.State ("down",
+					[
+						new eui.SetProperty("_Image1","source","banzi_png")
+					])
+				,
+				new eui.State ("disabled",
+					[
+						new eui.SetProperty("_Image1","source","banzi_png")
+					])
+			];
+		}
+		var _proto = CarveSkin$Skin2.prototype;
+
+		_proto._Image1_i = function () {
+			var t = new eui.Image();
+			this._Image1 = t;
+			t.percentHeight = 100;
+			t.source = "banzi_png";
+			t.percentWidth = 100;
+			return t;
+		};
+		_proto.labelDisplay_i = function () {
+			var t = new eui.Label();
+			this.labelDisplay = t;
+			t.horizontalCenter = 0;
+			t.verticalCenter = 0;
+			return t;
+		};
+		return CarveSkin$Skin2;
+	})(eui.Skin);
+
+	function CarveSkin() {
 		_super.call(this);
-		this.skinParts = ["season_detail","season_detail0","season_detail1","season_detail2","season_detail3","season_detail4","season_group"];
+		this.skinParts = ["carveLine","back","banzi","toCarve","toXian","toPrint"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.season_group_i()];
+		this.elementsContent = [this._Image1_i(),this.carveLine_i(),this.back_i(),this.banzi_i(),this.toCarve_i(),this.toXian_i(),this.toPrint_i()];
+	}
+	var _proto = CarveSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.source = "bg_jpg";
+		t.top = 0;
+		return t;
+	};
+	_proto.carveLine_i = function () {
+		var t = new eui.Image();
+		this.carveLine = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.bottom = 287;
+		t.left = 152;
+		t.right = 152;
+		t.source = "Xiangaozip_jpg";
+		t.top = 287;
+		t.width = 496;
+		return t;
+	};
+	_proto.back_i = function () {
+		var t = new eui.Button();
+		this.back = t;
+		t.height = 34;
+		t.label = "";
+		t.left = 45;
+		t.top = 45;
+		t.width = 47;
+		t.skinName = CarveSkin$Skin1;
+		return t;
+	};
+	_proto.banzi_i = function () {
+		var t = new eui.Button();
+		this.banzi = t;
+		t.enabled = false;
+		t.height = 750;
+		t.horizontalCenter = 0;
+		t.label = "";
+		t.verticalCenter = 0;
+		t.width = 496;
+		t.skinName = CarveSkin$Skin2;
+		return t;
+	};
+	_proto.toCarve_i = function () {
+		var t = new eui.Button();
+		this.toCarve = t;
+		t.enabled = true;
+		t.label = "刻";
+		t.x = 438;
+		t.y = 992;
+		return t;
+	};
+	_proto.toXian_i = function () {
+		var t = new eui.Button();
+		this.toXian = t;
+		t.label = "印";
+		t.visible = false;
+		t.x = 438;
+		t.y = 992;
+		return t;
+	};
+	_proto.toPrint_i = function () {
+		var t = new eui.Button();
+		this.toPrint = t;
+		t.enabled = true;
+		t.label = "刷";
+		t.visible = false;
+		t.x = 438;
+		t.y = 992;
+		return t;
+	};
+	return CarveSkin;
+})(eui.Skin);generateEUI.paths['resource/game/Detail.exml'] = window.DetailSkin = (function (_super) {
+	__extends(DetailSkin, _super);
+	var DetailSkin$Skin3 = 	(function (_super) {
+		__extends(DetailSkin$Skin3, _super);
+		function DetailSkin$Skin3() {
+			_super.call(this);
+			this.skinParts = ["labelDisplay"];
+			
+			this.elementsContent = [this._Image1_i(),this.labelDisplay_i()];
+			this.states = [
+				new eui.State ("up",
+					[
+					])
+				,
+				new eui.State ("down",
+					[
+						new eui.SetProperty("_Image1","source","back_png")
+					])
+				,
+				new eui.State ("disabled",
+					[
+						new eui.SetProperty("_Image1","source","back_png")
+					])
+			];
+		}
+		var _proto = DetailSkin$Skin3.prototype;
+
+		_proto._Image1_i = function () {
+			var t = new eui.Image();
+			this._Image1 = t;
+			t.percentHeight = 100;
+			t.source = "back_png";
+			t.percentWidth = 100;
+			return t;
+		};
+		_proto.labelDisplay_i = function () {
+			var t = new eui.Label();
+			this.labelDisplay = t;
+			t.horizontalCenter = 0;
+			t.verticalCenter = 0;
+			return t;
+		};
+		return DetailSkin$Skin3;
+	})(eui.Skin);
+
+	function DetailSkin() {
+		_super.call(this);
+		this.skinParts = ["season_detail","season_detail0","season_detail1","season_detail2","season_detail3","season_detail4","season_group","back"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this.season_group_i(),this._Image2_i(),this._Image3_i(),this._Image4_i(),this._Image5_i(),this._Label1_i(),this._Label2_i(),this._Label3_i(),this._Label4_i(),this.back_i()];
 	}
 	var _proto = DetailSkin.prototype;
 
@@ -649,7 +864,7 @@ var egret = window.egret;window.skins={};
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
-		t.source = "bg_png";
+		t.source = "bg_jpg";
 		t.top = 0;
 		return t;
 	};
@@ -678,10 +893,10 @@ var egret = window.egret;window.skins={};
 		this.season_detail0 = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 268;
+		t.height = 260.42;
 		t.source = "Yushui_png";
-		t.width = 272;
-		t.x = 296;
+		t.width = 265.94;
+		t.x = 302.06;
 		t.y = 0;
 		return t;
 	};
@@ -690,7 +905,7 @@ var egret = window.egret;window.skins={};
 		this.season_detail1 = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 268;
+		t.height = 255.88;
 		t.source = "Jingzhe_png";
 		t.width = 272;
 		t.x = 2;
@@ -702,10 +917,10 @@ var egret = window.egret;window.skins={};
 		this.season_detail2 = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 268;
+		t.height = 255.88;
 		t.source = "Chunfen_png";
-		t.width = 272;
-		t.x = 296;
+		t.width = 262.91;
+		t.x = 305.09;
 		t.y = 256;
 		return t;
 	};
@@ -714,10 +929,10 @@ var egret = window.egret;window.skins={};
 		this.season_detail3 = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 268;
+		t.height = 261.94;
 		t.source = "Qingming_png";
-		t.width = 272;
-		t.x = 0;
+		t.width = 265.94;
+		t.x = 6.06;
 		t.y = 504;
 		return t;
 	};
@@ -726,19 +941,126 @@ var egret = window.egret;window.skins={};
 		this.season_detail4 = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 268;
+		t.height = 258.91;
 		t.source = "Guyu_png";
-		t.width = 272;
-		t.x = 296;
+		t.width = 264.42;
+		t.x = 303.58;
 		t.y = 504;
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 50;
+		t.source = "lock_png";
+		t.width = 42;
+		t.x = 222;
+		t.y = 122;
+		return t;
+	};
+	_proto._Image3_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 54;
+		t.source = "user_png";
+		t.width = 52;
+		t.x = 66;
+		t.y = 990;
+		return t;
+	};
+	_proto._Image4_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 12.93;
+		t.anchorOffsetY = 13.5;
+		t.height = 48;
+		t.source = "rank_png";
+		t.width = 48;
+		t.x = 316.02;
+		t.y = 1009.5;
+		return t;
+	};
+	_proto._Image5_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 58;
+		t.source = "setting_png";
+		t.width = 52;
+		t.x = 528.54;
+		t.y = 991;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 40;
+		t.size = 30;
+		t.text = "解锁：1/6";
+		t.textColor = 0x000000;
+		t.width = 144;
+		t.x = 285.09;
+		t.y = 136;
+		return t;
+	};
+	_proto._Label2_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 28;
+		t.size = 25;
+		t.text = "我的";
+		t.textColor = 0x000000;
+		t.width = 67;
+		t.x = 66;
+		t.y = 1053;
+		return t;
+	};
+	_proto._Label3_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 28;
+		t.size = 25;
+		t.text = "排行";
+		t.textColor = 0x000000;
+		t.width = 67;
+		t.x = 302;
+		t.y = 1053;
+		return t;
+	};
+	_proto._Label4_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 28;
+		t.size = 25;
+		t.text = "设置";
+		t.textColor = 0x000000;
+		t.width = 67;
+		t.x = 530;
+		t.y = 1053;
+		return t;
+	};
+	_proto.back_i = function () {
+		var t = new eui.Button();
+		this.back = t;
+		t.height = 34;
+		t.label = "";
+		t.left = 45;
+		t.top = 45;
+		t.width = 47;
+		t.skinName = DetailSkin$Skin3;
 		return t;
 	};
 	return DetailSkin;
 })(eui.Skin);generateEUI.paths['resource/game/Season.exml'] = window.SeasonSkin = (function (_super) {
 	__extends(SeasonSkin, _super);
-	var SeasonSkin$Skin1 = 	(function (_super) {
-		__extends(SeasonSkin$Skin1, _super);
-		function SeasonSkin$Skin1() {
+	var SeasonSkin$Skin4 = 	(function (_super) {
+		__extends(SeasonSkin$Skin4, _super);
+		function SeasonSkin$Skin4() {
 			_super.call(this);
 			this.skinParts = ["labelDisplay"];
 			
@@ -759,7 +1081,7 @@ var egret = window.egret;window.skins={};
 					])
 			];
 		}
-		var _proto = SeasonSkin$Skin1.prototype;
+		var _proto = SeasonSkin$Skin4.prototype;
 
 		_proto._Image1_i = function () {
 			var t = new eui.Image();
@@ -776,12 +1098,12 @@ var egret = window.egret;window.skins={};
 			t.verticalCenter = 0;
 			return t;
 		};
-		return SeasonSkin$Skin1;
+		return SeasonSkin$Skin4;
 	})(eui.Skin);
 
-	var SeasonSkin$Skin2 = 	(function (_super) {
-		__extends(SeasonSkin$Skin2, _super);
-		function SeasonSkin$Skin2() {
+	var SeasonSkin$Skin5 = 	(function (_super) {
+		__extends(SeasonSkin$Skin5, _super);
+		function SeasonSkin$Skin5() {
 			_super.call(this);
 			this.skinParts = ["labelDisplay"];
 			
@@ -802,7 +1124,7 @@ var egret = window.egret;window.skins={};
 					])
 			];
 		}
-		var _proto = SeasonSkin$Skin2.prototype;
+		var _proto = SeasonSkin$Skin5.prototype;
 
 		_proto._Image1_i = function () {
 			var t = new eui.Image();
@@ -819,12 +1141,12 @@ var egret = window.egret;window.skins={};
 			t.verticalCenter = 0;
 			return t;
 		};
-		return SeasonSkin$Skin2;
+		return SeasonSkin$Skin5;
 	})(eui.Skin);
 
-	var SeasonSkin$Skin3 = 	(function (_super) {
-		__extends(SeasonSkin$Skin3, _super);
-		function SeasonSkin$Skin3() {
+	var SeasonSkin$Skin6 = 	(function (_super) {
+		__extends(SeasonSkin$Skin6, _super);
+		function SeasonSkin$Skin6() {
 			_super.call(this);
 			this.skinParts = ["labelDisplay"];
 			
@@ -845,7 +1167,7 @@ var egret = window.egret;window.skins={};
 					])
 			];
 		}
-		var _proto = SeasonSkin$Skin3.prototype;
+		var _proto = SeasonSkin$Skin6.prototype;
 
 		_proto._Image1_i = function () {
 			var t = new eui.Image();
@@ -862,12 +1184,12 @@ var egret = window.egret;window.skins={};
 			t.verticalCenter = 0;
 			return t;
 		};
-		return SeasonSkin$Skin3;
+		return SeasonSkin$Skin6;
 	})(eui.Skin);
 
-	var SeasonSkin$Skin4 = 	(function (_super) {
-		__extends(SeasonSkin$Skin4, _super);
-		function SeasonSkin$Skin4() {
+	var SeasonSkin$Skin7 = 	(function (_super) {
+		__extends(SeasonSkin$Skin7, _super);
+		function SeasonSkin$Skin7() {
 			_super.call(this);
 			this.skinParts = ["labelDisplay"];
 			
@@ -888,7 +1210,7 @@ var egret = window.egret;window.skins={};
 					])
 			];
 		}
-		var _proto = SeasonSkin$Skin4.prototype;
+		var _proto = SeasonSkin$Skin7.prototype;
 
 		_proto._Image1_i = function () {
 			var t = new eui.Image();
@@ -905,7 +1227,7 @@ var egret = window.egret;window.skins={};
 			t.verticalCenter = 0;
 			return t;
 		};
-		return SeasonSkin$Skin4;
+		return SeasonSkin$Skin7;
 	})(eui.Skin);
 
 	function SeasonSkin() {
@@ -955,7 +1277,7 @@ var egret = window.egret;window.skins={};
 		t.width = 640;
 		t.x = -1920;
 		t.y = 0;
-		t.skinName = SeasonSkin$Skin1;
+		t.skinName = SeasonSkin$Skin4;
 		return t;
 	};
 	_proto.Summer_i = function () {
@@ -968,7 +1290,7 @@ var egret = window.egret;window.skins={};
 		t.width = 640;
 		t.x = -1280;
 		t.y = 0;
-		t.skinName = SeasonSkin$Skin2;
+		t.skinName = SeasonSkin$Skin5;
 		return t;
 	};
 	_proto.Autumn_i = function () {
@@ -981,7 +1303,7 @@ var egret = window.egret;window.skins={};
 		t.width = 640;
 		t.x = -640;
 		t.y = 0;
-		t.skinName = SeasonSkin$Skin3;
+		t.skinName = SeasonSkin$Skin6;
 		return t;
 	};
 	_proto.Winter_i = function () {
@@ -994,7 +1316,7 @@ var egret = window.egret;window.skins={};
 		t.width = 640;
 		t.x = 0;
 		t.y = 0;
-		t.skinName = SeasonSkin$Skin4;
+		t.skinName = SeasonSkin$Skin7;
 		return t;
 	};
 	return SeasonSkin;
@@ -1002,26 +1324,12 @@ var egret = window.egret;window.skins={};
 	__extends(StartGameSkin, _super);
 	function StartGameSkin() {
 		_super.call(this);
-		this.skinParts = ["btn_start"];
+		this.skinParts = [];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.btn_start_i()];
 	}
 	var _proto = StartGameSkin.prototype;
 
-	_proto.btn_start_i = function () {
-		var t = new eui.Image();
-		this.btn_start = t;
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.fillMode = "scale";
-		t.height = 436.67;
-		t.horizontalCenter = -34.5;
-		t.source = "16_png";
-		t.verticalCenter = -349.5;
-		t.width = 570.73;
-		return t;
-	};
 	return StartGameSkin;
 })(eui.Skin);

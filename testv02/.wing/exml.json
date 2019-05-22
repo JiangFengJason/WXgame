@@ -49,5 +49,20 @@
     "path": "..\\resource\\game\\Detail.ts",
     "class": "Detail",
     "parentPath": ""
+  },
+  "16ad54c9629": {
+    "path": "..\\resource\\game\\Carve.ts",
+    "class": "Carve",
+    "parentPath": ""
+  },
+  "16ad54de148": {
+    "path": "..\\resource\\game\\Carve.ts",
+    "class": "Carve",
+    "parentPath": ""
+  },
+  "16ad819d993": {
+    "path": "..\\resource\\game\\Carve.ts",
+    "class": "Carve",
+    "parentPath": ""
   }
 }

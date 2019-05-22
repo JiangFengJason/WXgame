@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="StartGameSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="16a1702f814" ></w:Config>
-	<e:Image id="btn_start" width="570.73" height="436.67" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-34.5" verticalCenter="-349.5" fillMode="scale" source="16_png"/>
 </e:Skin>

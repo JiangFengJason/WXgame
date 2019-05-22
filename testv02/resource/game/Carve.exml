@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CarveSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16ad819d993" ></w:Config>
+	<e:Image left="0" right="0" top="0" bottom="0" source="bg_jpg"/>
+	<e:Image id="carveLine" source="Xiangaozip_jpg" left="152" right="152" top="287" bottom="287" anchorOffsetX="0" anchorOffsetY="0" width="496"/>
+	<e:Button id="back" label="" width="47" height="34" left="45" top="45">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="back_png" source.down="back_png" source.disabled="back_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="banzi" label="" horizontalCenter="0" verticalCenter="0" width="496" height="750" enabled="false">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="banzi_png" source.down="banzi_png" source.disabled="banzi_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="toCarve" label="刻" x="438" y="992" enabled="true"/>
+	<e:Button id="toXian" label="印" x="438" y="992" visible="false"/>
+	<e:Button id="toPrint" label="刷" x="438" y="992" enabled="true" visible="false"/>
+</e:Skin>

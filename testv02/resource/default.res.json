@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,Autumn_png,Summer_png,Winter_png,bg_png,Spring_png,Chunfen_png,Guyu_png,Jingzhe_png,Lichun_png,Qingming_png,Yushui_png,Mangzhong_png,Xiaoman_png,Xiaoshu_png,Xiazhi_png,Dashu_png,Lixia_png,Hanlu_png,Liqiu_png,Qiufen_png,Shuangjiang_png,Bailu_png,Chushu_png,Dongzhi_png,Lidong_png,Xiaohan_png,Xiaoxue_png,Dahan_png,Daxue_png,abc_json,abc_png,Xiangao_png,Qiu_png,Qiu_json,16_png",
+			"keys": "description_json,Chunfen_png,Guyu_png,Jingzhe_png,Lichun_png,Qingming_png,Yushui_png,Mangzhong_png,Xiaoman_png,Xiaoshu_png,Xiazhi_png,Dashu_png,Lixia_png,Hanlu_png,Liqiu_png,Qiufen_png,Shuangjiang_png,Bailu_png,Chushu_png,Dongzhi_png,Lidong_png,Xiaohan_png,Xiaoxue_png,Dahan_png,Daxue_png,abc_json,abc_png,Qiu_png,Qiu_json,bg_jpg,bg_png,yin_png,yin_json,user_png,lock_png,rank_png,setting_png,back_png,Xiangaozip_jpg,Spring_png,Summer_png,Autumn_png,Winter_png,LixiaXian_png,LiqiuXian_png,LidongXian_png,banzi_png",
 			"name": "preload"
 		}
 	],
@@ -10,31 +10,6 @@
 			"url": "config/description.json",
 			"type": "json",
 			"name": "description_json"
-		},
-		{
-			"url": "assets/game/Autumn.png",
-			"type": "image",
-			"name": "Autumn_png"
-		},
-		{
-			"url": "assets/game/Summer.png",
-			"type": "image",
-			"name": "Summer_png"
-		},
-		{
-			"url": "assets/game/Winter.png",
-			"type": "image",
-			"name": "Winter_png"
-		},
-		{
-			"url": "assets/game/bg.png",
-			"type": "image",
-			"name": "bg_png"
-		},
-		{
-			"url": "assets/game/Spring.png",
-			"type": "image",
-			"name": "Spring_png"
 		},
 		{
 			"url": "assets/game/Spring/Chunfen.png",
@@ -177,11 +152,6 @@
 			"url": "abc.png"
 		},
 		{
-			"name": "Xiangao_png",
-			"type": "image",
-			"url": "assets/game/Xiangao.png"
-		},
-		{
 			"name": "Qiu_png",
 			"type": "image",
 			"url": "Qiu.png"
@@ -192,9 +162,94 @@
 			"url": "Qiu.json"
 		},
 		{
-			"name": "16_png",
+			"name": "bg_jpg",
 			"type": "image",
-			"url": "assets/game/16.png"
+			"url": "assets/game/bg.jpg"
+		},
+		{
+			"name": "bg_png",
+			"type": "image",
+			"url": "assets/game/bg.png"
+		},
+		{
+			"name": "yin_png",
+			"type": "image",
+			"url": "yin.png"
+		},
+		{
+			"name": "yin_json",
+			"type": "json",
+			"url": "yin.json"
+		},
+		{
+			"name": "user_png",
+			"type": "image",
+			"url": "assets/game/user.png"
+		},
+		{
+			"name": "lock_png",
+			"type": "image",
+			"url": "assets/game/lock.png"
+		},
+		{
+			"name": "rank_png",
+			"type": "image",
+			"url": "assets/game/rank.png"
+		},
+		{
+			"name": "setting_png",
+			"type": "image",
+			"url": "assets/game/setting.png"
+		},
+		{
+			"name": "back_png",
+			"type": "image",
+			"url": "assets/game/back.png"
+		},
+		{
+			"name": "Xiangaozip_jpg",
+			"type": "image",
+			"url": "assets/game/Spring/Xiangaozip.jpg"
+		},
+		{
+			"name": "Spring_png",
+			"type": "image",
+			"url": "assets/game/Spring/Spring.png"
+		},
+		{
+			"name": "Summer_png",
+			"type": "image",
+			"url": "assets/game/Summer/Summer.png"
+		},
+		{
+			"name": "Autumn_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Autumn.png"
+		},
+		{
+			"name": "Winter_png",
+			"type": "image",
+			"url": "assets/game/Winter/Winter.png"
+		},
+		{
+			"name": "LixiaXian_png",
+			"type": "image",
+			"url": "assets/game/Summer/LixiaXian.png"
+		},
+		{
+			"name": "LiqiuXian_png",
+			"type": "image",
+			"url": "assets/game/Autumn/LiqiuXian.png"
+		},
+		{
+			"name": "LidongXian_png",
+			"type": "image",
+			"url": "assets/game/Winter/LidongXian.png"
+		},
+		{
+			"name": "banzi_png",
+			"type": "image",
+			"url": "assets/game/banzi.png"
 		}
 	]
 }

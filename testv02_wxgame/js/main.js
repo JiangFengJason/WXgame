@@ -236,8 +236,10 @@ var Main = (function (_super) {
                         _a.trys.push([0, 4, , 5]);
                         loadingView = new LoadingUI();
                         this.stage.addChild(loadingView);
+                        // await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
                         return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
                     case 1:
+                        // await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
                         _a.sent();
                         return [4 /*yield*/, this.loadTheme()];
                     case 2:
@@ -261,6 +263,7 @@ var Main = (function (_super) {
         return new Promise(function (resolve, reject) {
             // load skin theme configuration file, you can manually modify the file. And replace the default skin.
             //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
+            // let theme = new eui.Theme("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.thm.json", this.stage);
             var theme = new eui.Theme("resource/default.thm.json", _this.stage);
             theme.addEventListener(eui.UIEvent.COMPLETE, function () {
                 resolve();
@@ -442,6 +445,66 @@ var ThemeAdapter = (function () {
     return ThemeAdapter;
 }());
 __reflect(ThemeAdapter.prototype, "ThemeAdapter", ["eui.IThemeAdapter"]);
+var Carve = (function (_super) {
+    __extends(Carve, _super);
+    function Carve() {
+        return _super.call(this) || this;
+    }
+    Carve.getInstance = function () {
+        if (!Carve.shared) {
+            Carve.shared = new Carve();
+        }
+        return Carve.shared;
+    };
+    Carve.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    Carve.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        //this.carveLine.addEventListener(egret.TouchEvent.TOUCH_TAP,this.jump,this);
+        this.toCarve.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetCarve, this);
+        this.toXian.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetXian, this);
+        this.toPrint.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetPrint, this);
+        this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
+    };
+    Carve.prototype.jump = function () {
+        var timer = new egret.Timer(1000, 1);
+        //注册事件侦听器
+        timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
+        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.timerComFunc, this);
+        //开始计时
+        timer.start();
+    };
+    Carve.prototype.timerFunc = function () {
+        //console.log("start");
+    };
+    Carve.prototype.toGetPrint = function () {
+        //线稿出现
+        this.toXian.visible = false;
+        this.toPrint.visible = false;
+        this.toCarve.visible = false;
+    };
+    Carve.prototype.toGetCarve = function () {
+        //金色的线稿显示
+        this.toXian.visible = true;
+        this.toCarve.visible = false;
+    };
+    Carve.prototype.toGetXian = function () {
+        var data = RES.getRes("yin_json");
+        var txtr = RES.getRes("yin_png");
+        var mcFactory = new egret.MovieClipDataFactory(data, txtr);
+        var mc1 = new egret.MovieClip(mcFactory.generateMovieClipData());
+        this.addChild(mc1);
+        mc1.gotoAndPlay(1, 1);
+        this.toXian.visible = false;
+        this.toPrint.visible = true;
+    };
+    Carve.prototype.timerComFunc = function () {
+        this.parent.setChildIndex(this, 0);
+    };
+    return Carve;
+}(eui.Component));
+__reflect(Carve.prototype, "Carve", ["eui.UIComponent", "egret.DisplayObject"]);
 var Detail = (function (_super) {
     __extends(Detail, _super);
     function Detail() {
@@ -459,8 +522,27 @@ var Detail = (function (_super) {
     Detail.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         this.season_detail.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toPass, this);
+        this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toSeason, this);
     };
     Detail.prototype.toPass = function () {
+        //this.parent.removeChild(this);
+        this.addChild(Carve.getInstance());
+        switch (this.season_detail.source) {
+            case "Lichun_png":
+                Carve.getInstance().carveLine.source = "Xiangaozip_jpg";
+                break;
+            case "Lixia_png":
+                Carve.getInstance().carveLine.source = "LixiaXian_png";
+                break;
+            case "Liqiu_png":
+                Carve.getInstance().carveLine.source = "LiqiuXian_png";
+                break;
+            case "Lidong_png":
+                Carve.getInstance().carveLine.source = "LidongXian_png";
+                break;
+        }
+    };
+    Detail.prototype.toSeason = function () {
         this.parent.removeChild(this);
     };
     return Detail;
@@ -592,17 +674,27 @@ var StartGame = (function (_super) {
     };
     StartGame.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        var img = new egret.Bitmap;
-        img.texture = RES.getRes('16_png');
-        this.addChild(img);
-        console.log(img.hitTestPoint(300, 300, true));
-        //this.btn_start.addEventListener(egret.TouchEvent.TOUCH_TAP,this.getpoint,this);
-        // this.addChild(Season.getInstance());
+        // var img = new eui.Image;
+        // img.source = "16_png";
+        // this.addChild(img);
+        // img.addEventListener(egret.TouchEvent.TOUCH_TAP,this.getpoint,this);
+        // console.log(img.hitTestPoint(300,300,true));
+        //this.btn_start.alpha=0;
+        // let result = new egret.Bitmap();
+        // let texture: egret.Texture = RES.getRes("16_png");
+        // result.texture = texture;
+        // this.addChild(result);
+        // result.pixelHitTest=true;
+        // console.log(result.hitTestPoint(400,400,true));
+        //this.btn_start_bt.addEventListener(egret.TouchEvent.TOUCH_TAP,this.getpoint,this);
+        this.addChild(Season.getInstance());
     };
     StartGame.prototype.getpoint = function () {
-        if (this.btn_start.hitTestPoint(300, 300, true)) {
-            this.toStartGame();
-        }
+        console.log("======>");
+        // if (this.btn_start_bt.hitTestPoint(300,300,true))
+        // {
+        // 	this.toStartGame();
+        // }
     };
     StartGame.prototype.toStartGame = function () {
         this.addChild(Season.getInstance());
