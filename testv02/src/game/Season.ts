@@ -5,8 +5,6 @@ class Season extends eui.Component implements  eui.UIComponent {
 	public Autumn:eui.Button;
 	public Winter:eui.Button;
 	public Canvas:eui.Group;
-
-
 	private posStart:egret.Point;
     private posEnd:egret.Point;
 

@@ -468,10 +468,10 @@ var Carve = (function (_super) {
         this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
     };
     Carve.prototype.jump = function () {
-        var timer = new egret.Timer(1000, 1);
+        var timer = new egret.Timer(2500, 1);
         //注册事件侦听器
         timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
-        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.timerComFunc, this);
+        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.tolarge, this);
         //开始计时
         timer.start();
     };
@@ -480,6 +480,9 @@ var Carve = (function (_super) {
     };
     Carve.prototype.toGetPrint = function () {
         //线稿出现
+        this.removeChild(this.mc);
+        egret.Tween.get(this.carveLine, { loop: false }).to({ alpha: 0 }, 200).to({ alpha: 1 }, 2000);
+        this.jump();
         this.toXian.visible = false;
         this.toPrint.visible = false;
         this.toCarve.visible = false;
@@ -493,18 +496,95 @@ var Carve = (function (_super) {
         var data = RES.getRes("yin_json");
         var txtr = RES.getRes("yin_png");
         var mcFactory = new egret.MovieClipDataFactory(data, txtr);
-        var mc1 = new egret.MovieClip(mcFactory.generateMovieClipData());
-        this.addChild(mc1);
-        mc1.gotoAndPlay(1, 1);
+        this.mc = new egret.MovieClip(mcFactory.generateMovieClipData());
+        this.addChild(this.mc);
+        this.mc.gotoAndPlay(1, 1);
         this.toXian.visible = false;
         this.toPrint.visible = true;
     };
+    Carve.prototype.tolarge = function () {
+        this.initData();
+        this.addChild(Colorful.getInstance());
+        Colorful.getInstance().carveLineLarge.source = this.carveLine.source;
+        var nb = 1;
+        while (nb <= 30) {
+            var im = new eui.Image("resource/assets/game/Spring/Lichun/Number/" + String(nb) + ".png");
+            im.width = 80;
+            im.height = 80;
+            im.x = (nb - 1) * 80;
+            im.name = String(nb);
+            Colorful.getInstance().SpringNumber.addChild(im);
+            im.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectPart, this);
+            nb++;
+        }
+    };
+    Carve.prototype.selectPart = function (e) {
+        var part = e.currentTarget;
+        //if (Number(part.name)==this.Numb)
+        //{
+        var group = Colorful.getInstance().SpringGroup.getChildAt(Number(part.name) - 1);
+        for (var i = 0; i < group.numChildren; i++) {
+            var child = group.getChildAt(i);
+            child.alpha = 0.5;
+            child.addEventListener(egret.TouchEvent.TOUCH_TAP, this.changeColor, this);
+        }
+        //}
+    };
+    Carve.prototype.changeColor = function (e) {
+        var img = e.currentTarget;
+        img.alpha = 1;
+    };
     Carve.prototype.timerComFunc = function () {
-        this.parent.setChildIndex(this, 0);
+        //this.parent.setChildIndex(this,0);
+        this.initData();
+        this.parent.removeChild(this);
+    };
+    Carve.prototype.initData = function () {
+        this.carveLine.alpha = 0;
+        this.toCarve.visible = true;
+        this.toXian.visible = false;
+        this.toPrint.visible = false;
+        this.carveLine.x = 100;
+        this.carveLine.y = 219;
     };
     return Carve;
 }(eui.Component));
 __reflect(Carve.prototype, "Carve", ["eui.UIComponent", "egret.DisplayObject"]);
+var Colorful = (function (_super) {
+    __extends(Colorful, _super);
+    function Colorful() {
+        return _super.call(this) || this;
+    }
+    Colorful.getInstance = function () {
+        if (!Colorful.shared) {
+            Colorful.shared = new Colorful();
+        }
+        return Colorful.shared;
+    };
+    Colorful.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    Colorful.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
+        //this.Numb=1;
+        // for (var item in this.SpringGroup)
+        // {
+        // 	if (this.SpringGroup[item].name=="1"){
+        // 		this.SpringGroup[item].visible=true;
+        // 		this.Numb=1;
+        // 	}else{
+        // 		this.SpringGroup[item].visible=false;
+        // 	}
+        // }
+    };
+    Colorful.prototype.timerComFunc = function () {
+        this.parent.removeChild(this);
+        Carve.getInstance().timerComFunc();
+    };
+    return Colorful;
+}(eui.Component));
+__reflect(Colorful.prototype, "Colorful", ["eui.UIComponent", "egret.DisplayObject"]);
 var Detail = (function (_super) {
     __extends(Detail, _super);
     function Detail() {

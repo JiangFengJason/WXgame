@@ -1,68 +1,73 @@
 {
-  "16a162adc0a": {
-    "path": "..\\resource\\game\\draw.ts",
-    "class": "draw",
-    "parentPath": ""
-  },
-  "global": {
-    "globalAutoLayerMarkEnable": false,
-    "globalBindingDataTestObj": [],
-    "globalAdsorbEnable": true
-  },
-  "16a1702f814": {
-    "guideLines": [
-      {
-        "type": "h",
-        "pos": -154
-      }
-    ],
-    "bindingDataTestObj": [],
-    "backgroundX": 0,
-    "backgroundY": 0,
-    "backgroundWidth": -1,
-    "backgroundHeight": -1,
-    "useBgImage": true,
-    "useBgColor": true,
-    "backgroundAlpha": 100
-  },
-  "16a19d019cd": {
-    "path": "..\\resource\\game\\Season.ts",
-    "class": "Season",
-    "parentPath": ""
-  },
-  "16a1ac947b1": {
-    "path": "..\\resource\\game\\Spring.ts",
-    "class": "Spring",
-    "parentPath": ""
-  },
-  "16a1ad9e929": {
-    "path": "..\\resource\\game\\Spring.ts",
-    "class": "Spring",
-    "parentPath": ""
-  },
-  "16a1ae1327c": {
-    "path": "..\\resource\\game\\Summer.ts",
-    "class": "Summer",
-    "parentPath": ""
-  },
-  "16a1af24088": {
-    "path": "..\\resource\\game\\Detail.ts",
-    "class": "Detail",
-    "parentPath": ""
-  },
-  "16ad54c9629": {
-    "path": "..\\resource\\game\\Carve.ts",
-    "class": "Carve",
-    "parentPath": ""
-  },
-  "16ad54de148": {
-    "path": "..\\resource\\game\\Carve.ts",
-    "class": "Carve",
-    "parentPath": ""
-  },
-  "16ad819d993": {
-    "path": "..\\resource\\game\\Carve.ts",
-    "class": "Carve",
-    "parentPath": ""
-  }
+    "16a162adc0a": {
+        "path": "..\\resource\\game\\draw.ts",
+        "class": "draw",
+        "parentPath": ""
+    },
+    "global": {
+        "globalAutoLayerMarkEnable": false,
+        "globalBindingDataTestObj": [],
+        "globalAdsorbEnable": true
+    },
+    "16a1702f814": {
+        "guideLines": [
+            {
+                "type": "h",
+                "pos": -154
+            }
+        ],
+        "bindingDataTestObj": [],
+        "backgroundX": 0,
+        "backgroundY": 0,
+        "backgroundWidth": -1,
+        "backgroundHeight": -1,
+        "useBgImage": true,
+        "useBgColor": true,
+        "backgroundAlpha": 100
+    },
+    "16a19d019cd": {
+        "path": "..\\resource\\game\\Season.ts",
+        "class": "Season",
+        "parentPath": ""
+    },
+    "16a1ac947b1": {
+        "path": "..\\resource\\game\\Spring.ts",
+        "class": "Spring",
+        "parentPath": ""
+    },
+    "16a1ad9e929": {
+        "path": "..\\resource\\game\\Spring.ts",
+        "class": "Spring",
+        "parentPath": ""
+    },
+    "16a1ae1327c": {
+        "path": "..\\resource\\game\\Summer.ts",
+        "class": "Summer",
+        "parentPath": ""
+    },
+    "16a1af24088": {
+        "path": "..\\resource\\game\\Detail.ts",
+        "class": "Detail",
+        "parentPath": ""
+    },
+    "16ad54c9629": {
+        "path": "..\\resource\\game\\Carve.ts",
+        "class": "Carve",
+        "parentPath": ""
+    },
+    "16ad54de148": {
+        "path": "..\\resource\\game\\Carve.ts",
+        "class": "Carve",
+        "parentPath": ""
+    },
+    "16ad819d993": {
+        "path": "..\\resource\\game\\Carve.ts",
+        "class": "Carve",
+        "parentPath": ""
+    },
+    "16ae36977fd": {
+        "path": "..\\resource\\game\\Colorful.ts",
+        "class": "Colorful",
+        "parentPath": ""
+    }
 }

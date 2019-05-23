@@ -19,7 +19,8 @@
 		"Spring": "resource/game/Spring.exml",
 		"Summer": "resource/game/Summer.exml",
 		"Detail": "resource/game/Detail.exml",
-		"Carve": "resource/game/Carve.exml"
+		"Carve": "resource/game/Carve.exml",
+		"Colorful": "resource/game/Colorful.exml"
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
@@ -37,6 +38,7 @@
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml",
 		"resource/game/Carve.exml",
+		"resource/game/Colorful.exml",
 		"resource/game/Detail.exml",
 		"resource/game/Season.exml",
 		"resource/game/StartGame.exml"

@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,Chunfen_png,Guyu_png,Jingzhe_png,Lichun_png,Qingming_png,Yushui_png,Mangzhong_png,Xiaoman_png,Xiaoshu_png,Xiazhi_png,Dashu_png,Lixia_png,Hanlu_png,Liqiu_png,Qiufen_png,Shuangjiang_png,Bailu_png,Chushu_png,Dongzhi_png,Lidong_png,Xiaohan_png,Xiaoxue_png,Dahan_png,Daxue_png,abc_json,abc_png,Qiu_png,Qiu_json,bg_jpg,bg_png,yin_png,yin_json,user_png,lock_png,rank_png,setting_png,back_png,Xiangaozip_jpg,Spring_png,Summer_png,Autumn_png,Winter_png,LixiaXian_png,LiqiuXian_png,LidongXian_png,banzi_png",
+			"keys": "description_json,Chunfen_png,Guyu_png,Jingzhe_png,Lichun_png,Qingming_png,Yushui_png,Mangzhong_png,Xiaoman_png,Xiaoshu_png,Xiazhi_png,Dashu_png,Lixia_png,Hanlu_png,Liqiu_png,Qiufen_png,Shuangjiang_png,Bailu_png,Chushu_png,Dongzhi_png,Lidong_png,Xiaohan_png,Xiaoxue_png,Dahan_png,Daxue_png,abc_json,abc_png,Qiu_png,Qiu_json,bg_jpg,bg_png,yin_png,yin_json,user_png,lock_png,rank_png,setting_png,back_png,Xiangaozip_jpg,Spring_png,Summer_png,Autumn_png,Winter_png,LixiaXian_png,LiqiuXian_png,LidongXian_png,banzi_png,1_png,2_png,3_png,4_png,5_png,6_png,7_png,8_png,9_png,10_png,11_png,12_png,13_png,14_png,15_png,16_png,17_png,18_png,19_png,20_png,21_png,22_png,23_png,24_png,25_png,26_png,27_png,28_png,29_png,30_png,1_1_png,1_2_png,1_3_png,2_1_png,2_2_png",
 			"name": "preload"
 		}
 	],
@@ -250,6 +250,181 @@
 			"name": "banzi_png",
 			"type": "image",
 			"url": "assets/game/banzi.png"
+		},
+		{
+			"name": "1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/1.png"
+		},
+		{
+			"name": "2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/2.png"
+		},
+		{
+			"name": "3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/3.png"
+		},
+		{
+			"name": "4_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/4.png"
+		},
+		{
+			"name": "5_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/5.png"
+		},
+		{
+			"name": "6_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/6.png"
+		},
+		{
+			"name": "7_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/7.png"
+		},
+		{
+			"name": "8_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/8.png"
+		},
+		{
+			"name": "9_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/9.png"
+		},
+		{
+			"name": "10_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/10.png"
+		},
+		{
+			"name": "11_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/11.png"
+		},
+		{
+			"name": "12_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/12.png"
+		},
+		{
+			"name": "13_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/13.png"
+		},
+		{
+			"name": "14_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/14.png"
+		},
+		{
+			"name": "15_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/15.png"
+		},
+		{
+			"name": "16_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/16.png"
+		},
+		{
+			"name": "17_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/17.png"
+		},
+		{
+			"name": "18_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/18.png"
+		},
+		{
+			"name": "19_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/19.png"
+		},
+		{
+			"name": "20_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/20.png"
+		},
+		{
+			"name": "21_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/21.png"
+		},
+		{
+			"name": "22_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/22.png"
+		},
+		{
+			"name": "23_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/23.png"
+		},
+		{
+			"name": "24_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/24.png"
+		},
+		{
+			"name": "25_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/25.png"
+		},
+		{
+			"name": "26_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/26.png"
+		},
+		{
+			"name": "27_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/27.png"
+		},
+		{
+			"name": "28_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/28.png"
+		},
+		{
+			"name": "29_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/29.png"
+		},
+		{
+			"name": "30_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/30.png"
+		},
+		{
+			"name": "1_1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/1_1.png"
+		},
+		{
+			"name": "1_2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/1_2.png"
+		},
+		{
+			"name": "1_3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/1_3.png"
+		},
+		{
+			"name": "2_1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/2_1.png"
+		},
+		{
+			"name": "2_2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/2_2.png"
 		}
 	]
 }
