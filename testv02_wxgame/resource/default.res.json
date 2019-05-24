@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,Chunfen_png,Guyu_png,Jingzhe_png,Lichun_png,Qingming_png,Yushui_png,Mangzhong_png,Xiaoman_png,Xiaoshu_png,Xiazhi_png,Dashu_png,Lixia_png,Hanlu_png,Liqiu_png,Qiufen_png,Shuangjiang_png,Bailu_png,Chushu_png,Dongzhi_png,Lidong_png,Xiaohan_png,Xiaoxue_png,Dahan_png,Daxue_png,abc_json,abc_png,Qiu_png,Qiu_json,bg_jpg,bg_png,yin_png,yin_json,user_png,lock_png,rank_png,setting_png,back_png,Xiangaozip_jpg,Spring_png,Summer_png,Autumn_png,Winter_png,LixiaXian_png,LiqiuXian_png,LidongXian_png,banzi_png,1_png,2_png,3_png,4_png,5_png,6_png,7_png,8_png,9_png,10_png,11_png,12_png,13_png,14_png,15_png,16_png,17_png,18_png,19_png,20_png,21_png,22_png,23_png,24_png,25_png,26_png,27_png,28_png,29_png,30_png,1_1_png,1_2_png,1_3_png,2_1_png,2_2_png",
+			"keys": "description_json,Chunfen_png,Guyu_png,Jingzhe_png,Lichun_png,Qingming_png,Yushui_png,Mangzhong_png,Xiaoman_png,Xiaoshu_png,Xiazhi_png,Dashu_png,Lixia_png,Hanlu_png,Liqiu_png,Qiufen_png,Shuangjiang_png,Bailu_png,Chushu_png,Dongzhi_png,Lidong_png,Xiaohan_png,Xiaoxue_png,Dahan_png,Daxue_png,abc_json,abc_png,Qiu_png,Qiu_json,bg_jpg,bg_png,yin_png,yin_json,user_png,lock_png,rank_png,setting_png,back_png,Xiangaozip_jpg,Spring_png,Summer_png,Autumn_png,Winter_png,LixiaXian_png,LiqiuXian_png,LidongXian_png,banzi_png,1_png,2_png,3_png,4_png,5_png,6_png,7_png,8_png,9_png,10_png,11_png,12_png,13_png,14_png,15_png,16_png,17_png,18_png,19_png,20_png,21_png,22_png,23_png,24_png,25_png,26_png,27_png,28_png,29_png,30_png,1_1_png,1_2_png,1_3_png,2_1_png,2_2_png,Chun_jpg",
 			"name": "preload"
 		}
 	],
@@ -425,6 +425,11 @@
 			"name": "2_2_png",
 			"type": "image",
 			"url": "assets/game/Spring/Lichun/Part/2_2.png"
+		},
+		{
+			"name": "Chun_jpg",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Chun.jpg"
 		}
 	]
 }

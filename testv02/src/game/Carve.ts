@@ -8,7 +8,6 @@ class Carve extends eui.Component implements  eui.UIComponent {
 	public toPrint:eui.Button;
 	public mc:egret.MovieClip;
 
-
 	private static shared:Carve;
 	public static getInstance(){
         if( !Carve.shared){
@@ -102,13 +101,54 @@ class Carve extends eui.Component implements  eui.UIComponent {
 			{
 				var child:eui.Image=<eui.Image>group.getChildAt(i);
 				child.alpha=0.5;
-				child.addEventListener(egret.TouchEvent.TOUCH_TAP,this.changeColor,this);
+				child.addEventListener(egret.TouchEvent.TOUCH_TAP,this.changeColor.bind(this,child,Number(part.name),group),this);
 			}
 		//}
 	}	
-	private changeColor(e:egret.TouchEvent){
-		var img:eui.Image=<eui.Image>e.currentTarget;
+	private changeColor(img:eui.Image,nb:number,group:eui.Group){
 		img.alpha=1;
+		let next:boolean[]=[];
+		var turn=true;
+		for (var i=0;i<group.numChildren;i++)
+		{
+			var child:eui.Image=<eui.Image>group.getChildAt(i);
+			if (child.alpha==0.5){
+				next.push(false);
+			}
+			else{
+				next.push(true);
+			}
+		}
+		for (var m=0;m<next.length;m++)
+		{
+			if (next[m]==false)
+			{
+				turn=false;
+				break;
+			}	
+		}
+		if (turn)
+		{
+			//挪位置
+			var item=Colorful.getInstance().SpringNumber.getChildAt(nb-1);
+			item.visible=false;
+			for(var j=nb;j<30;j++)
+			{
+				var imge:eui.Image=<eui.Image>Colorful.getInstance().SpringNumber.getChildAt(j);
+				imge.x=imge.x-80;
+			}
+			if (nb<2)
+			{
+				var childs:eui.Group=<eui.Group>Colorful.getInstance().SpringGroup.getChildAt(nb);
+				childs.visible=true;
+			}
+			else
+			{
+				console.log("successful");
+				Detail.getInstance().season_detail.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.onTouch, this);
+			}
+		}
+		
 	}
 	public timerComFunc(){
 		//this.parent.setChildIndex(this,0);
@@ -122,5 +162,9 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		this.toPrint.visible=false;
 		this.carveLine.x=100;
 		this.carveLine.y=219;
+	}
+	private onTouch(){
+		Detail.getInstance().addChild(show.getInstance());
+		show.getInstance().result.source="Chun_jpg";
 	}
 }

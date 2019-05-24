@@ -20,7 +20,8 @@
 		"Summer": "resource/game/Summer.exml",
 		"Detail": "resource/game/Detail.exml",
 		"Carve": "resource/game/Carve.exml",
-		"Colorful": "resource/game/Colorful.exml"
+		"Colorful": "resource/game/Colorful.exml",
+		"show": "resource/game/show.exml"
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
@@ -41,6 +42,7 @@
 		"resource/game/Colorful.exml",
 		"resource/game/Detail.exml",
 		"resource/game/Season.exml",
+		"resource/game/show.exml",
 		"resource/game/StartGame.exml"
 	],
 	"path": "resource/default.thm.json"

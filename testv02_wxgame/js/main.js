@@ -43,6 +43,148 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var Carve = (function (_super) {
+    __extends(Carve, _super);
+    function Carve() {
+        return _super.call(this) || this;
+    }
+    Carve.getInstance = function () {
+        if (!Carve.shared) {
+            Carve.shared = new Carve();
+        }
+        return Carve.shared;
+    };
+    Carve.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    Carve.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        //this.carveLine.addEventListener(egret.TouchEvent.TOUCH_TAP,this.jump,this);
+        this.toCarve.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetCarve, this);
+        this.toXian.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetXian, this);
+        this.toPrint.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetPrint, this);
+        this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
+    };
+    Carve.prototype.jump = function () {
+        var timer = new egret.Timer(2500, 1);
+        //注册事件侦听器
+        timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
+        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.tolarge, this);
+        //开始计时
+        timer.start();
+    };
+    Carve.prototype.timerFunc = function () {
+        //console.log("start");
+    };
+    Carve.prototype.toGetPrint = function () {
+        //线稿出现
+        this.removeChild(this.mc);
+        egret.Tween.get(this.carveLine, { loop: false }).to({ alpha: 0 }, 200).to({ alpha: 1 }, 2000);
+        this.jump();
+        this.toXian.visible = false;
+        this.toPrint.visible = false;
+        this.toCarve.visible = false;
+    };
+    Carve.prototype.toGetCarve = function () {
+        //金色的线稿显示
+        this.toXian.visible = true;
+        this.toCarve.visible = false;
+    };
+    Carve.prototype.toGetXian = function () {
+        var data = RES.getRes("yin_json");
+        var txtr = RES.getRes("yin_png");
+        var mcFactory = new egret.MovieClipDataFactory(data, txtr);
+        this.mc = new egret.MovieClip(mcFactory.generateMovieClipData());
+        this.addChild(this.mc);
+        this.mc.gotoAndPlay(1, 1);
+        this.toXian.visible = false;
+        this.toPrint.visible = true;
+    };
+    Carve.prototype.tolarge = function () {
+        this.initData();
+        this.addChild(Colorful.getInstance());
+        Colorful.getInstance().carveLineLarge.source = this.carveLine.source;
+        var nb = 1;
+        while (nb <= 30) {
+            var im = new eui.Image("resource/assets/game/Spring/Lichun/Number/" + String(nb) + ".png");
+            im.width = 80;
+            im.height = 80;
+            im.x = (nb - 1) * 80;
+            im.name = String(nb);
+            Colorful.getInstance().SpringNumber.addChild(im);
+            im.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectPart, this);
+            nb++;
+        }
+    };
+    Carve.prototype.selectPart = function (e) {
+        var part = e.currentTarget;
+        //if (Number(part.name)==this.Numb)
+        //{
+        var group = Colorful.getInstance().SpringGroup.getChildAt(Number(part.name) - 1);
+        for (var i = 0; i < group.numChildren; i++) {
+            var child = group.getChildAt(i);
+            child.alpha = 0.5;
+            child.addEventListener(egret.TouchEvent.TOUCH_TAP, this.changeColor.bind(this, child, Number(part.name), group), this);
+        }
+        //}
+    };
+    Carve.prototype.changeColor = function (img, nb, group) {
+        img.alpha = 1;
+        var next = [];
+        var turn = true;
+        for (var i = 0; i < group.numChildren; i++) {
+            var child = group.getChildAt(i);
+            if (child.alpha == 0.5) {
+                next.push(false);
+            }
+            else {
+                next.push(true);
+            }
+        }
+        for (var m = 0; m < next.length; m++) {
+            if (next[m] == false) {
+                turn = false;
+                break;
+            }
+        }
+        if (turn) {
+            //挪位置
+            var item = Colorful.getInstance().SpringNumber.getChildAt(nb - 1);
+            item.visible = false;
+            for (var j = nb; j < 30; j++) {
+                var imge = Colorful.getInstance().SpringNumber.getChildAt(j);
+                imge.x = imge.x - 80;
+            }
+            if (nb < 2) {
+                var childs = Colorful.getInstance().SpringGroup.getChildAt(nb);
+                childs.visible = true;
+            }
+            else {
+                console.log("successful");
+                Detail.getInstance().season_detail.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.onTouch, this);
+            }
+        }
+    };
+    Carve.prototype.timerComFunc = function () {
+        //this.parent.setChildIndex(this,0);
+        this.initData();
+        this.parent.removeChild(this);
+    };
+    Carve.prototype.initData = function () {
+        this.carveLine.alpha = 0;
+        this.toCarve.visible = true;
+        this.toXian.visible = false;
+        this.toPrint.visible = false;
+        this.carveLine.x = 100;
+        this.carveLine.y = 219;
+    };
+    Carve.prototype.onTouch = function () {
+        Detail.getInstance().addChild(show.getInstance());
+        show.getInstance().result.source = "Chun_jpg";
+    };
+    return Carve;
+}(eui.Component));
+__reflect(Carve.prototype, "Carve", ["eui.UIComponent", "egret.DisplayObject"]);
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.
@@ -101,55 +243,6 @@ var AssetAdapter = (function () {
     return AssetAdapter;
 }());
 __reflect(AssetAdapter.prototype, "AssetAdapter", ["eui.IAssetAdapter"]);
-//////////////////////////////////////////////////////////////////////////////////////
-//
-//  Copyright (c) 2014-present, Egret Technology.
-//  All rights reserved.
-//  Redistribution and use in source and binary forms, with or without
-//  modification, are permitted provided that the following conditions are met:
-//
-//     * Redistributions of source code must retain the above copyright
-//       notice, this list of conditions and the following disclaimer.
-//     * Redistributions in binary form must reproduce the above copyright
-//       notice, this list of conditions and the following disclaimer in the
-//       documentation and/or other materials provided with the distribution.
-//     * Neither the name of the Egret nor the
-//       names of its contributors may be used to endorse or promote products
-//       derived from this software without specific prior written permission.
-//
-//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
-//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
-//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
-//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
-//////////////////////////////////////////////////////////////////////////////////////
-var LoadingUI = (function (_super) {
-    __extends(LoadingUI, _super);
-    function LoadingUI() {
-        var _this = _super.call(this) || this;
-        _this.createView();
-        return _this;
-    }
-    LoadingUI.prototype.createView = function () {
-        this.textField = new egret.TextField();
-        this.addChild(this.textField);
-        this.textField.y = 300;
-        this.textField.width = 480;
-        this.textField.height = 100;
-        this.textField.textAlign = "center";
-    };
-    LoadingUI.prototype.onProgress = function (current, total) {
-        this.textField.text = "Loading..." + current + "/" + total;
-    };
-    return LoadingUI;
-}(egret.Sprite));
-__reflect(LoadingUI.prototype, "LoadingUI", ["RES.PromiseTaskReporter"]);
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.
@@ -445,111 +538,55 @@ var ThemeAdapter = (function () {
     return ThemeAdapter;
 }());
 __reflect(ThemeAdapter.prototype, "ThemeAdapter", ["eui.IThemeAdapter"]);
-var Carve = (function (_super) {
-    __extends(Carve, _super);
-    function Carve() {
-        return _super.call(this) || this;
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) 2014-present, Egret Technology.
+//  All rights reserved.
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions are met:
+//
+//     * Redistributions of source code must retain the above copyright
+//       notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above copyright
+//       notice, this list of conditions and the following disclaimer in the
+//       documentation and/or other materials provided with the distribution.
+//     * Neither the name of the Egret nor the
+//       names of its contributors may be used to endorse or promote products
+//       derived from this software without specific prior written permission.
+//
+//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
+//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
+//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//////////////////////////////////////////////////////////////////////////////////////
+var LoadingUI = (function (_super) {
+    __extends(LoadingUI, _super);
+    function LoadingUI() {
+        var _this = _super.call(this) || this;
+        _this.createView();
+        return _this;
     }
-    Carve.getInstance = function () {
-        if (!Carve.shared) {
-            Carve.shared = new Carve();
-        }
-        return Carve.shared;
+    LoadingUI.prototype.createView = function () {
+        this.textField = new egret.TextField();
+        this.addChild(this.textField);
+        this.textField.y = 300;
+        this.textField.width = 480;
+        this.textField.height = 100;
+        this.textField.textAlign = "center";
     };
-    Carve.prototype.partAdded = function (partName, instance) {
-        _super.prototype.partAdded.call(this, partName, instance);
+    LoadingUI.prototype.onProgress = function (current, total) {
+        this.textField.text = "Loading..." + current + "/" + total;
     };
-    Carve.prototype.childrenCreated = function () {
-        _super.prototype.childrenCreated.call(this);
-        //this.carveLine.addEventListener(egret.TouchEvent.TOUCH_TAP,this.jump,this);
-        this.toCarve.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetCarve, this);
-        this.toXian.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetXian, this);
-        this.toPrint.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetPrint, this);
-        this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
-    };
-    Carve.prototype.jump = function () {
-        var timer = new egret.Timer(2500, 1);
-        //注册事件侦听器
-        timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
-        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.tolarge, this);
-        //开始计时
-        timer.start();
-    };
-    Carve.prototype.timerFunc = function () {
-        //console.log("start");
-    };
-    Carve.prototype.toGetPrint = function () {
-        //线稿出现
-        this.removeChild(this.mc);
-        egret.Tween.get(this.carveLine, { loop: false }).to({ alpha: 0 }, 200).to({ alpha: 1 }, 2000);
-        this.jump();
-        this.toXian.visible = false;
-        this.toPrint.visible = false;
-        this.toCarve.visible = false;
-    };
-    Carve.prototype.toGetCarve = function () {
-        //金色的线稿显示
-        this.toXian.visible = true;
-        this.toCarve.visible = false;
-    };
-    Carve.prototype.toGetXian = function () {
-        var data = RES.getRes("yin_json");
-        var txtr = RES.getRes("yin_png");
-        var mcFactory = new egret.MovieClipDataFactory(data, txtr);
-        this.mc = new egret.MovieClip(mcFactory.generateMovieClipData());
-        this.addChild(this.mc);
-        this.mc.gotoAndPlay(1, 1);
-        this.toXian.visible = false;
-        this.toPrint.visible = true;
-    };
-    Carve.prototype.tolarge = function () {
-        this.initData();
-        this.addChild(Colorful.getInstance());
-        Colorful.getInstance().carveLineLarge.source = this.carveLine.source;
-        var nb = 1;
-        while (nb <= 30) {
-            var im = new eui.Image("resource/assets/game/Spring/Lichun/Number/" + String(nb) + ".png");
-            im.width = 80;
-            im.height = 80;
-            im.x = (nb - 1) * 80;
-            im.name = String(nb);
-            Colorful.getInstance().SpringNumber.addChild(im);
-            im.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectPart, this);
-            nb++;
-        }
-    };
-    Carve.prototype.selectPart = function (e) {
-        var part = e.currentTarget;
-        //if (Number(part.name)==this.Numb)
-        //{
-        var group = Colorful.getInstance().SpringGroup.getChildAt(Number(part.name) - 1);
-        for (var i = 0; i < group.numChildren; i++) {
-            var child = group.getChildAt(i);
-            child.alpha = 0.5;
-            child.addEventListener(egret.TouchEvent.TOUCH_TAP, this.changeColor, this);
-        }
-        //}
-    };
-    Carve.prototype.changeColor = function (e) {
-        var img = e.currentTarget;
-        img.alpha = 1;
-    };
-    Carve.prototype.timerComFunc = function () {
-        //this.parent.setChildIndex(this,0);
-        this.initData();
-        this.parent.removeChild(this);
-    };
-    Carve.prototype.initData = function () {
-        this.carveLine.alpha = 0;
-        this.toCarve.visible = true;
-        this.toXian.visible = false;
-        this.toPrint.visible = false;
-        this.carveLine.x = 100;
-        this.carveLine.y = 219;
-    };
-    return Carve;
-}(eui.Component));
-__reflect(Carve.prototype, "Carve", ["eui.UIComponent", "egret.DisplayObject"]);
+    return LoadingUI;
+}(egret.Sprite));
+__reflect(LoadingUI.prototype, "LoadingUI", ["RES.PromiseTaskReporter"]);
 var Colorful = (function (_super) {
     __extends(Colorful, _super);
     function Colorful() {
@@ -567,16 +604,6 @@ var Colorful = (function (_super) {
     Colorful.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
-        //this.Numb=1;
-        // for (var item in this.SpringGroup)
-        // {
-        // 	if (this.SpringGroup[item].name=="1"){
-        // 		this.SpringGroup[item].visible=true;
-        // 		this.Numb=1;
-        // 	}else{
-        // 		this.SpringGroup[item].visible=false;
-        // 	}
-        // }
     };
     Colorful.prototype.timerComFunc = function () {
         this.parent.removeChild(this);
@@ -738,6 +765,26 @@ var Season = (function (_super) {
     return Season;
 }(eui.Component));
 __reflect(Season.prototype, "Season", ["eui.UIComponent", "egret.DisplayObject"]);
+var show = (function (_super) {
+    __extends(show, _super);
+    function show() {
+        return _super.call(this) || this;
+    }
+    show.getInstance = function () {
+        if (!show.shared) {
+            show.shared = new show();
+        }
+        return show.shared;
+    };
+    show.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    show.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+    };
+    return show;
+}(eui.Component));
+__reflect(show.prototype, "show", ["eui.UIComponent", "egret.DisplayObject"]);
 var StartGame = (function (_super) {
     __extends(StartGame, _super);
     function StartGame() {

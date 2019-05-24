@@ -69,5 +69,10 @@
         "path": "..\\resource\\game\\Colorful.ts",
         "class": "Colorful",
         "parentPath": ""
+    },
+    "16ae9e6967a": {
+        "path": "..\\resource\\game\\show.ts",
+        "class": "show",
+        "parentPath": ""
     }
 }
