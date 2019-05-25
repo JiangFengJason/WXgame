@@ -31,7 +31,7 @@ class Detail extends eui.Component implements  eui.UIComponent {
 		this.season_detail.addEventListener(egret.TouchEvent.TOUCH_TAP,this.toPass,this);
 		this.back.addEventListener(egret.TouchEvent.TOUCH_TAP,this.toSeason,this);
 	}
-	private toPass()
+	public toPass()
 	{
 		//this.parent.removeChild(this);
 		this.addChild(Carve.getInstance());

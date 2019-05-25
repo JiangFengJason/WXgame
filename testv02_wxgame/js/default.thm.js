@@ -1515,13 +1515,56 @@ var egret = window.egret;window.skins={};
 	return SeasonSkin;
 })(eui.Skin);generateEUI.paths['resource/game/show.exml'] = window.showSkin = (function (_super) {
 	__extends(showSkin, _super);
+	var showSkin$Skin9 = 	(function (_super) {
+		__extends(showSkin$Skin9, _super);
+		function showSkin$Skin9() {
+			_super.call(this);
+			this.skinParts = ["labelDisplay"];
+			
+			this.elementsContent = [this._Image1_i(),this.labelDisplay_i()];
+			this.states = [
+				new eui.State ("up",
+					[
+					])
+				,
+				new eui.State ("down",
+					[
+						new eui.SetProperty("_Image1","source","back_png")
+					])
+				,
+				new eui.State ("disabled",
+					[
+						new eui.SetProperty("_Image1","source","back_png")
+					])
+			];
+		}
+		var _proto = showSkin$Skin9.prototype;
+
+		_proto._Image1_i = function () {
+			var t = new eui.Image();
+			this._Image1 = t;
+			t.percentHeight = 100;
+			t.source = "back_png";
+			t.percentWidth = 100;
+			return t;
+		};
+		_proto.labelDisplay_i = function () {
+			var t = new eui.Label();
+			this.labelDisplay = t;
+			t.horizontalCenter = 0;
+			t.verticalCenter = 0;
+			return t;
+		};
+		return showSkin$Skin9;
+	})(eui.Skin);
+
 	function showSkin() {
 		_super.call(this);
-		this.skinParts = ["result"];
+		this.skinParts = ["result","back"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.result_i()];
+		this.elementsContent = [this.result_i(),this.back_i()];
 	}
 	var _proto = showSkin.prototype;
 
@@ -1532,6 +1575,17 @@ var egret = window.egret;window.skins={};
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
+		return t;
+	};
+	_proto.back_i = function () {
+		var t = new eui.Button();
+		this.back = t;
+		t.height = 34;
+		t.label = "";
+		t.left = 45;
+		t.top = 45;
+		t.width = 47;
+		t.skinName = showSkin$Skin9;
 		return t;
 	};
 	return showSkin;

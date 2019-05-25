@@ -124,7 +124,8 @@ var Carve = (function (_super) {
         for (var i = 0; i < group.numChildren; i++) {
             var child = group.getChildAt(i);
             child.alpha = 0.5;
-            child.addEventListener(egret.TouchEvent.TOUCH_TAP, this.changeColor.bind(this, child, Number(part.name), group), this);
+            this.func = this.changeColor.bind(this, child, Number(part.name), group);
+            child.addEventListener(egret.TouchEvent.TOUCH_TAP, this.func, this);
         }
         //}
     };
@@ -161,7 +162,8 @@ var Carve = (function (_super) {
             }
             else {
                 console.log("successful");
-                Detail.getInstance().season_detail.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.onTouch, this);
+                Detail.getInstance().season_detail.removeEventListener(egret.TouchEvent.TOUCH_TAP, Detail.getInstance().toPass, Detail.getInstance());
+                //Detail.getInstance().season_detail.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTouch,this);
             }
         }
     };
@@ -608,6 +610,18 @@ var Colorful = (function (_super) {
     Colorful.prototype.timerComFunc = function () {
         this.parent.removeChild(this);
         Carve.getInstance().timerComFunc();
+        for (var i = 0; i < this.SpringGroup.numChildren; i++) {
+            var group = this.SpringGroup.getChildAt(i);
+            for (var j = 0; j < group.numChildren; j++) {
+                var im = group.getChildAt(j);
+                im.alpha = 0;
+                im.removeEventListener(egret.TouchEvent.TOUCH_TAP, Carve.getInstance().func, Carve.getInstance());
+            }
+            if (i != 0) {
+                this.SpringGroup.getChildAt(i).visible = false;
+            }
+        }
+        this.SpringNumber.removeChildren();
     };
     return Colorful;
 }(eui.Component));
@@ -781,6 +795,10 @@ var show = (function (_super) {
     };
     show.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
+        this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toReturn, this);
+    };
+    show.prototype.toReturn = function () {
+        this.parent.removeChild(this);
     };
     return show;
 }(eui.Component));

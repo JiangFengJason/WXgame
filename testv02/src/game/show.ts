@@ -1,5 +1,6 @@
 class show extends eui.Component implements  eui.UIComponent {
 	public result:eui.Image;
+	public back:eui.Button;
 
 	private static shared:show;
 	public static getInstance(){
@@ -21,6 +22,10 @@ class show extends eui.Component implements  eui.UIComponent {
 	protected childrenCreated():void
 	{
 		super.childrenCreated();
+		this.back.addEventListener(egret.TouchEvent.TOUCH_TAP,this.toReturn,this)
 	}
-	
+	private toReturn()
+	{
+		this.parent.removeChild(this);
+	}
 }

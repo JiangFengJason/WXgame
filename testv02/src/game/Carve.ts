@@ -7,6 +7,7 @@ class Carve extends eui.Component implements  eui.UIComponent {
 	public toXian:eui.Button;
 	public toPrint:eui.Button;
 	public mc:egret.MovieClip;
+	public func:any;
 
 	private static shared:Carve;
 	public static getInstance(){
@@ -101,7 +102,8 @@ class Carve extends eui.Component implements  eui.UIComponent {
 			{
 				var child:eui.Image=<eui.Image>group.getChildAt(i);
 				child.alpha=0.5;
-				child.addEventListener(egret.TouchEvent.TOUCH_TAP,this.changeColor.bind(this,child,Number(part.name),group),this);
+				this.func=this.changeColor.bind(this,child,Number(part.name),group);
+				child.addEventListener(egret.TouchEvent.TOUCH_TAP,this.func,this);
 			}
 		//}
 	}	
@@ -145,7 +147,8 @@ class Carve extends eui.Component implements  eui.UIComponent {
 			else
 			{
 				console.log("successful");
-				Detail.getInstance().season_detail.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.onTouch, this);
+				Detail.getInstance().season_detail.removeEventListener(egret.TouchEvent.TOUCH_TAP, Detail.getInstance().toPass,  Detail.getInstance());
+				//Detail.getInstance().season_detail.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTouch,this);
 			}
 		}
 		
