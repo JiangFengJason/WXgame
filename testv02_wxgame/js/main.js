@@ -64,6 +64,10 @@ var Carve = (function (_super) {
         this.toXian.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetXian, this);
         this.toPrint.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetPrint, this);
         this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
+        this.Springsuccess = false;
+        this.Summersuccess = false;
+        this.Autumnsuccess = false;
+        this.Wintersuccess = false;
     };
     Carve.prototype.jump = function () {
         var timer = new egret.Timer(2500, 1);
@@ -104,30 +108,43 @@ var Carve = (function (_super) {
         this.initData();
         this.addChild(Colorful.getInstance());
         Colorful.getInstance().carveLineLarge.source = this.carveLine.source;
-        var nb = 1;
-        while (nb <= 30) {
-            var im = new eui.Image("resource/assets/game/Spring/Lichun/Number/" + String(nb) + ".png");
-            im.width = 80;
-            im.height = 80;
-            im.x = (nb - 1) * 80;
-            im.name = String(nb);
-            Colorful.getInstance().SpringNumber.addChild(im);
-            im.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectPart, this);
-            nb++;
+        switch (this.carveLine.source) {
+            case "Xiangaozip_jpg":
+                //封装函数，参数为文件路径，SpringGroup
+                var nb = 1;
+                while (nb <= 2) {
+                    var im = new eui.Image("resource/assets/game/Spring/Lichun/Number/" + String(nb) + ".png");
+                    im.width = 80;
+                    im.height = 80;
+                    im.x = (nb - 1) * 80;
+                    im.name = String(nb);
+                    Colorful.getInstance().Numbers.addChild(im);
+                    im.once(egret.TouchEvent.TOUCH_TAP, this.selectPart, this);
+                    if (nb != 1) {
+                        im.touchEnabled = false;
+                    }
+                    nb++;
+                }
+                Colorful.getInstance().SpringGroup.getChildAt(0).visible = true;
+                break;
+            case "LixiaXian_png":
+                break;
+            case "LiqiuXian_png":
+                break;
+            case "LidongXian_png":
+                break;
         }
     };
+    //增加参数，将SpringGroup改掉
     Carve.prototype.selectPart = function (e) {
         var part = e.currentTarget;
-        //if (Number(part.name)==this.Numb)
-        //{
         var group = Colorful.getInstance().SpringGroup.getChildAt(Number(part.name) - 1);
         for (var i = 0; i < group.numChildren; i++) {
             var child = group.getChildAt(i);
             child.alpha = 0.5;
             this.func = this.changeColor.bind(this, child, Number(part.name), group);
-            child.addEventListener(egret.TouchEvent.TOUCH_TAP, this.func, this);
+            child.once(egret.TouchEvent.TOUCH_TAP, this.func, this);
         }
-        //}
     };
     Carve.prototype.changeColor = function (img, nb, group) {
         img.alpha = 1;
@@ -138,7 +155,7 @@ var Carve = (function (_super) {
             if (child.alpha == 0.5) {
                 next.push(false);
             }
-            else {
+            else if (child.alpha == 1) {
                 next.push(true);
             }
         }
@@ -150,20 +167,22 @@ var Carve = (function (_super) {
         }
         if (turn) {
             //挪位置
-            var item = Colorful.getInstance().SpringNumber.getChildAt(nb - 1);
+            //封装函数，将其中的SpringGroup和胜利标志匹配
+            var item = Colorful.getInstance().Numbers.getChildAt(nb - 1);
             item.visible = false;
-            for (var j = nb; j < 30; j++) {
-                var imge = Colorful.getInstance().SpringNumber.getChildAt(j);
+            for (var j = nb; j < 2; j++) {
+                var imge = Colorful.getInstance().Numbers.getChildAt(j);
                 imge.x = imge.x - 80;
             }
             if (nb < 2) {
                 var childs = Colorful.getInstance().SpringGroup.getChildAt(nb);
                 childs.visible = true;
+                var nbimg = Colorful.getInstance().Numbers.getChildAt(nb);
+                nbimg.touchEnabled = true;
             }
             else {
                 console.log("successful");
-                Detail.getInstance().season_detail.removeEventListener(egret.TouchEvent.TOUCH_TAP, Detail.getInstance().toPass, Detail.getInstance());
-                //Detail.getInstance().season_detail.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTouch,this);
+                this.Springsuccess = true;
             }
         }
     };
@@ -177,12 +196,6 @@ var Carve = (function (_super) {
         this.toCarve.visible = true;
         this.toXian.visible = false;
         this.toPrint.visible = false;
-        this.carveLine.x = 100;
-        this.carveLine.y = 219;
-    };
-    Carve.prototype.onTouch = function () {
-        Detail.getInstance().addChild(show.getInstance());
-        show.getInstance().result.source = "Chun_jpg";
     };
     return Carve;
 }(eui.Component));
@@ -610,6 +623,7 @@ var Colorful = (function (_super) {
     Colorful.prototype.timerComFunc = function () {
         this.parent.removeChild(this);
         Carve.getInstance().timerComFunc();
+        //封装一个函数，参数为SpringGroup或者其他，从而清空内容
         for (var i = 0; i < this.SpringGroup.numChildren; i++) {
             var group = this.SpringGroup.getChildAt(i);
             for (var j = 0; j < group.numChildren; j++) {
@@ -621,7 +635,7 @@ var Colorful = (function (_super) {
                 this.SpringGroup.getChildAt(i).visible = false;
             }
         }
-        this.SpringNumber.removeChildren();
+        this.Numbers.removeChildren();
     };
     return Colorful;
 }(eui.Component));
@@ -651,6 +665,11 @@ var Detail = (function (_super) {
         switch (this.season_detail.source) {
             case "Lichun_png":
                 Carve.getInstance().carveLine.source = "Xiangaozip_jpg";
+                if (Carve.getInstance().Springsuccess) {
+                    this.removeChild(Carve.getInstance());
+                    this.addChild(show.getInstance());
+                    show.getInstance().result.source = "Chun_jpg";
+                }
                 break;
             case "Lixia_png":
                 Carve.getInstance().carveLine.source = "LixiaXian_png";

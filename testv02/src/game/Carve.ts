@@ -8,6 +8,10 @@ class Carve extends eui.Component implements  eui.UIComponent {
 	public toPrint:eui.Button;
 	public mc:egret.MovieClip;
 	public func:any;
+	public Springsuccess:boolean;
+	public Summersuccess:boolean;
+	public Autumnsuccess:boolean;
+	public Wintersuccess:boolean;
 
 	private static shared:Carve;
 	public static getInstance(){
@@ -34,7 +38,10 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		this.toXian.addEventListener(egret.TouchEvent.TOUCH_TAP,this.toGetXian,this);
 		this.toPrint.addEventListener(egret.TouchEvent.TOUCH_TAP,this.toGetPrint,this);
 		this.back.addEventListener(egret.TouchEvent.TOUCH_TAP,this.timerComFunc,this);
-
+		this.Springsuccess=false;
+		this.Summersuccess=false;
+		this.Autumnsuccess=false;
+		this.Wintersuccess=false;
 		
 	}
 
@@ -80,32 +87,48 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		this.initData();
 		this.addChild(Colorful.getInstance());
 		Colorful.getInstance().carveLineLarge.source=this.carveLine.source;
-		var nb=1;
-		while (nb<=30){
-			var im=new eui.Image("resource/assets/game/Spring/Lichun/Number/"+String(nb)+".png");
-			im.width=80;
-			im.height=80;
-			im.x=(nb-1)*80;
-			im.name=String(nb);
-			Colorful.getInstance().SpringNumber.addChild(im);
-			im.addEventListener(egret.TouchEvent.TOUCH_TAP,this.selectPart,this);
-			nb++;
-		}
+		switch(this.carveLine.source){
+			case "Xiangaozip_jpg":
+			//封装函数，参数为文件路径，SpringGroup
+				var nb=1;
+				while (nb<=2){
+					//https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Spring/Lichun/Number/
+					var im=new eui.Image("resource/assets/game/Spring/Lichun/Number/"+String(nb)+".png");
+					im.width=80;
+					im.height=80;
+					im.x=(nb-1)*80;
+					im.name=String(nb);
+					Colorful.getInstance().Numbers.addChild(im);
+					im.once(egret.TouchEvent.TOUCH_TAP,this.selectPart,this);
+					if (nb!=1){
+						im.touchEnabled=false;
+					}
+					nb++;
+				}
+				Colorful.getInstance().SpringGroup.getChildAt(0).visible=true;
+				break;
+			case "LixiaXian_png":
 
+				break;
+			case "LiqiuXian_png":
+
+				break;
+			case "LidongXian_png":
+
+				break;
+		}
 	}
+	//增加参数，将SpringGroup改掉
 	private selectPart(e:egret.TouchEvent){
 		var part:eui.Image=<eui.Image>e.currentTarget;
-		//if (Number(part.name)==this.Numb)
-		//{
-			var group:eui.Group=<eui.Group>Colorful.getInstance().SpringGroup.getChildAt(Number(part.name)-1);
-			for (var i=0;i<group.numChildren;i++)
-			{
-				var child:eui.Image=<eui.Image>group.getChildAt(i);
-				child.alpha=0.5;
-				this.func=this.changeColor.bind(this,child,Number(part.name),group);
-				child.addEventListener(egret.TouchEvent.TOUCH_TAP,this.func,this);
-			}
-		//}
+		var group:eui.Group=<eui.Group>Colorful.getInstance().SpringGroup.getChildAt(Number(part.name)-1);
+		for (var i=0;i<group.numChildren;i++)
+		{
+			var child:eui.Image=<eui.Image>group.getChildAt(i);
+			child.alpha=0.5;
+			this.func=this.changeColor.bind(this,child,Number(part.name),group);
+			child.once(egret.TouchEvent.TOUCH_TAP,this.func,this);
+		}
 	}	
 	private changeColor(img:eui.Image,nb:number,group:eui.Group){
 		img.alpha=1;
@@ -117,7 +140,7 @@ class Carve extends eui.Component implements  eui.UIComponent {
 			if (child.alpha==0.5){
 				next.push(false);
 			}
-			else{
+			else if (child.alpha==1){
 				next.push(true);
 			}
 		}
@@ -132,23 +155,25 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		if (turn)
 		{
 			//挪位置
-			var item=Colorful.getInstance().SpringNumber.getChildAt(nb-1);
+			//封装函数，将其中的SpringGroup和胜利标志匹配
+			var item=Colorful.getInstance().Numbers.getChildAt(nb-1);
 			item.visible=false;
-			for(var j=nb;j<30;j++)
+			for(var j=nb;j<2;j++)
 			{
-				var imge:eui.Image=<eui.Image>Colorful.getInstance().SpringNumber.getChildAt(j);
+				var imge:eui.Image=<eui.Image>Colorful.getInstance().Numbers.getChildAt(j);
 				imge.x=imge.x-80;
 			}
 			if (nb<2)
 			{
 				var childs:eui.Group=<eui.Group>Colorful.getInstance().SpringGroup.getChildAt(nb);
 				childs.visible=true;
+				var nbimg:eui.Image=<eui.Image>Colorful.getInstance().Numbers.getChildAt(nb);
+				nbimg.touchEnabled=true;
 			}
-			else
+			else 
 			{
 				console.log("successful");
-				Detail.getInstance().season_detail.removeEventListener(egret.TouchEvent.TOUCH_TAP, Detail.getInstance().toPass,  Detail.getInstance());
-				//Detail.getInstance().season_detail.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTouch,this);
+				this.Springsuccess=true;
 			}
 		}
 		
@@ -163,11 +188,5 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		this.toCarve.visible=true;
 		this.toXian.visible=false;
 		this.toPrint.visible=false;
-		this.carveLine.x=100;
-		this.carveLine.y=219;
-	}
-	private onTouch(){
-		Detail.getInstance().addChild(show.getInstance());
-		show.getInstance().result.source="Chun_jpg";
 	}
 }

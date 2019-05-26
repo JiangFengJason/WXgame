@@ -3,18 +3,18 @@
 	<w:Config id="16ae36977fd" ></w:Config>
 	<e:Image id="carveLineLarge" source="Xiangaozip_jpg" anchorOffsetX="0" anchorOffsetY="0" alpha="1" scaleX="1" x="0" y="0" scaleY="1" width="640" height="1136"/>
 	<e:Group id="SpringGroup" x="306" y="74.5">
-		<e:Group id="group1" x="0" y="0" alpha="1" name="1">
+		<e:Group x="0" y="0" alpha="1" visible="false">
 			<e:Image width="168.67" height="158" x="0" y="478.84" source="1_3_png" anchorOffsetY="0" anchorOffsetX="0" alpha="0"/>
 			<e:Image width="62.5" height="156.5" x="172" y="114.5" source="1_2_png" anchorOffsetY="0" anchorOffsetX="0" alpha="0"/>
 			<e:Image width="128.39" height="72.76" x="58.49" y="1.53" anchorOffsetX="0" anchorOffsetY="0" source="1_1_png" rotation="0.88" alpha="0"/>
 		</e:Group>
-		<e:Group id="group2" x="83.34" y="49.5" alpha="1" name="2" visible="false">
+		<e:Group x="83.34" y="49.5" alpha="1" visible="false">
 			<e:Image width="98" height="45.5" x="0" y="0" source="2_1_png" anchorOffsetX="0" anchorOffsetY="0" alpha="0"/>
 			<e:Image width="58.4" height="102" x="59.86" y="56.6" source="2_2_png" anchorOffsetY="0" anchorOffsetX="0" alpha="0"/>
 		</e:Group>
 	</e:Group>
-	<e:Scroller id="Numbers" width="640" height="80" x="0" y="1056" anchorOffsetY="0" anchorOffsetX="0">
-		<e:Group id="SpringNumber" anchorOffsetX="0" width="880" height="80">
+	<e:Scroller width="640" height="80" x="0" y="1056" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Group id="Numbers" anchorOffsetX="0" width="880" height="80">
 		</e:Group>
 	</e:Scroller>
 	<e:Button id="back" label="" width="47" height="34" left="45" top="45">

@@ -852,11 +852,11 @@ var egret = window.egret;window.skins={};
 
 	function ColorfulSkin() {
 		_super.call(this);
-		this.skinParts = ["carveLineLarge","group1","group2","SpringGroup","SpringNumber","Numbers","back"];
+		this.skinParts = ["carveLineLarge","SpringGroup","Numbers","back"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.carveLineLarge_i(),this.SpringGroup_i(),this.Numbers_i(),this.back_i()];
+		this.elementsContent = [this.carveLineLarge_i(),this.SpringGroup_i(),this._Scroller1_i(),this.back_i()];
 	}
 	var _proto = ColorfulSkin.prototype;
 
@@ -880,14 +880,13 @@ var egret = window.egret;window.skins={};
 		this.SpringGroup = t;
 		t.x = 306;
 		t.y = 74.5;
-		t.elementsContent = [this.group1_i(),this.group2_i()];
+		t.elementsContent = [this._Group1_i(),this._Group2_i()];
 		return t;
 	};
-	_proto.group1_i = function () {
+	_proto._Group1_i = function () {
 		var t = new eui.Group();
-		this.group1 = t;
 		t.alpha = 1;
-		t.name = "1";
+		t.visible = false;
 		t.x = 0;
 		t.y = 0;
 		t.elementsContent = [this._Image1_i(),this._Image2_i(),this._Image3_i()];
@@ -930,11 +929,9 @@ var egret = window.egret;window.skins={};
 		t.y = 1.53;
 		return t;
 	};
-	_proto.group2_i = function () {
+	_proto._Group2_i = function () {
 		var t = new eui.Group();
-		this.group2 = t;
 		t.alpha = 1;
-		t.name = "2";
 		t.visible = false;
 		t.x = 83.34;
 		t.y = 49.5;
@@ -965,21 +962,20 @@ var egret = window.egret;window.skins={};
 		t.y = 56.6;
 		return t;
 	};
-	_proto.Numbers_i = function () {
+	_proto._Scroller1_i = function () {
 		var t = new eui.Scroller();
-		this.Numbers = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
 		t.height = 80;
 		t.width = 640;
 		t.x = 0;
 		t.y = 1056;
-		t.viewport = this.SpringNumber_i();
+		t.viewport = this.Numbers_i();
 		return t;
 	};
-	_proto.SpringNumber_i = function () {
+	_proto.Numbers_i = function () {
 		var t = new eui.Group();
-		this.SpringNumber = t;
+		this.Numbers = t;
 		t.anchorOffsetX = 0;
 		t.height = 80;
 		t.width = 880;

@@ -38,6 +38,11 @@ class Detail extends eui.Component implements  eui.UIComponent {
 		switch (this.season_detail.source){
 			case "Lichun_png":
 				Carve.getInstance().carveLine.source="Xiangaozip_jpg";
+				if (Carve.getInstance().Springsuccess){
+					this.removeChild(Carve.getInstance());
+					this.addChild(show.getInstance());
+					show.getInstance().result.source="Chun_jpg";
+				}
 				break;
 
 			case "Lixia_png":
