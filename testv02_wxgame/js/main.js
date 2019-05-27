@@ -61,7 +61,6 @@ var Carve = (function (_super) {
         _super.prototype.childrenCreated.call(this);
         //this.carveLine.addEventListener(egret.TouchEvent.TOUCH_TAP,this.jump,this);
         this.toCarve.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetCarve, this);
-        this.toXian.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetXian, this);
         this.toPrint.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetPrint, this);
         this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
         this.Springsuccess = false;
@@ -70,7 +69,7 @@ var Carve = (function (_super) {
         this.Wintersuccess = false;
     };
     Carve.prototype.jump = function () {
-        var timer = new egret.Timer(2500, 1);
+        var timer = new egret.Timer(2000, 1);
         //注册事件侦听器
         timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
         timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.tolarge, this);
@@ -82,63 +81,75 @@ var Carve = (function (_super) {
     };
     Carve.prototype.toGetPrint = function () {
         //线稿出现
-        this.removeChild(this.mc);
-        egret.Tween.get(this.carveLine, { loop: false }).to({ alpha: 0 }, 200).to({ alpha: 1 }, 2000);
+        var num = this.numChildren;
+        this.setChildIndex(this.blackCarve, num - 1);
+        egret.Tween.get(this.blackCarve, { loop: false }).to({ alpha: 0 }, 200).to({ alpha: 1 }, 1500);
         this.jump();
-        this.toXian.visible = false;
         this.toPrint.visible = false;
         this.toCarve.visible = false;
     };
     Carve.prototype.toGetCarve = function () {
         //金色的线稿显示
-        this.toXian.visible = true;
+        egret.Tween.get(this.goldCarve, { loop: false }).to({ alpha: 0 }, 200).to({ alpha: 1 }, 1500);
         this.toCarve.visible = false;
+        var timer = new egret.Timer(2500, 1);
+        //注册事件侦听器
+        timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
+        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.toGetXian, this);
+        //开始计时
+        timer.start();
     };
     Carve.prototype.toGetXian = function () {
         var data = RES.getRes("yin_json");
         var txtr = RES.getRes("yin_png");
         var mcFactory = new egret.MovieClipDataFactory(data, txtr);
         this.mc = new egret.MovieClip(mcFactory.generateMovieClipData());
+        this.mc.x = 120;
+        this.mc.y = 278;
         this.addChild(this.mc);
         this.mc.gotoAndPlay(1, 1);
-        this.toXian.visible = false;
         this.toPrint.visible = true;
     };
     Carve.prototype.tolarge = function () {
         this.initData();
         this.addChild(Colorful.getInstance());
+        this.removeChild(this.mc);
         Colorful.getInstance().carveLineLarge.source = this.carveLine.source;
         switch (this.carveLine.source) {
             case "Xiangaozip_jpg":
-                //封装函数，参数为文件路径，SpringGroup
-                var nb = 1;
-                while (nb <= 2) {
-                    var im = new eui.Image("resource/assets/game/Spring/Lichun/Number/" + String(nb) + ".png");
-                    im.width = 80;
-                    im.height = 80;
-                    im.x = (nb - 1) * 80;
-                    im.name = String(nb);
-                    Colorful.getInstance().Numbers.addChild(im);
-                    im.once(egret.TouchEvent.TOUCH_TAP, this.selectPart, this);
-                    if (nb != 1) {
-                        im.touchEnabled = false;
-                    }
-                    nb++;
-                }
-                Colorful.getInstance().SpringGroup.getChildAt(0).visible = true;
+                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Spring/Lichun/Number/", 2, Colorful.getInstance().SpringGroup);
                 break;
             case "LixiaXian_png":
+                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Summer/Lixia/Number/", 2, Colorful.getInstance().SummerGroup);
                 break;
             case "LiqiuXian_png":
+                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Autumn/Liqiu/Number/", 2, Colorful.getInstance().AutumnGroup);
                 break;
             case "LidongXian_png":
+                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Winter/Lidong/Number/", 2, Colorful.getInstance().WinterGroup);
                 break;
         }
     };
-    //增加参数，将SpringGroup改掉
-    Carve.prototype.selectPart = function (e) {
-        var part = e.currentTarget;
-        var group = Colorful.getInstance().SpringGroup.getChildAt(Number(part.name) - 1);
+    Carve.prototype.toDifferentlarge = function (url, seasonNb, group) {
+        var nb = 1;
+        while (nb <= seasonNb) {
+            //https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Spring/Lichun/Number/
+            var im = new eui.Image(url + String(nb) + ".png");
+            im.width = 80;
+            im.height = 80;
+            im.x = (nb - 1) * 80;
+            im.name = String(nb);
+            Colorful.getInstance().Numbers.addChild(im);
+            im.once(egret.TouchEvent.TOUCH_TAP, this.selectPart.bind(this, im, group), this);
+            if (nb != 1) {
+                im.touchEnabled = false;
+            }
+            nb++;
+        }
+        group.getChildAt(0).visible = true;
+    };
+    Carve.prototype.selectPart = function (part, Seasongroup) {
+        var group = Seasongroup.getChildAt(Number(part.name) - 1);
         for (var i = 0; i < group.numChildren; i++) {
             var child = group.getChildAt(i);
             child.alpha = 0.5;
@@ -170,19 +181,34 @@ var Carve = (function (_super) {
             //封装函数，将其中的SpringGroup和胜利标志匹配
             var item = Colorful.getInstance().Numbers.getChildAt(nb - 1);
             item.visible = false;
-            for (var j = nb; j < 2; j++) {
+            for (var j = nb; j < Colorful.getInstance().Numbers.numChildren; j++) {
                 var imge = Colorful.getInstance().Numbers.getChildAt(j);
                 imge.x = imge.x - 80;
             }
-            if (nb < 2) {
-                var childs = Colorful.getInstance().SpringGroup.getChildAt(nb);
+            if (nb < Colorful.getInstance().Numbers.numChildren) {
+                var childs = group.parent.getChildAt(nb);
                 childs.visible = true;
                 var nbimg = Colorful.getInstance().Numbers.getChildAt(nb);
                 nbimg.touchEnabled = true;
             }
             else {
                 console.log("successful");
-                this.Springsuccess = true;
+                if (group.parent == Colorful.getInstance().SpringGroup) {
+                    this.Springsuccess = true;
+                    console.log("Spring");
+                }
+                else if (group.parent == Colorful.getInstance().SummerGroup) {
+                    this.Summersuccess = true;
+                    console.log("Summer");
+                }
+                else if (group.parent == Colorful.getInstance().AutumnGroup) {
+                    this.Autumnsuccess = true;
+                    console.log("Autumn");
+                }
+                else if (group.parent == Colorful.getInstance().WinterGroup) {
+                    this.Wintersuccess = true;
+                    console.log("Winter");
+                }
             }
         }
     };
@@ -193,8 +219,9 @@ var Carve = (function (_super) {
     };
     Carve.prototype.initData = function () {
         this.carveLine.alpha = 0;
+        this.blackCarve.alpha = 0;
+        this.goldCarve.alpha = 0;
         this.toCarve.visible = true;
-        this.toXian.visible = false;
         this.toPrint.visible = false;
     };
     return Carve;
@@ -344,13 +371,13 @@ var Main = (function (_super) {
                         _a.trys.push([0, 4, , 5]);
                         loadingView = new LoadingUI();
                         this.stage.addChild(loadingView);
-                        // await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
-                        return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
+                        return [4 /*yield*/, RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/")];
                     case 1:
-                        // await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
                         _a.sent();
+                        // await RES.loadConfig("resource/default.res.json","resource/")
                         return [4 /*yield*/, this.loadTheme()];
                     case 2:
+                        // await RES.loadConfig("resource/default.res.json","resource/")
                         _a.sent();
                         return [4 /*yield*/, RES.loadGroup("preload", 0, loadingView)];
                     case 3:
@@ -371,8 +398,8 @@ var Main = (function (_super) {
         return new Promise(function (resolve, reject) {
             // load skin theme configuration file, you can manually modify the file. And replace the default skin.
             //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
-            // let theme = new eui.Theme("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.thm.json", this.stage);
-            var theme = new eui.Theme("resource/default.thm.json", _this.stage);
+            var theme = new eui.Theme("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.thm.json", _this.stage);
+            //let theme = new eui.Theme("resource/default.thm.json", this.stage);
             theme.addEventListener(eui.UIEvent.COMPLETE, function () {
                 resolve();
             }, _this);
@@ -623,19 +650,24 @@ var Colorful = (function (_super) {
     Colorful.prototype.timerComFunc = function () {
         this.parent.removeChild(this);
         Carve.getInstance().timerComFunc();
-        //封装一个函数，参数为SpringGroup或者其他，从而清空内容
-        for (var i = 0; i < this.SpringGroup.numChildren; i++) {
-            var group = this.SpringGroup.getChildAt(i);
-            for (var j = 0; j < group.numChildren; j++) {
-                var im = group.getChildAt(j);
+        this.cleanUp(this.SpringGroup);
+        // this.cleanUp(this.SummerGroup);
+        // this.cleanUp(this.AutumnGroup);
+        // this.cleanUp(this.WinterGroup);
+        this.Numbers.removeChildren();
+    };
+    Colorful.prototype.cleanUp = function (group) {
+        for (var i = 0; i < group.numChildren; i++) {
+            var groupDetail = group.getChildAt(i);
+            for (var j = 0; j < groupDetail.numChildren; j++) {
+                var im = groupDetail.getChildAt(j);
                 im.alpha = 0;
                 im.removeEventListener(egret.TouchEvent.TOUCH_TAP, Carve.getInstance().func, Carve.getInstance());
             }
             if (i != 0) {
-                this.SpringGroup.getChildAt(i).visible = false;
+                group.getChildAt(i).visible = false;
             }
         }
-        this.Numbers.removeChildren();
     };
     return Colorful;
 }(eui.Component));
@@ -664,7 +696,7 @@ var Detail = (function (_super) {
         this.addChild(Carve.getInstance());
         switch (this.season_detail.source) {
             case "Lichun_png":
-                Carve.getInstance().carveLine.source = "Xiangaozip_jpg";
+                this.initPicture("Xiangaozip_jpg", "ChunGold_png", "ChunBlack_png");
                 if (Carve.getInstance().Springsuccess) {
                     this.removeChild(Carve.getInstance());
                     this.addChild(show.getInstance());
@@ -672,15 +704,35 @@ var Detail = (function (_super) {
                 }
                 break;
             case "Lixia_png":
-                Carve.getInstance().carveLine.source = "LixiaXian_png";
+                this.initPicture("LixiaXian_png", "XiaGold_png", "XiaBlack_png");
+                if (Carve.getInstance().Summersuccess) {
+                    this.removeChild(Carve.getInstance());
+                    this.addChild(show.getInstance());
+                    show.getInstance().result.source = "Xia_jpg";
+                }
                 break;
             case "Liqiu_png":
-                Carve.getInstance().carveLine.source = "LiqiuXian_png";
+                this.initPicture("LiqiuXian_png", "QiuGold_png", "QiuBlack_png");
+                if (Carve.getInstance().Autumnsuccess) {
+                    this.removeChild(Carve.getInstance());
+                    this.addChild(show.getInstance());
+                    show.getInstance().result.source = "Qiu2_png";
+                }
                 break;
             case "Lidong_png":
-                Carve.getInstance().carveLine.source = "LidongXian_png";
+                this.initPicture("LidongXian_png", "DongGold_png", "DongBlack_png");
+                if (Carve.getInstance().Autumnsuccess) {
+                    this.removeChild(Carve.getInstance());
+                    this.addChild(show.getInstance());
+                    show.getInstance().result.source = "Dong_jpg";
+                }
                 break;
         }
+    };
+    Detail.prototype.initPicture = function (carvelinePic, goldCarvePic, blackCarve) {
+        Carve.getInstance().carveLine.source = carvelinePic;
+        Carve.getInstance().goldCarve.source = goldCarvePic;
+        Carve.getInstance().blackCarve.source = blackCarve;
     };
     Detail.prototype.toSeason = function () {
         this.parent.removeChild(this);

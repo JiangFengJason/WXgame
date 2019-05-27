@@ -37,7 +37,7 @@ class Detail extends eui.Component implements  eui.UIComponent {
 		this.addChild(Carve.getInstance());
 		switch (this.season_detail.source){
 			case "Lichun_png":
-				Carve.getInstance().carveLine.source="Xiangaozip_jpg";
+				this.initPicture("Xiangaozip_jpg","ChunGold_png","ChunBlack_png");
 				if (Carve.getInstance().Springsuccess){
 					this.removeChild(Carve.getInstance());
 					this.addChild(show.getInstance());
@@ -46,17 +46,37 @@ class Detail extends eui.Component implements  eui.UIComponent {
 				break;
 
 			case "Lixia_png":
-				Carve.getInstance().carveLine.source="LixiaXian_png";
+				this.initPicture("LixiaXian_png","XiaGold_png","XiaBlack_png");
+				if (Carve.getInstance().Summersuccess){
+					this.removeChild(Carve.getInstance());
+					this.addChild(show.getInstance());
+					show.getInstance().result.source="Xia_jpg";
+				}
 				break;
 
 			case "Liqiu_png":
-				Carve.getInstance().carveLine.source="LiqiuXian_png";
+				this.initPicture("LiqiuXian_png","QiuGold_png","QiuBlack_png");
+				if (Carve.getInstance().Autumnsuccess){
+					this.removeChild(Carve.getInstance());
+					this.addChild(show.getInstance());
+					show.getInstance().result.source="Qiu2_png";
+				}
 				break;
 
 			case "Lidong_png":
-				Carve.getInstance().carveLine.source="LidongXian_png";
+				this.initPicture("LidongXian_png","DongGold_png","DongBlack_png");
+				if (Carve.getInstance().Autumnsuccess){
+					this.removeChild(Carve.getInstance());
+					this.addChild(show.getInstance());
+					show.getInstance().result.source="Dong_jpg";
+				}
 				break;
 		}
+	}
+	private initPicture(carvelinePic:string,goldCarvePic:string,blackCarve){
+		Carve.getInstance().carveLine.source=carvelinePic;
+		Carve.getInstance().goldCarve.source=goldCarvePic;
+		Carve.getInstance().blackCarve.source=blackCarve;
 	}
 	private toSeason(){
 		this.parent.removeChild(this);

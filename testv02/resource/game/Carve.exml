@@ -2,7 +2,7 @@
 <e:Skin class="CarveSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="16ad819d993" ></w:Config>
 	<e:Image left="0" right="0" top="0" bottom="0" source="bg_jpg"/>
-	<e:Button id="banzi" label="" horizontalCenter="0" verticalCenter="0" width="496" height="750" enabled="false">
+	<e:Button id="banzi" label="" horizontalCenter="0" verticalCenter="15" width="412" height="626" enabled="false" anchorOffsetY="0" anchorOffsetX="0">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="banzi_png" source.down="banzi_png" source.disabled="banzi_png"/>
@@ -10,10 +10,25 @@
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Button id="toCarve" label="刻" x="438" y="992" enabled="true"/>
-	<e:Button id="toXian" label="印" x="438" y="992" visible="false"/>
-	<e:Button id="toPrint" label="刷" x="438" y="992" enabled="true" visible="false"/>
-	<e:Image id="carveLine" source="Xiangaozip_jpg" anchorOffsetX="0" anchorOffsetY="0" width="444" x="102" height="698" y="219" alpha="0" scaleX="1"/>
+	<e:Button id="toCarve" label="" x="438" y="992" enabled="true" width="110.5" height="93.5">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="knif_png" source.down="knif_png" source.disabled="knif_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="toPrint" label="" x="438" y="992" enabled="true" width="101.6" height="92" visible="false">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="brush_png" source.down="brush_png" source.disabled="brush_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image id="goldCarve" source="Xiangaozip_jpg" anchorOffsetX="0" anchorOffsetY="0" width="370" x="138" height="588" y="292" alpha="0" scaleX="1"/>
+	<e:Image id="blackCarve" source="Xiangaozip_jpg" anchorOffsetX="0" anchorOffsetY="0" width="370" x="138" height="588" y="292" alpha="0" scaleX="1"/>
+	<e:Image id="carveLine" source="Xiangaozip_jpg" anchorOffsetX="0" anchorOffsetY="0" width="370" x="138" height="588" y="292" alpha="0" scaleX="1"/>
 	<e:Button id="back" label="" width="47" height="34" left="45" top="45">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">

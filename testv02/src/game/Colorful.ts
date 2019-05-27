@@ -39,21 +39,27 @@ class Colorful extends eui.Component implements  eui.UIComponent {
 	private timerComFunc(){
 		this.parent.removeChild(this);
 		Carve.getInstance().timerComFunc();
-		//封装一个函数，参数为SpringGroup或者其他，从而清空内容
-		for (var i=0;i<this.SpringGroup.numChildren;i++)
+
+		this.cleanUp(this.SpringGroup);
+		// this.cleanUp(this.SummerGroup);
+		// this.cleanUp(this.AutumnGroup);
+		// this.cleanUp(this.WinterGroup);
+		this.Numbers.removeChildren();
+	}
+	private cleanUp(group:eui.Group){
+		for (var i=0;i<group.numChildren;i++)
 		{
-			var group:eui.Group=<eui.Group>this.SpringGroup.getChildAt(i);
-			for (var j=0;j<group.numChildren;j++)
+			var groupDetail:eui.Group=<eui.Group>group.getChildAt(i);
+			for (var j=0;j<groupDetail.numChildren;j++)
 			{
-				var im:eui.Image=<eui.Image>group.getChildAt(j);
+				var im:eui.Image=<eui.Image>groupDetail.getChildAt(j);
 				im.alpha=0;
 				im.removeEventListener(egret.TouchEvent.TOUCH_TAP,Carve.getInstance().func,Carve.getInstance());
 			}
 			if (i!=0)
 			{
-				this.SpringGroup.getChildAt(i).visible=false;
+				group.getChildAt(i).visible=false;
 			}
 		}
-		this.Numbers.removeChildren();
 	}
 }
