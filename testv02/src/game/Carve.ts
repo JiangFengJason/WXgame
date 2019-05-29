@@ -92,11 +92,12 @@ class Carve extends eui.Component implements  eui.UIComponent {
 	private tolarge(){
 		this.initData();
 		this.addChild(Colorful.getInstance());
+		Colorful.getInstance().save.visible=false;
 		this.removeChild(this.mc);
 		Colorful.getInstance().carveLineLarge.source=this.carveLine.source;
 		switch(this.carveLine.source){
 			case "Xiangaozip_jpg":
-				this.toDifferentlarge("resource/assets/game/Spring/Lichun/Number/",2,Colorful.getInstance().SpringGroup);
+				this.toDifferentlarge("resource/assets/game/Spring/Lichun/Number/",15,Colorful.getInstance().SpringGroup);
 				break;
 			case "LixiaXian_png":
 				this.toDifferentlarge("resource/assets/game/Summer/Lixia/Number/",2,Colorful.getInstance().SummerGroup);
@@ -182,8 +183,10 @@ class Carve extends eui.Component implements  eui.UIComponent {
 			else 
 			{
 				console.log("successful");
+				Colorful.getInstance().save.visible=true;
 				if (group.parent==Colorful.getInstance().SpringGroup){
 					this.Springsuccess=true;
+					//Colorful.getInstance().save.addEventListener(egret.TouchEvent.TOUCH_TAP,this.savePic.bind(show.getInstance().result,"https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Spring/Lichun/Chun.jpg"),Colorful.getInstance());
 					console.log("Spring");
 				}
 				else if (group.parent==Colorful.getInstance().SummerGroup){
@@ -203,6 +206,9 @@ class Carve extends eui.Component implements  eui.UIComponent {
 			}
 		}
 		
+	}
+	private savePic(img:eui.Image,u:string){
+		img.texture.saveToFile("image/png",u);
 	}
 	public timerComFunc(){
 		//this.parent.setChildIndex(this,0);

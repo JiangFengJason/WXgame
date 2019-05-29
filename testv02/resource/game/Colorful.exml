@@ -1,17 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="ColorfulSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+<e:Skin class="ColorfulSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"  currentState="衣服绿8_png">
 	<w:Config id="16ae36977fd" ></w:Config>
-	<e:Image id="carveLineLarge" source="Xiangaozip_jpg" anchorOffsetX="0" anchorOffsetY="0" alpha="1" scaleX="1" x="0" y="0" scaleY="1" width="640" height="1136"/>
-	<e:Group id="SpringGroup" x="306" y="74.5">
+	<e:Image id="carveLineLarge" anchorOffsetX="0" anchorOffsetY="0" alpha="1" scaleX="1" x="0" y="0" scaleY="1" width="640" height="1136" source="LixiaXian_png"/>
+	<e:Group id="SpringGroup" x="306" y="74.5" visible="false">
 		<e:Group x="0" y="0" alpha="1" visible="false">
-			<e:Image width="168.67" height="158" x="0" y="478.84" source="1_3_png" anchorOffsetY="0" anchorOffsetX="0" alpha="0"/>
-			<e:Image width="62.5" height="156.5" x="172" y="114.5" source="1_2_png" anchorOffsetY="0" anchorOffsetX="0" alpha="0"/>
-			<e:Image width="128.39" height="72.76" x="58.49" y="1.53" anchorOffsetX="0" anchorOffsetY="0" source="1_1_png" rotation="0.88" alpha="0"/>
+			<e:Image width="119.33" height="130" x="-42.33" y="263.51" anchorOffsetY="0" anchorOffsetX="0" alpha="0" source="脸2_png"/>
+			<e:Image width="51.16" height="33.84" x="-15.71" y="382.5" anchorOffsetY="0" anchorOffsetX="0" alpha="0" source="脖子2_png"/>
+			<e:Image width="46.54" height="43.45" x="-13.07" y="427.81" anchorOffsetX="0" anchorOffsetY="0" rotation="0.88" alpha="0" source="右手12_png"/>
+			<e:Image width="16" height="11.17" x="23.67" y="468.31" anchorOffsetX="0" anchorOffsetY="0" source="右手22_png" alpha="0"/>
+			<e:Image width="37" height="64.17" x="-120.83" y="415.81" anchorOffsetX="0" anchorOffsetY="0" source="左手3_png" alpha="0"/>
+			<e:Image width="44.5" height="46.67" x="-144.83" y="398.81" anchorOffsetX="0" anchorOffsetY="0" source="左手12_png" alpha="0"/>
+			<e:Image width="33" height="27.17" x="-131.5" y="406" anchorOffsetX="0" anchorOffsetY="0" source="左手22_png" alpha="0"/>
 		</e:Group>
 		<e:Group x="83.34" y="49.5" alpha="1" visible="false">
-			<e:Image width="98" height="45.5" x="0" y="0" source="2_1_png" anchorOffsetX="0" anchorOffsetY="0" alpha="0"/>
-			<e:Image width="58.4" height="102" x="59.86" y="56.6" source="2_2_png" anchorOffsetY="0" anchorOffsetX="0" alpha="0"/>
+			<e:Image width="31.95" height="33" x="-63.14" y="302" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="右腮红2_png"/>
+			<e:Image width="35" height="35.5" x="-117.14" y="290" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="左腮红2_png"/>
+			<e:Image width="30.9" height="18.5" x="-59.64" y="284.6" anchorOffsetY="0" anchorOffsetX="0" alpha="0" source="右眼影_png"/>
+			<e:Image width="33.4" height="15" x="-108.14" y="278.1" anchorOffsetY="0" anchorOffsetX="0" alpha="0" source="左眼影_png"/>
 		</e:Group>
+		<e:Group x="-140.02" y="272.51" visible="false">
+			<e:Image width="18.5" height="18" x="71.52" y="3.99" source="头绳1_png" anchorOffsetX="0" anchorOffsetY="0" alpha="0"/>
+			<e:Image width="5.67" height="10.76" x="85.52" y="0" anchorOffsetX="0" anchorOffsetY="0" source="头绳2_png" rotation="0.69" alpha="0"/>
+			<e:Image width="8.26" height="21.74" x="218.83" y="30.47" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="头绳3_png" alpha="0"/>
+			<e:Image width="35.94" height="28.55" x="78.43" y="193.4" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="腰带红1_png" alpha="0"/>
+			<e:Image width="30.93" height="27.03" x="96.78" y="215" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="腰带红2_png" alpha="0"/>
+			<e:Image width="40.42" height="33.52" x="136.35" y="214.84" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="腰带红3_png" alpha="0"/>
+			<e:Image width="25.49" height="18.51" x="121.87" y="215.04" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="腰带红4_png" alpha="0"/>
+			<e:Image width="65" height="89.61" x="63.33" y="226.22" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="腰带红5_png" alpha="0"/>
+			<e:Image width="33.55" height="33.63" x="42.02" y="305.85" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="腰带红6_png" alpha="0"/>
+			<e:Image width="68" height="104.33" x="86.57" y="222.57" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="腰带红7_png" alpha="0"/>
+			<e:Image width="13.63" height="13.86" x="73.04" y="323.79" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="腰带红8_png" alpha="0"/>
+			<e:Image width="18.7" height="20.62" x="88.03" y="170.65" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红10_png" alpha="0"/>
+			<e:Image width="11.16" height="8.88" x="91.28" y="177.11" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红11_png" alpha="0"/>
+			<e:Image width="12.67" height="15.39" x="78.73" y="191.83" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红12_png" alpha="0"/>
+			<e:Image width="25.18" height="12.89" x="125.2" y="202.76" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红13_png" alpha="0"/>
+			<e:Image width="9.35" height="17.99" x="209.64" y="116.52" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红15_png" alpha="0"/>
+			<e:Image width="13.32" height="20.93" x="219.29" y="113.56" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红16_png" alpha="0"/>
+			<e:Image width="18.82" height="22.51" x="234.12" y="95.51" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红17_png" alpha="0"/>
+			<e:Image width="10.82" height="12.48" x="241.19" y="99.82" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红18_png" alpha="0"/>
+			<e:Image width="20.8" height="17.53" x="224.99" y="135.46" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红19_png" alpha="0"/>
+			<e:Image width="15.38" height="22.6" x="54.33" y="92.26" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红2_png" alpha="0"/>
+			<e:Image width="7.77" height="13.47" x="55.62" y="96.37" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红1_png" alpha="0"/>
+			<e:Image width="20.9" height="18.06" x="204.78" y="155.45" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红21_png" alpha="0"/>
+			<e:Image width="7.18" height="9.09" x="211.83" y="159.42" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红20_png" alpha="0"/>
+			<e:Image width="15.6" height="21.9" x="248.46" y="148.09" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红22_png" alpha="0"/>
+			<e:Image width="10.53" height="10.29" x="252.77" y="154.43" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红23_png" alpha="0"/>
+			<e:Image width="24.47" height="9.46" x="230.71" y="178.45" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红25_png" alpha="0"/>
+			<e:Image width="9.74" height="5.61" x="239.23" y="186.73" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红26_png" alpha="0"/>
+			<e:Image width="19.51" height="17.48" x="210.66" y="195.11" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红27_png" alpha="0"/>
+			<e:Image width="9.76" height="10.32" x="214.91" y="201.05" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红28_png" alpha="0"/>
+			<e:Image width="20.01" height="18.47" x="223.83" y="232.12" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红29_png" alpha="0"/>
+			<e:Image width="15.1" height="22.44" x="62.82" y="115.09" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红3_png" alpha="0"/>
+			<e:Image width="7.53" height="11.37" x="68.04" y="120.72" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红4_png" alpha="0"/>
+			<e:Image width="16.21" height="29.74" x="199.1" y="241.59" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红30_png" alpha="0"/>
+			<e:Image width="6.38" height="18.07" x="194.46" y="251.41" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红31_png" alpha="0"/>
+			<e:Image width="19.82" height="14.95" x="198.68" y="263.47" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红32_png" alpha="0"/>
+			<e:Image width="28.62" height="16.15" x="227.07" y="278.49" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红33_png" alpha="0"/>
+			<e:Image width="19.14" height="20.9" x="60.91" y="266.41" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红34_png" alpha="0"/>
+			<e:Image width="11.52" height="21.29" x="13.93" y="225.36" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红35_png" alpha="0"/>
+			<e:Image width="18.7" height="13.67" x="0" y="227.86" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红36_png" alpha="0"/>
+			<e:Image width="9.84" height="20.65" x="99.31" y="243.47" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红37_png" alpha="0"/>
+			<e:Image width="13.87" height="26.6" x="85.11" y="102.21" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红5_png" alpha="0"/>
+			<e:Image width="5.37" height="11.62" x="91.66" y="109.15" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红6_png" alpha="0"/>
+			<e:Image width="19.87" height="25.1" x="77.86" y="137.03" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红7_png" alpha="0"/>
+			<e:Image width="11.93" height="11.36" x="78.29" y="145.42" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="衣服花纹红8_png" alpha="0"/>
+			<e:Image width="32.45" height="37.44" x="114.16" y="120.63" anchorOffsetX="0" anchorOffsetY="0" rotation="0.69" source="右手花_png" alpha="0"/>
+		</e:Group>
+		<e:Group x="-67.5" y="257.5" visible="false">
+			<e:Image width="16.5" height="23.5" x="0" y="0" source="头发1_png" anchorOffsetX="0" anchorOffsetY="0" alpha="0"/>
+			<e:Image width="25" height="17" x="18" y="16.5" anchorOffsetX="0" anchorOffsetY="0" source="头发2_png" alpha="0"/>
+			<e:Image width="14.75" height="28.5" x="136.5" y="40.5" anchorOffsetX="0" anchorOffsetY="0" source="头发3_png" alpha="0"/>
+			<e:Image width="20" height="24" x="150.5" y="47.5" anchorOffsetX="0" anchorOffsetY="0" source="头发4_png" alpha="0"/>
+			<e:Image width="8" height="7.01" x="97.5" y="85.66" anchorOffsetX="0" anchorOffsetY="0" source="右眼2_png" alpha="0"/>
+			<e:Image width="8.25" height="6.01" x="58" y="79.91" anchorOffsetX="0" anchorOffsetY="0" source="左眼_png" alpha="0"/>
+		</e:Group>
+		<e:Group x="-49.7" y="341" visible="false">
+			<e:Image width="70" height="67.5" x="49" y="21" source="右领_png" anchorOffsetX="0" anchorOffsetY="0" alpha="0"/>
+			<e:Image width="38" height="115.5" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="左领_png" alpha="0"/>
+		</e:Group>
+		<e:Group x="-202.2" y="594.5" visible="false">
+			<e:Image width="40.5" height="39.5" x="170.2" y="0" source="右鞋2_png" anchorOffsetY="0" anchorOffsetX="0" alpha="0"/>
+			<e:Image width="54" height="28" x="0" y="4.5" anchorOffsetX="0" anchorOffsetY="0" source="左鞋2_png" alpha="0"/>
+		</e:Group>
+		<e:Group x="-151" y="343.5" visible="false">
+			<e:Image width="223" height="243.5" x="46.5" y="0" source="衣服绿1_png" anchorOffsetY="0" anchorOffsetX="0" alpha="0"/>
+			<e:Image width="79.99" height="133.5" x="195.17" y="7.33" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿2_png" alpha="0"/>
+			<e:Image width="112.66" height="106.83" x="15.5" y="120" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿3_png" alpha="0"/>
+			<e:Image width="29.99" height="71.16" x="124.17" y="159" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿4_png" alpha="0"/>
+			<e:Image width="13.4" height="11.9" x="100.9" y="104" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿10_png" alpha="0"/>
+			<e:Image width="15.8" height="17.5" x="89.3" y="69.6" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿11_png" alpha="0"/>
+			<e:Image width="28" height="12.75" x="0" y="164.5" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿14_png" alpha="0"/>
+			<e:Image width="19.75" height="8.75" x="139.25" y="135.75" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿15_png" alpha="0"/>
+			<e:Image width="15.4" height="16.42" x="248.59" y="28.42" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿18_png" alpha="0"/>
+			<e:Image width="14.42" height="11.42" x="239.25" y="67.42" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿20_png" alpha="0"/>
+			<e:Image width="12.75" height="13.09" x="219.46" y="86.39" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿21_png" alpha="0"/>
+			<e:Image width="12.42" height="14.09" x="262.46" y="81.06" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿22_png" alpha="0"/>
+			<e:Image width="11.75" height="14.42" x="77.13" y="47.73" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿7_png" alpha="0"/>
+			<e:Image width="19.76" height="11.62" x="245.77" y="112.8" anchorOffsetY="0" anchorOffsetX="0" source="衣服绿24_png" alpha="0"/>
+			<e:Image width="7.43" height="19.96" x="100.1" y="34.46" anchorOffsetY="0" anchorOffsetX="0" alpha="0" source="衣服绿8_png"/>
+		</e:Group>
+		<e:Group x="-127.33" y="408.66" visible="false">
+			<e:Image width="65.66" height="70.01" x="142" y="18" source="右袖_png" anchorOffsetX="0" anchorOffsetY="0" alpha="0"/>
+			<e:Image width="65.16" height="80.01" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="左袖_png" alpha="0"/>
+		</e:Group>
+		<e:Group width="200" height="200" x="13" y="370" visible="false">
+			<e:Image width="86" height="69.5" x="-297.5" y="-64.5" source="右边上花_png" anchorOffsetX="0" anchorOffsetY="0" alpha="0" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group x="-117.33" y="418.66" visible="false">
+			<e:Image width="113.16" height="147.51" x="-133.5" y="9.5" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="右边花_png"/>
+		</e:Group>
+		<e:Group x="-107.33" y="428.66" visible="false">
+			<e:Image width="147.16" height="148.01" x="216" y="-26.5" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="左边花_png"/>
+		</e:Group>
+		<e:Group x="-97.33" y="438.66" visible="false">
+			<e:Image width="172.16" height="117.51" x="-197" y="-112.5" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="右边上花叶1_png"/>
+		</e:Group>
+		<e:Group x="-77.33" y="458.66" visible="false">
+			<e:Image width="34.16" height="45.68" x="-163" y="90" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="右边花叶1_png"/>
+			<e:Image width="63.66" height="55.18" x="-216" y="-7" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="右边花叶2_png"/>
+			<e:Image width="64.66" height="41.68" x="-145" y="-49.5" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="右边花叶3_png"/>
+			<e:Image width="66.66" height="40.18" x="-147" y="-82" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="右边上花叶2_png"/>
+			<e:Image width="35.66" height="17.18" x="-118" y="-70" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="右边花叶4_png"/>
+			<e:Image width="41.16" height="58.68" x="-91.5" y="-37" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="右边花叶5 _png"/>
+			<e:Image width="33.16" height="40.68" x="165.5" y="25.5" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="左边花叶1_png"/>
+			<e:Image width="79.16" height="56.68" x="192.5" y="67.5" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="左边花叶2_png"/>
+			<e:Image width="75.66" height="86.68" x="306" y="42.5" anchorOffsetX="0" anchorOffsetY="0" alpha="0" source="左边花叶3_png"/>
+		</e:Group>
+		<e:Group x="-211.5" y="394" visible="false">
+			<e:Image width="66" height="20.5" x="0" y="0" source="右边上花根1_png" anchorOffsetX="0" anchorOffsetY="0" alpha="0"/>
+			<e:Image width="26.5" height="31" x="94" y="28.5" anchorOffsetX="0" anchorOffsetY="0" source="右边上花根3_png" alpha="0"/>
+			<e:Image width="11.4" height="14.2" x="205.1" y="28.9" anchorOffsetX="0" anchorOffsetY="0" source="右手花根_png" alpha="0"/>
+		</e:Group>
+		<e:Group x="-201.67" y="518.67" visible="false">
+			<e:Image width="126.68" height="70" x="180.67" y="42" source="右裤_png" anchorOffsetY="0" anchorOffsetX="0" alpha="0"/>
+			<e:Image width="137.35" height="105.33" x="0" y="0" anchorOffsetY="0" anchorOffsetX="0" source="左裤_png" alpha="0"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="SummerGroup" left="0" right="0" top="0" bottom="0">
+		<e:Group x="229.00000000000003" y="411" scaleX="1" scaleY="1" visible="false">
+			<e:Image width="21.76" height="18.36" x="167" y="144.67" anchorOffsetX="0" anchorOffsetY="0" source="右娃脖子2_png" alpha="0"/>
+			<e:Image width="163.09" height="161.03" x="113.67" y="-15.33" anchorOffsetX="0" anchorOffsetY="0" source="右娃脸2_png" alpha="0"/>
+			<e:Image width="53.09" height="31.03" x="238.24" y="128.86" anchorOffsetX="0" anchorOffsetY="0" source="右娃右手_png" alpha="0"/>
+			<e:Image width="57.09" height="42.36" x="221.58" y="177.52" anchorOffsetX="0" anchorOffsetY="0" source="右娃左手2_png" alpha="0"/>
+			<e:Image width="25.86" height="27.86" x="2.01" y="-53.09" anchorOffsetX="0" anchorOffsetY="0" source="左娃脖子2_png" alpha="0"/>
+			<e:Image width="163.06" height="146.26" x="-56.64" y="-87.69" anchorOffsetX="85.75" anchorOffsetY="71.4" source="左娃脸_png" alpha="0"/>
+			<e:Image width="71.06" height="43.06" x="161.38" y="-35.68" anchorOffsetX="37.37" anchorOffsetY="21.01" source="左娃右手2_png" alpha="0"/>
+			<e:Image width="28.26" height="32.26" x="132.08" y="-12.56" anchorOffsetX="14.87" anchorOffsetY="15.73" source="左娃右手臂_png" alpha="0"/>
+			<e:Image width="84.26" height="57.86" x="116.75" y="-48.89" anchorOffsetX="44.34" anchorOffsetY="28.2" source="左娃左手_png" alpha="0"/>
+			<e:Image width="42.66" height="65.46" x="77.26" y="0.81" anchorOffsetX="22.45" anchorOffsetY="31.9" source="左娃左手臂_png" alpha="0"/>
+		</e:Group>
+		<e:Group x="239.00000000000003" y="421" scaleX="1" scaleY="1" visible="false">
+			<e:Image width="66.96" height="52.36" x="162.24" y="112.12" anchorOffsetX="33.24" anchorOffsetY="26.25" source="右娃右腮红2_png"/>
+			<e:Image width="26.96" height="35.96" x="112.79" y="77.91" anchorOffsetX="13.39" anchorOffsetY="18.04" source="右娃左腮红_png"/>
+			<e:Image width="32.16" height="44.36" x="-4.63" y="-89.07" anchorOffsetX="15.97" anchorOffsetY="22.26" source="左娃右腮红2_png"/>
+			<e:Image width="14.16" height="21.96" x="-27.57" y="-113.51" anchorOffsetX="7.03" anchorOffsetY="11.02" source="左娃右眼皮2_png"/>
+			<e:Image width="70.96" height="50.36" x="-44.57" y="-48.86" anchorOffsetX="35.23" anchorOffsetY="25.27" source="左娃左腮红2_png"/>
+			<e:Image width="19.36" height="27.56" x="-69.78" y="-76.71" anchorOffsetX="9.62" anchorOffsetY="13.82" source="左娃左眼皮2_png"/>
+		</e:Group>
+		<e:Group x="249.00000000000003" y="431" scaleX="1" scaleY="1">
+			<e:Image width="18.76" height="10.36" x="122.61" y="82.06" anchorOffsetX="9.31" anchorOffsetY="5.19" source="右娃上嘴唇_png"/>
+			<e:Image width="28.36" height="58.76" x="242.17" y="47.92" anchorOffsetX="14.07" anchorOffsetY="29.45" source="右娃头绳_png"/>
+			<e:Image width="15.56" height="11.96" x="118.22" y="86.07" anchorOffsetX="7.72" anchorOffsetY="6" source="右娃下嘴唇_png"/>
+			<e:Image width="46.36" height="41.96" x="198.69" y="378.72" anchorOffsetX="22.99" anchorOffsetY="21.05" source="右娃右鞋红_png"/>
+			<e:Image width="57.56" height="57.56" x="94.24" y="432.95" anchorOffsetX="28.54" anchorOffsetY="28.88" source="右娃左鞋红_png"/>
+			<e:Image width="16.36" height="13.96" x="-30.99" y="-81.33" anchorOffsetX="8.11" anchorOffsetY="7" source="左娃上嘴唇_png"/>
+			<e:Image width="23.96" height="35.16" x="-151.22" y="-74.26" anchorOffsetX="11.88" anchorOffsetY="17.67" source="左娃头绳1_png"/>
+			<e:Image width="36.36" height="9.16" x="-74.67" y="-178.92" anchorOffsetX="18.03" anchorOffsetY="4.61" source="左娃头绳2_png"/>
+			<e:Image width="18.36" height="11.16" x="-28.39" y="-79.52" anchorOffsetX="9.11" anchorOffsetY="5.61" source="左娃下嘴唇_png"/>
+			<e:Image width="63.56" height="67.56" x="28.85" y="-57.17" anchorOffsetX="31.55" anchorOffsetY="33.96" source="左娃衣服红3_png"/>
+			<e:Image width="22.76" height="57.96" x="12.99" y="-66.4" anchorOffsetX="11.29" anchorOffsetY="29.13" source="左娃衣服红2_png"/>
+			<e:Image width="100.36" height="92.36" x="-19.72" y="23.68" anchorOffsetX="49.78" anchorOffsetY="46.41" source="左娃衣服红4_png"/>
+			<e:Image width="74.76" height="31.96" x="-30.81" y="-22.67" anchorOffsetX="37.09" anchorOffsetY="16.06" source="左娃衣服红1_png"/>
+			<e:Image width="46.76" height="76.76" x="78.8" y="-18.15" anchorOffsetX="7.5" anchorOffsetY="29.78" source="左娃衣服红5_png"/>
+			<e:Image width="126.36" height="112.76" x="-64.84" y="134.22" anchorOffsetX="20.26" anchorOffsetY="43.75" source="左娃衣服红6_png"/>
+			<e:Image width="49.96" height="135.96" x="51.3" y="113.62" anchorOffsetX="8" anchorOffsetY="52.75" source="左娃衣服红7_png"/>
+			<e:Image width="89.96" height="25.56" x="-30.28" y="72.78" anchorOffsetX="14.42" anchorOffsetY="9.91" source="左娃衣服红8_png"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="AutumnGroup" left="0" right="0" top="0" bottom="0"/>
+	<e:Group id="WinterGroup" left="0" right="0" top="0" bottom="0">
 	</e:Group>
 	<e:Scroller width="640" height="80" x="0" y="1056" anchorOffsetY="0" anchorOffsetX="0">
 		<e:Group id="Numbers" anchorOffsetX="0" width="880" height="80">
@@ -25,4 +192,5 @@
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
+	<e:Image id="save" width="79.09" height="54.84" x="505" y="959" anchorOffsetX="0" anchorOffsetY="0" source="button_up_png"/>
 </e:Skin>

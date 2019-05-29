@@ -11,13 +11,11 @@
 		<e:Image id="season_detail4" width="264.42" height="258.91" x="303.58" y="504" anchorOffsetX="0" anchorOffsetY="0" source="Guyu_png"/>
 	</e:Group>
 	<e:Image width="42" height="50" x="222" y="122" anchorOffsetX="0" anchorOffsetY="0" source="lock_png"/>
-	<e:Image width="52" height="54" x="66" y="990" anchorOffsetX="0" anchorOffsetY="0" source="user_png"/>
-	<e:Image width="48" height="48" x="316.02" y="1009.5" anchorOffsetX="12.93" anchorOffsetY="13.5" source="rank_png"/>
-	<e:Image width="52" height="58" x="528.54" y="991" anchorOffsetX="0" anchorOffsetY="0" source="setting_png"/>
+	<e:Image width="52" height="54" x="138.82" y="990" anchorOffsetX="0" anchorOffsetY="0" source="user_png"/>
+	<e:Image width="48" height="48" x="463.03" y="1009.5" anchorOffsetX="12.93" anchorOffsetY="13.5" source="rank_png"/>
 	<e:Label text="解锁：1/6" x="285.09" y="136" anchorOffsetX="0" width="144" anchorOffsetY="0" height="40" textColor="0x000000" size="30"/>
-	<e:Label text="我的" x="66" y="1053" anchorOffsetX="0" width="67" anchorOffsetY="0" height="28" textColor="0x000000" size="25"/>
-	<e:Label text="排行" x="302" y="1053" anchorOffsetX="0" width="67" anchorOffsetY="0" height="28" textColor="0x000000" size="25"/>
-	<e:Label text="设置" x="530" y="1053" anchorOffsetX="0" width="67" anchorOffsetY="0" height="28" textColor="0x000000" size="25"/>
+	<e:Label text="我的" x="138.82" y="1053" anchorOffsetX="0" width="67" anchorOffsetY="0" height="28" textColor="0x000000" size="25"/>
+	<e:Label text="排行" x="449.01" y="1053" anchorOffsetX="0" width="67" anchorOffsetY="0" height="28" textColor="0x000000" size="25"/>
 	<e:Button id="back" label="" width="47" height="34" left="45" top="45">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">

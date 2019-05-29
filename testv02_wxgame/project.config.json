@@ -11,9 +11,9 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "game",
-	"libVersion": "2.7.0",
+	"libVersion": "game",
 	"appid": "wx56d7bee7469cfb5f",
-	"projectname": "%E5%B9%B4%E7%94%BB",
+	"projectname": "NianHua",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

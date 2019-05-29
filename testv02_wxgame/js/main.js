@@ -113,20 +113,21 @@ var Carve = (function (_super) {
     Carve.prototype.tolarge = function () {
         this.initData();
         this.addChild(Colorful.getInstance());
+        Colorful.getInstance().save.visible = false;
         this.removeChild(this.mc);
         Colorful.getInstance().carveLineLarge.source = this.carveLine.source;
         switch (this.carveLine.source) {
             case "Xiangaozip_jpg":
-                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Spring/Lichun/Number/", 2, Colorful.getInstance().SpringGroup);
+                this.toDifferentlarge("resource/assets/game/Spring/Lichun/Number/", 15, Colorful.getInstance().SpringGroup);
                 break;
             case "LixiaXian_png":
-                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Summer/Lixia/Number/", 2, Colorful.getInstance().SummerGroup);
+                this.toDifferentlarge("resource/assets/game/Summer/Lixia/Number/", 2, Colorful.getInstance().SummerGroup);
                 break;
             case "LiqiuXian_png":
-                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Autumn/Liqiu/Number/", 2, Colorful.getInstance().AutumnGroup);
+                this.toDifferentlarge("resource/assets/game/Autumn/Liqiu/Number/", 2, Colorful.getInstance().AutumnGroup);
                 break;
             case "LidongXian_png":
-                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Winter/Lidong/Number/", 2, Colorful.getInstance().WinterGroup);
+                this.toDifferentlarge("resource/assets/game/Winter/Lidong/Number/", 2, Colorful.getInstance().WinterGroup);
                 break;
         }
     };
@@ -193,8 +194,10 @@ var Carve = (function (_super) {
             }
             else {
                 console.log("successful");
+                Colorful.getInstance().save.visible = true;
                 if (group.parent == Colorful.getInstance().SpringGroup) {
                     this.Springsuccess = true;
+                    //Colorful.getInstance().save.addEventListener(egret.TouchEvent.TOUCH_TAP,this.savePic.bind(show.getInstance().result,"https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Spring/Lichun/Chun.jpg"),Colorful.getInstance());
                     console.log("Spring");
                 }
                 else if (group.parent == Colorful.getInstance().SummerGroup) {
@@ -211,6 +214,9 @@ var Carve = (function (_super) {
                 }
             }
         }
+    };
+    Carve.prototype.savePic = function (img, u) {
+        img.texture.saveToFile("image/png", u);
     };
     Carve.prototype.timerComFunc = function () {
         //this.parent.setChildIndex(this,0);
@@ -371,13 +377,13 @@ var Main = (function (_super) {
                         _a.trys.push([0, 4, , 5]);
                         loadingView = new LoadingUI();
                         this.stage.addChild(loadingView);
-                        return [4 /*yield*/, RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/")];
+                        //await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
+                        return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
                     case 1:
+                        //await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
                         _a.sent();
-                        // await RES.loadConfig("resource/default.res.json","resource/")
                         return [4 /*yield*/, this.loadTheme()];
                     case 2:
-                        // await RES.loadConfig("resource/default.res.json","resource/")
                         _a.sent();
                         return [4 /*yield*/, RES.loadGroup("preload", 0, loadingView)];
                     case 3:
@@ -398,8 +404,8 @@ var Main = (function (_super) {
         return new Promise(function (resolve, reject) {
             // load skin theme configuration file, you can manually modify the file. And replace the default skin.
             //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
-            var theme = new eui.Theme("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.thm.json", _this.stage);
-            //let theme = new eui.Theme("resource/default.thm.json", this.stage);
+            //let theme = new eui.Theme("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.thm.json", this.stage);
+            var theme = new eui.Theme("resource/default.thm.json", _this.stage);
             theme.addEventListener(eui.UIEvent.COMPLETE, function () {
                 resolve();
             }, _this);
@@ -625,6 +631,9 @@ var LoadingUI = (function (_super) {
     };
     LoadingUI.prototype.onProgress = function (current, total) {
         this.textField.text = "Loading..." + current + "/" + total;
+        if (current == total) {
+            this.removeChild(this.textField);
+        }
     };
     return LoadingUI;
 }(egret.Sprite));
@@ -648,13 +657,14 @@ var Colorful = (function (_super) {
         this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
     };
     Colorful.prototype.timerComFunc = function () {
-        this.parent.removeChild(this);
+        this.save.visible = false;
         Carve.getInstance().timerComFunc();
         this.cleanUp(this.SpringGroup);
         // this.cleanUp(this.SummerGroup);
         // this.cleanUp(this.AutumnGroup);
         // this.cleanUp(this.WinterGroup);
         this.Numbers.removeChildren();
+        this.parent.removeChild(this);
     };
     Colorful.prototype.cleanUp = function (group) {
         for (var i = 0; i < group.numChildren; i++) {

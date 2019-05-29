@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="CarveSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="16ad819d993" ></w:Config>
-	<e:Image left="0" right="0" top="0" bottom="0" source="bg_jpg"/>
+	<e:Image left="0" right="0" top="0" bottom="0" source="bgofBz_jpg"/>
 	<e:Button id="banzi" label="" horizontalCenter="0" verticalCenter="15" width="412" height="626" enabled="false" anchorOffsetY="0" anchorOffsetX="0">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">
