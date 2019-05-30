@@ -59,7 +59,9 @@ var Carve = (function (_super) {
     };
     Carve.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        //this.carveLine.addEventListener(egret.TouchEvent.TOUCH_TAP,this.jump,this);
+        //播放刻的说明
+        this.setChildIndex(this.CarveText, this.numChildren - 1);
+        egret.Tween.get(this.CarveText, { loop: false }).to({ alpha: 1 }, 200).to({ alpha: 0 }, 4000).call(this.close, this, [this.CarveText]);
         this.toCarve.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetCarve, this);
         this.toPrint.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetPrint, this);
         this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
@@ -68,8 +70,11 @@ var Carve = (function (_super) {
         this.Autumnsuccess = false;
         this.Wintersuccess = false;
     };
+    Carve.prototype.close = function (group) {
+        this.setChildIndex(group, 0);
+    };
     Carve.prototype.jump = function () {
-        var timer = new egret.Timer(2000, 1);
+        var timer = new egret.Timer(1500, 1);
         //注册事件侦听器
         timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
         timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.tolarge, this);
@@ -80,26 +85,18 @@ var Carve = (function (_super) {
         //console.log("start");
     };
     Carve.prototype.toGetPrint = function () {
-        //线稿出现
-        var num = this.numChildren;
-        this.setChildIndex(this.blackCarve, num - 1);
+        //金色线稿换黑色
         egret.Tween.get(this.blackCarve, { loop: false }).to({ alpha: 0 }, 200).to({ alpha: 1 }, 1500);
-        this.jump();
+        egret.Tween.get(this.goldCarve, { loop: false }).to({ alpha: 1 }, 200).to({ alpha: 0 }, 1500).wait(500).call(this.toPut, this);
         this.toPrint.visible = false;
         this.toCarve.visible = false;
     };
-    Carve.prototype.toGetCarve = function () {
-        //金色的线稿显示
-        egret.Tween.get(this.goldCarve, { loop: false }).to({ alpha: 0 }, 200).to({ alpha: 1 }, 1500);
-        this.toCarve.visible = false;
-        var timer = new egret.Timer(2500, 1);
-        //注册事件侦听器
-        timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
-        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.toGetXian, this);
-        //开始计时
-        timer.start();
+    Carve.prototype.toPut = function () {
+        //播放印的说明
+        this.setChildIndex(this.PrintText, this.numChildren - 1);
+        egret.Tween.get(this.PrintText, { loop: false }).to({ alpha: 1 }, 200).to({ alpha: 0 }, 4000).call(this.close, this, [this.PrintText]).call(this.toYin, this);
     };
-    Carve.prototype.toGetXian = function () {
+    Carve.prototype.toYin = function () {
         var data = RES.getRes("yin_json");
         var txtr = RES.getRes("yin_png");
         var mcFactory = new egret.MovieClipDataFactory(data, txtr);
@@ -108,6 +105,18 @@ var Carve = (function (_super) {
         this.mc.y = 278;
         this.addChild(this.mc);
         this.mc.gotoAndPlay(1, 1);
+        this.setChildIndex(this.blackCarve, this.numChildren - 1);
+        this.mc.addEventListener(egret.Event.COMPLETE, this.jump, this);
+    };
+    Carve.prototype.toGetCarve = function () {
+        //金色的线稿显示
+        this.toCarve.visible = false;
+        egret.Tween.get(this.goldCarve, { loop: false }).to({ alpha: 0 }, 200).to({ alpha: 1 }, 1500).wait(500).call(this.toGetXian, this);
+    };
+    Carve.prototype.toGetXian = function () {
+        //播放刷的说明
+        this.setChildIndex(this.BrushText, this.numChildren - 1);
+        egret.Tween.get(this.BrushText, { loop: false }).to({ alpha: 1 }, 200).to({ alpha: 0 }, 4000).call(this.close, this, [this.BrushText]);
         this.toPrint.visible = true;
     };
     Carve.prototype.tolarge = function () {
@@ -378,13 +387,13 @@ var Main = (function (_super) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 4, , 5]);
-                        loadingView = new LoadingUI();
-                        this.stage.addChild(loadingView);
                         //await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
                         return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
                     case 1:
                         //await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
                         _a.sent();
+                        loadingView = new LoadingUI();
+                        this.stage.addChild(loadingView);
                         return [4 /*yield*/, this.loadTheme()];
                     case 2:
                         _a.sent();
@@ -625,17 +634,35 @@ var LoadingUI = (function (_super) {
         return _this;
     }
     LoadingUI.prototype.createView = function () {
-        this.textField = new egret.TextField();
-        this.addChild(this.textField);
-        this.textField.y = 300;
-        this.textField.width = 480;
-        this.textField.height = 100;
-        this.textField.textAlign = "center";
+        this.loadingImg1 = new eui.Image();
+        this.loadingImg2 = new eui.Image();
+        this.loadingImg1.source = "load1_jpg";
+        this.loadingImg2.source = "load2_jpg";
+        this.loadingImg1.alpha = 0;
+        this.loadingImg2.alpha = 0;
+        this.loadingImg1.top = 0;
+        this.loadingImg1.bottom = 0;
+        this.loadingImg1.left = 0;
+        this.loadingImg1.right = 0;
+        this.loadingImg2.top = 0;
+        this.loadingImg2.bottom = 0;
+        this.loadingImg2.left = 0;
+        this.loadingImg2.right = 0;
+        this.addChild(this.loadingImg1);
+        this.addChild(this.loadingImg2);
     };
     LoadingUI.prototype.onProgress = function (current, total) {
-        this.textField.text = "Loading..." + current + "/" + total;
+        //this.textField.text = `Loading...${current}/${total}`;
+        var divide = current / total;
+        if (divide * 2 < 1) {
+            this.loadingImg1.alpha = divide * 2;
+        }
+        else if (divide * 2 >= 1) {
+            this.loadingImg2.alpha = divide * 2 - 1;
+        }
         if (current == total) {
-            this.removeChild(this.textField);
+            this.removeChild(this.loadingImg1);
+            this.removeChild(this.loadingImg2);
         }
     };
     return LoadingUI;
@@ -779,6 +806,18 @@ var Season = (function (_super) {
         this.Winter.addEventListener(egret.TouchEvent.TOUCH_END, this.onTouch, this);
         var tw = egret.Tween.get(this.Canvas, { loop: false });
         tw.to({ x: 1920 }, 2000).call(function () { }).wait(100);
+        var data = RES.getRes("yanZi_json");
+        var txtr = RES.getRes("yanZi_png");
+        var mcFactory = new egret.MovieClipDataFactory(data, txtr);
+        var mc1 = new egret.MovieClip(mcFactory.generateMovieClipData());
+        this.Spring.addChild(mc1);
+        mc1.gotoAndPlay(1, -1);
+        var data = RES.getRes("chan_json");
+        var txtr = RES.getRes("chan_png");
+        var mcFactory = new egret.MovieClipDataFactory(data, txtr);
+        var mc1 = new egret.MovieClip(mcFactory.generateMovieClipData());
+        this.Summer.addChild(mc1);
+        mc1.gotoAndPlay(1, -1);
         var data = RES.getRes("abc_json");
         var txtr = RES.getRes("abc_png");
         var mcFactory = new egret.MovieClipDataFactory(data, txtr);

@@ -15,6 +15,10 @@ class Carve extends eui.Component implements  eui.UIComponent {
 	public Autumnsuccess:boolean;
 	public Wintersuccess:boolean;
 
+	public CarveText:eui.Group;
+	public PrintText:eui.Group;
+	public BrushText:eui.Group;
+
 	private static shared:Carve;
 	public static getInstance(){
         if( !Carve.shared){
@@ -31,11 +35,13 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		super.partAdded(partName,instance);
 	}
 
-
 	protected childrenCreated():void
 	{
 		super.childrenCreated();
-		//this.carveLine.addEventListener(egret.TouchEvent.TOUCH_TAP,this.jump,this);
+		//播放刻的说明
+		this.setChildIndex(this.CarveText,this.numChildren-1);
+		egret.Tween.get(this.CarveText,{loop:false}).to({ alpha: 1}, 200).to({ alpha: 0}, 4000).call(this.close, this, [this.CarveText]);
+
 		this.toCarve.addEventListener(egret.TouchEvent.TOUCH_TAP,this.toGetCarve,this);
 		this.toPrint.addEventListener(egret.TouchEvent.TOUCH_TAP,this.toGetPrint,this);
 		this.back.addEventListener(egret.TouchEvent.TOUCH_TAP,this.timerComFunc,this);
@@ -45,9 +51,11 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		this.Wintersuccess=false;
 		
 	}
-
+	private close(group:eui.Group){
+		this.setChildIndex(group,0);
+	}
 	private jump(){
-		var timer:egret.Timer = new egret.Timer(2000,1);
+		var timer:egret.Timer = new egret.Timer(1500,1);
         //注册事件侦听器
         timer.addEventListener(egret.TimerEvent.TIMER,this.timerFunc,this);
         timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.tolarge,this);
@@ -58,26 +66,19 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		//console.log("start");
 	}
 	private toGetPrint(){
-		//线稿出现
-		var num=this.numChildren;
-		this.setChildIndex(this.blackCarve, num - 1);
+		//金色线稿换黑色
 		egret.Tween.get(this.blackCarve,{loop:false}).to({ alpha: 0}, 200).to({ alpha: 1}, 1500);
-		this.jump();
+		egret.Tween.get(this.goldCarve,{loop:false}).to({ alpha: 1}, 200).to({ alpha: 0}, 1500).wait(500).call(this.toPut,this);
+		
 		this.toPrint.visible=false;
 		this.toCarve.visible=false;
 	}
-	private toGetCarve(){
-		//金色的线稿显示
-		egret.Tween.get(this.goldCarve,{loop:false}).to({ alpha: 0}, 200).to({ alpha: 1}, 1500);
-		this.toCarve.visible=false;
-		var timer:egret.Timer = new egret.Timer(2500,1);
-        //注册事件侦听器
-        timer.addEventListener(egret.TimerEvent.TIMER,this.timerFunc,this);
-        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.toGetXian,this);
-        //开始计时
-        timer.start();
+	private toPut(){
+		//播放印的说明
+		this.setChildIndex(this.PrintText,this.numChildren-1);
+		egret.Tween.get(this.PrintText,{loop:false}).to({ alpha: 1}, 200).to({ alpha: 0}, 4000).call(this.close, this, [this.PrintText]).call(this.toYin,this);
 	}
-	private toGetXian(){
+	private toYin(){
 		var data = RES.getRes("yin_json");
         var txtr = RES.getRes("yin_png");
         var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
@@ -87,6 +88,19 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		this.addChild(this.mc);
         this.mc.gotoAndPlay( 1 ,1);
 
+		this.setChildIndex(this.blackCarve, this.numChildren - 1);
+
+		this.mc.addEventListener(egret.Event.COMPLETE,this.jump,this);
+	}
+	private toGetCarve(){
+		//金色的线稿显示
+		this.toCarve.visible=false;
+		egret.Tween.get(this.goldCarve,{loop:false}).to({ alpha: 0}, 200).to({ alpha: 1}, 1500).wait(500).call(this.toGetXian,this);
+	}
+	private toGetXian(){
+		//播放刷的说明
+		this.setChildIndex(this.BrushText,this.numChildren-1);
+		egret.Tween.get(this.BrushText,{loop:false}).to({ alpha: 1}, 200).to({ alpha: 0}, 4000).call(this.close, this, [this.BrushText]);
 		this.toPrint.visible=true;
 	}
 	private tolarge(){

@@ -34,22 +34,49 @@ class LoadingUI extends egret.Sprite implements RES.PromiseTaskReporter {
         this.createView();
     }
 
-    private textField: egret.TextField;
+     private loadingImg1:eui.Image;
+     private loadingImg2:eui.Image;
 
     private createView(): void {
-        this.textField = new egret.TextField();
-        this.addChild(this.textField);
-        this.textField.y = 300;
-        this.textField.width = 480;
-        this.textField.height = 100;
-        this.textField.textAlign = "center";
+         this.loadingImg1=new eui.Image();
+         this.loadingImg2=new eui.Image();
+
+         this.loadingImg1.source="load1_jpg";
+         this.loadingImg2.source="load2_jpg";
+
+        this.loadingImg1.alpha=0;
+        this.loadingImg2.alpha=0;
+
+        this.loadingImg1.top=0;
+        this.loadingImg1.bottom=0;
+        this.loadingImg1.left=0;
+        this.loadingImg1.right=0;
+
+        this.loadingImg2.top=0;
+        this.loadingImg2.bottom=0;
+        this.loadingImg2.left=0;
+        this.loadingImg2.right=0;
+
+         this.addChild(this.loadingImg1);
+         this.addChild(this.loadingImg2);
+
+        
     }
 
     public onProgress(current: number, total: number): void {
-        this.textField.text = `Loading...${current}/${total}`;
+        //this.textField.text = `Loading...${current}/${total}`;
+        var divide=current/total;
+        if (divide*2<1){
+            this.loadingImg1.alpha=divide*2;
+        }
+        else if (divide*2>=1){
+            this.loadingImg2.alpha=divide*2-1;
+        }
+
         if(current==total)
         {
-            this.removeChild(this.textField);
+            this.removeChild(this.loadingImg1);
+            this.removeChild(this.loadingImg2);
         }
     }
 }

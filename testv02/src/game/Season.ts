@@ -40,6 +40,20 @@ class Season extends eui.Component implements  eui.UIComponent {
 		var tw = egret.Tween.get( this.Canvas, { loop:false} );
 		tw.to( {x:1920}, 2000 ).call( function(){  } ).wait( 100 );
 
+		var data = RES.getRes("yanZi_json");
+        var txtr = RES.getRes("yanZi_png");
+        var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
+        var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData() );
+        this.Spring.addChild( mc1 );
+        mc1.gotoAndPlay( 1 ,-1);
+
+		var data = RES.getRes("chan_json");
+        var txtr = RES.getRes("chan_png");
+        var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
+        var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData() );
+        this.Summer.addChild( mc1 );
+        mc1.gotoAndPlay( 1 ,-1);
+
 		var data = RES.getRes("abc_json");
         var txtr = RES.getRes("abc_png");
         var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );

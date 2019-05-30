@@ -35,6 +35,7 @@ class Detail extends eui.Component implements  eui.UIComponent {
 	{
 		//this.parent.removeChild(this);
 		this.addChild(Carve.getInstance());
+		
 		switch (this.season_detail.source){
 			case "Lichun_png":
 				this.initPicture("Xiangaozip_jpg","ChunGold_png","ChunBlack_png");
