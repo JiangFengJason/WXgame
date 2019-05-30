@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="ColorfulSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"  currentState="衣服绿8_png">
 	<w:Config id="16ae36977fd" ></w:Config>
-	<e:Image id="carveLineLarge" anchorOffsetX="0" anchorOffsetY="0" alpha="1" scaleX="1" x="0" y="0" scaleY="1" width="640" height="1136" source="LixiaXian_png"/>
-	<e:Group id="SpringGroup" x="306" y="74.5" visible="false">
+	<e:Image id="carveLineLarge" anchorOffsetX="0" anchorOffsetY="0" alpha="1" scaleX="1" x="0" y="0" scaleY="1" width="640" height="1136" source="LiqiuXian_png"/>
+	<e:Group id="SpringGroup" x="306" y="74.5">
 		<e:Group x="0" y="0" alpha="1" visible="false">
 			<e:Image width="119.33" height="130" x="-42.33" y="263.51" anchorOffsetY="0" anchorOffsetX="0" alpha="0" source="脸2_png"/>
 			<e:Image width="51.16" height="33.84" x="-15.71" y="382.5" anchorOffsetY="0" anchorOffsetX="0" alpha="0" source="脖子2_png"/>
@@ -150,34 +150,39 @@
 			<e:Image width="42.66" height="65.46" x="77.26" y="0.81" anchorOffsetX="22.45" anchorOffsetY="31.9" source="左娃左手臂_png" alpha="0"/>
 		</e:Group>
 		<e:Group x="239.00000000000003" y="421" scaleX="1" scaleY="1" visible="false">
-			<e:Image width="66.96" height="52.36" x="162.24" y="112.12" anchorOffsetX="33.24" anchorOffsetY="26.25" source="右娃右腮红2_png"/>
-			<e:Image width="26.96" height="35.96" x="112.79" y="77.91" anchorOffsetX="13.39" anchorOffsetY="18.04" source="右娃左腮红_png"/>
-			<e:Image width="32.16" height="44.36" x="-4.63" y="-89.07" anchorOffsetX="15.97" anchorOffsetY="22.26" source="左娃右腮红2_png"/>
-			<e:Image width="14.16" height="21.96" x="-27.57" y="-113.51" anchorOffsetX="7.03" anchorOffsetY="11.02" source="左娃右眼皮2_png"/>
-			<e:Image width="70.96" height="50.36" x="-44.57" y="-48.86" anchorOffsetX="35.23" anchorOffsetY="25.27" source="左娃左腮红2_png"/>
-			<e:Image width="19.36" height="27.56" x="-69.78" y="-76.71" anchorOffsetX="9.62" anchorOffsetY="13.82" source="左娃左眼皮2_png"/>
+			<e:Image width="66.96" height="52.36" x="162.24" y="112.12" anchorOffsetX="33.24" anchorOffsetY="26.25" source="右娃右腮红2_png" alpha="0"/>
+			<e:Image width="26.96" height="35.96" x="112.79" y="77.91" anchorOffsetX="13.39" anchorOffsetY="18.04" source="右娃左腮红_png" alpha="0"/>
+			<e:Image width="32.16" height="44.36" x="-4.63" y="-89.07" anchorOffsetX="15.97" anchorOffsetY="22.26" source="左娃右腮红2_png" alpha="0"/>
+			<e:Image width="14.16" height="21.96" x="-27.57" y="-113.51" anchorOffsetX="7.03" anchorOffsetY="11.02" source="左娃右眼皮2_png" alpha="0"/>
+			<e:Image width="70.96" height="50.36" x="-44.57" y="-48.86" anchorOffsetX="35.23" anchorOffsetY="25.27" source="左娃左腮红2_png" alpha="0"/>
+			<e:Image width="19.36" height="27.56" x="-69.78" y="-76.71" anchorOffsetX="9.62" anchorOffsetY="13.82" source="左娃左眼皮2_png" alpha="0"/>
 		</e:Group>
-		<e:Group x="249.00000000000003" y="431" scaleX="1" scaleY="1">
-			<e:Image width="18.76" height="10.36" x="122.61" y="82.06" anchorOffsetX="9.31" anchorOffsetY="5.19" source="右娃上嘴唇_png"/>
-			<e:Image width="28.36" height="58.76" x="242.17" y="47.92" anchorOffsetX="14.07" anchorOffsetY="29.45" source="右娃头绳_png"/>
-			<e:Image width="15.56" height="11.96" x="118.22" y="86.07" anchorOffsetX="7.72" anchorOffsetY="6" source="右娃下嘴唇_png"/>
-			<e:Image width="46.36" height="41.96" x="198.69" y="378.72" anchorOffsetX="22.99" anchorOffsetY="21.05" source="右娃右鞋红_png"/>
-			<e:Image width="57.56" height="57.56" x="94.24" y="432.95" anchorOffsetX="28.54" anchorOffsetY="28.88" source="右娃左鞋红_png"/>
-			<e:Image width="16.36" height="13.96" x="-30.99" y="-81.33" anchorOffsetX="8.11" anchorOffsetY="7" source="左娃上嘴唇_png"/>
-			<e:Image width="23.96" height="35.16" x="-151.22" y="-74.26" anchorOffsetX="11.88" anchorOffsetY="17.67" source="左娃头绳1_png"/>
-			<e:Image width="36.36" height="9.16" x="-74.67" y="-178.92" anchorOffsetX="18.03" anchorOffsetY="4.61" source="左娃头绳2_png"/>
-			<e:Image width="18.36" height="11.16" x="-28.39" y="-79.52" anchorOffsetX="9.11" anchorOffsetY="5.61" source="左娃下嘴唇_png"/>
-			<e:Image width="63.56" height="67.56" x="28.85" y="-57.17" anchorOffsetX="31.55" anchorOffsetY="33.96" source="左娃衣服红3_png"/>
-			<e:Image width="22.76" height="57.96" x="12.99" y="-66.4" anchorOffsetX="11.29" anchorOffsetY="29.13" source="左娃衣服红2_png"/>
-			<e:Image width="100.36" height="92.36" x="-19.72" y="23.68" anchorOffsetX="49.78" anchorOffsetY="46.41" source="左娃衣服红4_png"/>
-			<e:Image width="74.76" height="31.96" x="-30.81" y="-22.67" anchorOffsetX="37.09" anchorOffsetY="16.06" source="左娃衣服红1_png"/>
-			<e:Image width="46.76" height="76.76" x="78.8" y="-18.15" anchorOffsetX="7.5" anchorOffsetY="29.78" source="左娃衣服红5_png"/>
-			<e:Image width="126.36" height="112.76" x="-64.84" y="134.22" anchorOffsetX="20.26" anchorOffsetY="43.75" source="左娃衣服红6_png"/>
-			<e:Image width="49.96" height="135.96" x="51.3" y="113.62" anchorOffsetX="8" anchorOffsetY="52.75" source="左娃衣服红7_png"/>
-			<e:Image width="89.96" height="25.56" x="-30.28" y="72.78" anchorOffsetX="14.42" anchorOffsetY="9.91" source="左娃衣服红8_png"/>
+		<e:Group x="249.00000000000003" y="431" scaleX="1" scaleY="1" visible="false">
+			<e:Image width="18.76" height="10.36" x="122.61" y="82.06" anchorOffsetX="9.31" anchorOffsetY="5.19" source="右娃上嘴唇_png" alpha="0"/>
+			<e:Image width="28.36" height="58.76" x="242.17" y="47.92" anchorOffsetX="14.07" anchorOffsetY="29.45" source="右娃头绳_png" alpha="0"/>
+			<e:Image width="15.56" height="11.96" x="118.22" y="86.07" anchorOffsetX="7.72" anchorOffsetY="6" source="右娃下嘴唇_png" alpha="0"/>
+			<e:Image width="46.36" height="41.96" x="198.69" y="378.72" anchorOffsetX="22.99" anchorOffsetY="21.05" source="右娃右鞋红_png" alpha="0"/>
+			<e:Image width="57.56" height="57.56" x="94.24" y="432.95" anchorOffsetX="28.54" anchorOffsetY="28.88" source="右娃左鞋红_png" alpha="0"/>
+			<e:Image width="16.36" height="13.96" x="-30.99" y="-81.33" anchorOffsetX="8.11" anchorOffsetY="7" source="左娃上嘴唇_png" alpha="0"/>
+			<e:Image width="23.96" height="35.16" x="-151.22" y="-74.26" anchorOffsetX="11.88" anchorOffsetY="17.67" source="左娃头绳1_png" alpha="0"/>
+			<e:Image width="36.36" height="9.16" x="-74.67" y="-178.92" anchorOffsetX="18.03" anchorOffsetY="4.61" source="左娃头绳2_png" alpha="0"/>
+			<e:Image width="18.36" height="11.16" x="-28.39" y="-79.52" anchorOffsetX="9.11" anchorOffsetY="5.61" source="左娃下嘴唇_png" alpha="0"/>
+			<e:Image width="63.56" height="67.56" x="28.85" y="-57.17" anchorOffsetX="31.55" anchorOffsetY="33.96" source="左娃衣服红3_png" alpha="0"/>
+			<e:Image width="22.76" height="57.96" x="12.99" y="-66.4" anchorOffsetX="11.29" anchorOffsetY="29.13" source="左娃衣服红2_png" alpha="0"/>
+			<e:Image width="100.36" height="92.36" x="-19.72" y="23.68" anchorOffsetX="49.78" anchorOffsetY="46.41" source="左娃衣服红4_png" alpha="0"/>
+			<e:Image width="74.76" height="31.96" x="-30.81" y="-22.67" anchorOffsetX="37.09" anchorOffsetY="16.06" source="左娃衣服红1_png" alpha="0"/>
+			<e:Image width="46.76" height="76.76" x="78.8" y="-18.15" anchorOffsetX="7.5" anchorOffsetY="29.78" source="左娃衣服红5_png" alpha="0"/>
+			<e:Image width="126.36" height="112.76" x="-64.84" y="134.22" anchorOffsetX="20.26" anchorOffsetY="43.75" source="左娃衣服红6_png" alpha="0"/>
+			<e:Image width="49.96" height="135.96" x="51.3" y="113.62" anchorOffsetX="8" anchorOffsetY="52.75" source="左娃衣服红7_png" alpha="0"/>
+			<e:Image width="89.96" height="25.56" x="-30.28" y="72.78" anchorOffsetX="14.42" anchorOffsetY="9.91" source="左娃衣服红8_png" alpha="0"/>
 		</e:Group>
 	</e:Group>
-	<e:Group id="AutumnGroup" left="0" right="0" top="0" bottom="0"/>
+	<e:Group id="AutumnGroup" left="0" right="0" top="0" bottom="0">
+		<e:Group x="384.83" y="303.33" visible="false">
+			<e:Image x="0" y="0" anchorOffsetX="0" width="129.17" anchorOffsetY="0" height="130.34" scaleX="1" scaleY="1" source="右娃脸_png" alpha="0"/>
+			<e:Image source="右娃脖子_png" x="29.5" y="123" anchorOffsetX="0" width="33.67" anchorOffsetY="0" height="14.34" scaleX="1" scaleY="1" alpha="0"/>
+		</e:Group>
+	</e:Group>
 	<e:Group id="WinterGroup" left="0" right="0" top="0" bottom="0">
 	</e:Group>
 	<e:Scroller width="640" height="80" x="0" y="1056" anchorOffsetY="0" anchorOffsetX="0">

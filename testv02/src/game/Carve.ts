@@ -127,6 +127,7 @@ class Carve extends eui.Component implements  eui.UIComponent {
 			nb++;
 		}
 		group.getChildAt(0).visible=true;
+		Colorful.getInstance().setChildIndex(group, 4);
 	}
 
 	private selectPart(part:eui.Image,Seasongroup:eui.Group){
@@ -135,12 +136,14 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		{
 			var child:eui.Image=<eui.Image>group.getChildAt(i);
 			child.alpha=0.5;
+			child.pixelHitTest=false;
 			this.func=this.changeColor.bind(this,child,Number(part.name),group);
 			child.once(egret.TouchEvent.TOUCH_TAP,this.func,this);
 		}
 	}	
 	private changeColor(img:eui.Image,nb:number,group:eui.Group){
 		img.alpha=1;
+		img.pixelHitTest=true;
 		let next:boolean[]=[];
 		var turn=true;
 		for (var i=0;i<group.numChildren;i++)

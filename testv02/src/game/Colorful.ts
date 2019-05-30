@@ -42,9 +42,9 @@ class Colorful extends eui.Component implements  eui.UIComponent {
 		Carve.getInstance().timerComFunc();
 
 		this.cleanUp(this.SpringGroup);
-		// this.cleanUp(this.SummerGroup);
-		// this.cleanUp(this.AutumnGroup);
-		// this.cleanUp(this.WinterGroup);
+		this.cleanUp(this.SummerGroup);
+		this.cleanUp(this.AutumnGroup);
+		this.cleanUp(this.WinterGroup);
 		this.Numbers.removeChildren();
 		this.parent.removeChild(this);
 	}

@@ -965,11 +965,12 @@ var egret = window.egret;window.skins={};
 
 	function ColorfulSkin() {
 		_super.call(this);
-		this.skinParts = ["carveLineLarge","SpringGroup","Numbers","back","save"];
+		this.skinParts = ["carveLineLarge","SpringGroup","SummerGroup","AutumnGroup","WinterGroup","Numbers","back","save"];
 		
+		this.currentState = "衣服绿8_png";
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.carveLineLarge_i(),this.SpringGroup_i(),this._Scroller1_i(),this.back_i(),this.save_i()];
+		this.elementsContent = [this.carveLineLarge_i(),this.SpringGroup_i(),this.SummerGroup_i(),this.AutumnGroup_i(),this.WinterGroup_i(),this._Scroller1_i(),this.back_i(),this.save_i()];
 	}
 	var _proto = ColorfulSkin.prototype;
 
@@ -982,7 +983,7 @@ var egret = window.egret;window.skins={};
 		t.height = 1136;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "Xiangaozip_jpg";
+		t.source = "LiqiuXian_png";
 		t.width = 640;
 		t.x = 0;
 		t.y = 0;
@@ -1901,7 +1902,7 @@ var egret = window.egret;window.skins={};
 		t.visible = false;
 		t.x = -151;
 		t.y = 343.5;
-		t.elementsContent = [this._Image68_i(),this._Image69_i(),this._Image70_i(),this._Image71_i(),this._Image72_i(),this._Image73_i(),this._Image74_i(),this._Image75_i(),this._Image76_i(),this._Image77_i(),this._Image78_i(),this._Image79_i(),this._Image80_i(),this._Image81_i()];
+		t.elementsContent = [this._Image68_i(),this._Image69_i(),this._Image70_i(),this._Image71_i(),this._Image72_i(),this._Image73_i(),this._Image74_i(),this._Image75_i(),this._Image76_i(),this._Image77_i(),this._Image78_i(),this._Image79_i(),this._Image80_i(),this._Image81_i(),this._Image82_i()];
 		return t;
 	};
 	_proto._Image68_i = function () {
@@ -2072,15 +2073,27 @@ var egret = window.egret;window.skins={};
 		t.y = 112.8;
 		return t;
 	};
+	_proto._Image82_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 19.96;
+		t.source = "衣服绿8_png";
+		t.width = 7.43;
+		t.x = 100.1;
+		t.y = 34.46;
+		return t;
+	};
 	_proto._Group8_i = function () {
 		var t = new eui.Group();
 		t.visible = false;
 		t.x = -127.33;
 		t.y = 408.66;
-		t.elementsContent = [this._Image82_i(),this._Image83_i()];
+		t.elementsContent = [this._Image83_i(),this._Image84_i()];
 		return t;
 	};
-	_proto._Image82_i = function () {
+	_proto._Image83_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2092,7 +2105,7 @@ var egret = window.egret;window.skins={};
 		t.y = 18;
 		return t;
 	};
-	_proto._Image83_i = function () {
+	_proto._Image84_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2111,10 +2124,10 @@ var egret = window.egret;window.skins={};
 		t.width = 200;
 		t.x = 13;
 		t.y = 370;
-		t.elementsContent = [this._Image84_i()];
+		t.elementsContent = [this._Image85_i()];
 		return t;
 	};
-	_proto._Image84_i = function () {
+	_proto._Image85_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2133,10 +2146,10 @@ var egret = window.egret;window.skins={};
 		t.visible = false;
 		t.x = -117.33;
 		t.y = 418.66;
-		t.elementsContent = [this._Image85_i()];
+		t.elementsContent = [this._Image86_i()];
 		return t;
 	};
-	_proto._Image85_i = function () {
+	_proto._Image86_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2153,10 +2166,10 @@ var egret = window.egret;window.skins={};
 		t.visible = false;
 		t.x = -107.33;
 		t.y = 428.66;
-		t.elementsContent = [this._Image86_i()];
+		t.elementsContent = [this._Image87_i()];
 		return t;
 	};
-	_proto._Image86_i = function () {
+	_proto._Image87_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2173,10 +2186,10 @@ var egret = window.egret;window.skins={};
 		t.visible = false;
 		t.x = -97.33;
 		t.y = 438.66;
-		t.elementsContent = [this._Image87_i()];
+		t.elementsContent = [this._Image88_i()];
 		return t;
 	};
-	_proto._Image87_i = function () {
+	_proto._Image88_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2193,10 +2206,10 @@ var egret = window.egret;window.skins={};
 		t.visible = false;
 		t.x = -77.33;
 		t.y = 458.66;
-		t.elementsContent = [this._Image88_i(),this._Image89_i(),this._Image90_i(),this._Image91_i(),this._Image92_i(),this._Image93_i(),this._Image94_i(),this._Image95_i(),this._Image96_i()];
+		t.elementsContent = [this._Image89_i(),this._Image90_i(),this._Image91_i(),this._Image92_i(),this._Image93_i(),this._Image94_i(),this._Image95_i(),this._Image96_i(),this._Image97_i()];
 		return t;
 	};
-	_proto._Image88_i = function () {
+	_proto._Image89_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2208,7 +2221,7 @@ var egret = window.egret;window.skins={};
 		t.y = 90;
 		return t;
 	};
-	_proto._Image89_i = function () {
+	_proto._Image90_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2220,7 +2233,7 @@ var egret = window.egret;window.skins={};
 		t.y = -7;
 		return t;
 	};
-	_proto._Image90_i = function () {
+	_proto._Image91_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2232,7 +2245,7 @@ var egret = window.egret;window.skins={};
 		t.y = -49.5;
 		return t;
 	};
-	_proto._Image91_i = function () {
+	_proto._Image92_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2244,7 +2257,7 @@ var egret = window.egret;window.skins={};
 		t.y = -82;
 		return t;
 	};
-	_proto._Image92_i = function () {
+	_proto._Image93_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2256,7 +2269,7 @@ var egret = window.egret;window.skins={};
 		t.y = -70;
 		return t;
 	};
-	_proto._Image93_i = function () {
+	_proto._Image94_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2268,7 +2281,7 @@ var egret = window.egret;window.skins={};
 		t.y = -37;
 		return t;
 	};
-	_proto._Image94_i = function () {
+	_proto._Image95_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2280,7 +2293,7 @@ var egret = window.egret;window.skins={};
 		t.y = 25.5;
 		return t;
 	};
-	_proto._Image95_i = function () {
+	_proto._Image96_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2292,7 +2305,7 @@ var egret = window.egret;window.skins={};
 		t.y = 67.5;
 		return t;
 	};
-	_proto._Image96_i = function () {
+	_proto._Image97_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2309,10 +2322,10 @@ var egret = window.egret;window.skins={};
 		t.visible = false;
 		t.x = -211.5;
 		t.y = 394;
-		t.elementsContent = [this._Image97_i(),this._Image98_i(),this._Image99_i()];
+		t.elementsContent = [this._Image98_i(),this._Image99_i(),this._Image100_i()];
 		return t;
 	};
-	_proto._Image97_i = function () {
+	_proto._Image98_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2324,7 +2337,7 @@ var egret = window.egret;window.skins={};
 		t.y = 0;
 		return t;
 	};
-	_proto._Image98_i = function () {
+	_proto._Image99_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2336,7 +2349,7 @@ var egret = window.egret;window.skins={};
 		t.y = 28.5;
 		return t;
 	};
-	_proto._Image99_i = function () {
+	_proto._Image100_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2353,10 +2366,10 @@ var egret = window.egret;window.skins={};
 		t.visible = false;
 		t.x = -201.67;
 		t.y = 518.67;
-		t.elementsContent = [this._Image100_i(),this._Image101_i()];
+		t.elementsContent = [this._Image101_i(),this._Image102_i()];
 		return t;
 	};
-	_proto._Image100_i = function () {
+	_proto._Image101_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2368,7 +2381,7 @@ var egret = window.egret;window.skins={};
 		t.y = 42;
 		return t;
 	};
-	_proto._Image101_i = function () {
+	_proto._Image102_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2378,6 +2391,497 @@ var egret = window.egret;window.skins={};
 		t.width = 137.35;
 		t.x = 0;
 		t.y = 0;
+		return t;
+	};
+	_proto.SummerGroup_i = function () {
+		var t = new eui.Group();
+		this.SummerGroup = t;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.elementsContent = [this._Group16_i(),this._Group17_i(),this._Group18_i()];
+		return t;
+	};
+	_proto._Group16_i = function () {
+		var t = new eui.Group();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.visible = false;
+		t.x = 229.00000000000003;
+		t.y = 411;
+		t.elementsContent = [this._Image103_i(),this._Image104_i(),this._Image105_i(),this._Image106_i(),this._Image107_i(),this._Image108_i(),this._Image109_i(),this._Image110_i(),this._Image111_i(),this._Image112_i()];
+		return t;
+	};
+	_proto._Image103_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 18.36;
+		t.source = "右娃脖子2_png";
+		t.width = 21.76;
+		t.x = 167;
+		t.y = 144.67;
+		return t;
+	};
+	_proto._Image104_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 161.03;
+		t.source = "右娃脸2_png";
+		t.width = 163.09;
+		t.x = 113.67;
+		t.y = -15.33;
+		return t;
+	};
+	_proto._Image105_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 31.03;
+		t.source = "右娃右手_png";
+		t.width = 53.09;
+		t.x = 238.24;
+		t.y = 128.86;
+		return t;
+	};
+	_proto._Image106_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 42.36;
+		t.source = "右娃左手2_png";
+		t.width = 57.09;
+		t.x = 221.58;
+		t.y = 177.52;
+		return t;
+	};
+	_proto._Image107_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 27.86;
+		t.source = "左娃脖子2_png";
+		t.width = 25.86;
+		t.x = 2.01;
+		t.y = -53.09;
+		return t;
+	};
+	_proto._Image108_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 85.75;
+		t.anchorOffsetY = 71.4;
+		t.height = 146.26;
+		t.source = "左娃脸_png";
+		t.width = 163.06;
+		t.x = -56.64;
+		t.y = -87.69;
+		return t;
+	};
+	_proto._Image109_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 37.37;
+		t.anchorOffsetY = 21.01;
+		t.height = 43.06;
+		t.source = "左娃右手2_png";
+		t.width = 71.06;
+		t.x = 161.38;
+		t.y = -35.68;
+		return t;
+	};
+	_proto._Image110_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 14.87;
+		t.anchorOffsetY = 15.73;
+		t.height = 32.26;
+		t.source = "左娃右手臂_png";
+		t.width = 28.26;
+		t.x = 132.08;
+		t.y = -12.56;
+		return t;
+	};
+	_proto._Image111_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 44.34;
+		t.anchorOffsetY = 28.2;
+		t.height = 57.86;
+		t.source = "左娃左手_png";
+		t.width = 84.26;
+		t.x = 116.75;
+		t.y = -48.89;
+		return t;
+	};
+	_proto._Image112_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 22.45;
+		t.anchorOffsetY = 31.9;
+		t.height = 65.46;
+		t.source = "左娃左手臂_png";
+		t.width = 42.66;
+		t.x = 77.26;
+		t.y = 0.81;
+		return t;
+	};
+	_proto._Group17_i = function () {
+		var t = new eui.Group();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.visible = false;
+		t.x = 239.00000000000003;
+		t.y = 421;
+		t.elementsContent = [this._Image113_i(),this._Image114_i(),this._Image115_i(),this._Image116_i(),this._Image117_i(),this._Image118_i()];
+		return t;
+	};
+	_proto._Image113_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 33.24;
+		t.anchorOffsetY = 26.25;
+		t.height = 52.36;
+		t.source = "右娃右腮红2_png";
+		t.width = 66.96;
+		t.x = 162.24;
+		t.y = 112.12;
+		return t;
+	};
+	_proto._Image114_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 13.39;
+		t.anchorOffsetY = 18.04;
+		t.height = 35.96;
+		t.source = "右娃左腮红_png";
+		t.width = 26.96;
+		t.x = 112.79;
+		t.y = 77.91;
+		return t;
+	};
+	_proto._Image115_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 15.97;
+		t.anchorOffsetY = 22.26;
+		t.height = 44.36;
+		t.source = "左娃右腮红2_png";
+		t.width = 32.16;
+		t.x = -4.63;
+		t.y = -89.07;
+		return t;
+	};
+	_proto._Image116_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 7.03;
+		t.anchorOffsetY = 11.02;
+		t.height = 21.96;
+		t.source = "左娃右眼皮2_png";
+		t.width = 14.16;
+		t.x = -27.57;
+		t.y = -113.51;
+		return t;
+	};
+	_proto._Image117_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 35.23;
+		t.anchorOffsetY = 25.27;
+		t.height = 50.36;
+		t.source = "左娃左腮红2_png";
+		t.width = 70.96;
+		t.x = -44.57;
+		t.y = -48.86;
+		return t;
+	};
+	_proto._Image118_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 9.62;
+		t.anchorOffsetY = 13.82;
+		t.height = 27.56;
+		t.source = "左娃左眼皮2_png";
+		t.width = 19.36;
+		t.x = -69.78;
+		t.y = -76.71;
+		return t;
+	};
+	_proto._Group18_i = function () {
+		var t = new eui.Group();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.visible = false;
+		t.x = 249.00000000000003;
+		t.y = 431;
+		t.elementsContent = [this._Image119_i(),this._Image120_i(),this._Image121_i(),this._Image122_i(),this._Image123_i(),this._Image124_i(),this._Image125_i(),this._Image126_i(),this._Image127_i(),this._Image128_i(),this._Image129_i(),this._Image130_i(),this._Image131_i(),this._Image132_i(),this._Image133_i(),this._Image134_i(),this._Image135_i()];
+		return t;
+	};
+	_proto._Image119_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 9.31;
+		t.anchorOffsetY = 5.19;
+		t.height = 10.36;
+		t.source = "右娃上嘴唇_png";
+		t.width = 18.76;
+		t.x = 122.61;
+		t.y = 82.06;
+		return t;
+	};
+	_proto._Image120_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 14.07;
+		t.anchorOffsetY = 29.45;
+		t.height = 58.76;
+		t.source = "右娃头绳_png";
+		t.width = 28.36;
+		t.x = 242.17;
+		t.y = 47.92;
+		return t;
+	};
+	_proto._Image121_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 7.72;
+		t.anchorOffsetY = 6;
+		t.height = 11.96;
+		t.source = "右娃下嘴唇_png";
+		t.width = 15.56;
+		t.x = 118.22;
+		t.y = 86.07;
+		return t;
+	};
+	_proto._Image122_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 22.99;
+		t.anchorOffsetY = 21.05;
+		t.height = 41.96;
+		t.source = "右娃右鞋红_png";
+		t.width = 46.36;
+		t.x = 198.69;
+		t.y = 378.72;
+		return t;
+	};
+	_proto._Image123_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 28.54;
+		t.anchorOffsetY = 28.88;
+		t.height = 57.56;
+		t.source = "右娃左鞋红_png";
+		t.width = 57.56;
+		t.x = 94.24;
+		t.y = 432.95;
+		return t;
+	};
+	_proto._Image124_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 8.11;
+		t.anchorOffsetY = 7;
+		t.height = 13.96;
+		t.source = "左娃上嘴唇_png";
+		t.width = 16.36;
+		t.x = -30.99;
+		t.y = -81.33;
+		return t;
+	};
+	_proto._Image125_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 11.88;
+		t.anchorOffsetY = 17.67;
+		t.height = 35.16;
+		t.source = "左娃头绳1_png";
+		t.width = 23.96;
+		t.x = -151.22;
+		t.y = -74.26;
+		return t;
+	};
+	_proto._Image126_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 18.03;
+		t.anchorOffsetY = 4.61;
+		t.height = 9.16;
+		t.source = "左娃头绳2_png";
+		t.width = 36.36;
+		t.x = -74.67;
+		t.y = -178.92;
+		return t;
+	};
+	_proto._Image127_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 9.11;
+		t.anchorOffsetY = 5.61;
+		t.height = 11.16;
+		t.source = "左娃下嘴唇_png";
+		t.width = 18.36;
+		t.x = -28.39;
+		t.y = -79.52;
+		return t;
+	};
+	_proto._Image128_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 31.55;
+		t.anchorOffsetY = 33.96;
+		t.height = 67.56;
+		t.source = "左娃衣服红3_png";
+		t.width = 63.56;
+		t.x = 28.85;
+		t.y = -57.17;
+		return t;
+	};
+	_proto._Image129_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 11.29;
+		t.anchorOffsetY = 29.13;
+		t.height = 57.96;
+		t.source = "左娃衣服红2_png";
+		t.width = 22.76;
+		t.x = 12.99;
+		t.y = -66.4;
+		return t;
+	};
+	_proto._Image130_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 49.78;
+		t.anchorOffsetY = 46.41;
+		t.height = 92.36;
+		t.source = "左娃衣服红4_png";
+		t.width = 100.36;
+		t.x = -19.72;
+		t.y = 23.68;
+		return t;
+	};
+	_proto._Image131_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 37.09;
+		t.anchorOffsetY = 16.06;
+		t.height = 31.96;
+		t.source = "左娃衣服红1_png";
+		t.width = 74.76;
+		t.x = -30.81;
+		t.y = -22.67;
+		return t;
+	};
+	_proto._Image132_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 7.5;
+		t.anchorOffsetY = 29.78;
+		t.height = 76.76;
+		t.source = "左娃衣服红5_png";
+		t.width = 46.76;
+		t.x = 78.8;
+		t.y = -18.15;
+		return t;
+	};
+	_proto._Image133_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 20.26;
+		t.anchorOffsetY = 43.75;
+		t.height = 112.76;
+		t.source = "左娃衣服红6_png";
+		t.width = 126.36;
+		t.x = -64.84;
+		t.y = 134.22;
+		return t;
+	};
+	_proto._Image134_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 8;
+		t.anchorOffsetY = 52.75;
+		t.height = 135.96;
+		t.source = "左娃衣服红7_png";
+		t.width = 49.96;
+		t.x = 51.3;
+		t.y = 113.62;
+		return t;
+	};
+	_proto._Image135_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 14.42;
+		t.anchorOffsetY = 9.91;
+		t.height = 25.56;
+		t.source = "左娃衣服红8_png";
+		t.width = 89.96;
+		t.x = -30.28;
+		t.y = 72.78;
+		return t;
+	};
+	_proto.AutumnGroup_i = function () {
+		var t = new eui.Group();
+		this.AutumnGroup = t;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.elementsContent = [this._Group19_i()];
+		return t;
+	};
+	_proto._Group19_i = function () {
+		var t = new eui.Group();
+		t.visible = false;
+		t.x = 384.83;
+		t.y = 303.33;
+		t.elementsContent = [this._Image136_i(),this._Image137_i()];
+		return t;
+	};
+	_proto._Image136_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 130.34;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右娃脸_png";
+		t.width = 129.17;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Image137_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 14.34;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右娃脖子_png";
+		t.width = 33.67;
+		t.x = 29.5;
+		t.y = 123;
+		return t;
+	};
+	_proto.WinterGroup_i = function () {
+		var t = new eui.Group();
+		this.WinterGroup = t;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
 		return t;
 	};
 	_proto._Scroller1_i = function () {

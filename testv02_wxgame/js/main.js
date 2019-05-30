@@ -148,18 +148,21 @@ var Carve = (function (_super) {
             nb++;
         }
         group.getChildAt(0).visible = true;
+        Colorful.getInstance().setChildIndex(group, 4);
     };
     Carve.prototype.selectPart = function (part, Seasongroup) {
         var group = Seasongroup.getChildAt(Number(part.name) - 1);
         for (var i = 0; i < group.numChildren; i++) {
             var child = group.getChildAt(i);
             child.alpha = 0.5;
+            child.pixelHitTest = false;
             this.func = this.changeColor.bind(this, child, Number(part.name), group);
             child.once(egret.TouchEvent.TOUCH_TAP, this.func, this);
         }
     };
     Carve.prototype.changeColor = function (img, nb, group) {
         img.alpha = 1;
+        img.pixelHitTest = true;
         var next = [];
         var turn = true;
         for (var i = 0; i < group.numChildren; i++) {
@@ -660,9 +663,9 @@ var Colorful = (function (_super) {
         this.save.visible = false;
         Carve.getInstance().timerComFunc();
         this.cleanUp(this.SpringGroup);
-        // this.cleanUp(this.SummerGroup);
-        // this.cleanUp(this.AutumnGroup);
-        // this.cleanUp(this.WinterGroup);
+        this.cleanUp(this.SummerGroup);
+        this.cleanUp(this.AutumnGroup);
+        this.cleanUp(this.WinterGroup);
         this.Numbers.removeChildren();
         this.parent.removeChild(this);
     };
