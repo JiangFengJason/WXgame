@@ -808,21 +808,25 @@ var egret = window.egret;window.skins={};
 
 	function CarveSkin() {
 		_super.call(this);
-		this.skinParts = ["CarveText","PrintText","BrushText","banzi","toCarve","toPrint","goldCarve","blackCarve","carveLine","back"];
+		this.skinParts = ["BrushText","CarveText","PrintText","PaintText","banzi","toCarve","toPrint","goldCarve","blackCarve","carveLine","back"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.CarveText_i(),this.PrintText_i(),this.BrushText_i(),this._Image4_i(),this.banzi_i(),this.toCarve_i(),this.toPrint_i(),this.goldCarve_i(),this.blackCarve_i(),this.carveLine_i(),this.back_i()];
+		this.elementsContent = [this.BrushText_i(),this.CarveText_i(),this.PrintText_i(),this.PaintText_i(),this._Image5_i(),this.banzi_i(),this.toCarve_i(),this.toPrint_i(),this.goldCarve_i(),this.blackCarve_i(),this.carveLine_i(),this.back_i()];
 	}
 	var _proto = CarveSkin.prototype;
 
-	_proto.CarveText_i = function () {
+	_proto.BrushText_i = function () {
 		var t = new eui.Group();
-		this.CarveText = t;
-		t.alpha = 1;
-		t.x = 0;
-		t.y = 0;
-		t.elementsContent = [this._Image1_i(),this._Label1_i(),this._Label2_i()];
+		this.BrushText = t;
+		t.alpha = 0;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.x = 10;
+		t.y = 10;
+		t.elementsContent = [this._Image1_i(),this._Label1_i(),this._Label2_i(),this._Label3_i(),this._Label4_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -837,79 +841,60 @@ var egret = window.egret;window.skins={};
 		var t = new eui.Label();
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
 		t.height = 563.34;
-		t.text = "刻时斜口弹道，以刀向木，直刻而下";
+		t.text = "刷";
 		t.width = 43.69;
 		t.x = 443.48;
-		t.y = 302.64;
+		t.y = 299.98;
 		return t;
 	};
 	_proto._Label2_i = function () {
 		var t = new eui.Label();
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 563.34;
-		t.text = "深刻半厘米以上";
+		t.fontFamily = "KaiTi";
+		t.height = 678.01;
+		t.text = "刷墨时要施加一定的力量，";
 		t.width = 43.69;
-		t.x = 399.79;
-		t.y = 302.64;
-		return t;
-	};
-	_proto.PrintText_i = function () {
-		var t = new eui.Group();
-		this.PrintText = t;
-		t.alpha = 1;
-		t.bottom = 0;
-		t.left = 0;
-		t.right = 0;
-		t.top = 0;
-		t.elementsContent = [this._Image2_i(),this._Label3_i(),this._Label4_i()];
-		return t;
-	};
-	_proto._Image2_i = function () {
-		var t = new eui.Image();
-		t.alpha = 0.5;
-		t.source = "blackbg_jpg";
-		t.x = 0;
-		t.y = 0;
+		t.x = 392.52;
+		t.y = 299.33;
 		return t;
 	};
 	_proto._Label3_i = function () {
 		var t = new eui.Label();
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 563.34;
-		t.text = "印";
+		t.fontFamily = "KaiTi";
+		t.height = 638.01;
+		t.text = "雕版上的墨线才会均匀。";
 		t.width = 43.69;
-		t.x = 443.48;
-		t.y = 302.64;
+		t.x = 269.2;
+		t.y = 297.36;
 		return t;
 	};
 	_proto._Label4_i = function () {
 		var t = new eui.Label();
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 563.34;
-		t.text = "深刻半厘米以上";
+		t.fontFamily = "KaiTi";
+		t.height = 638.01;
+		t.text = "只有当刷子上的墨均匀,";
 		t.width = 43.69;
-		t.x = 399.79;
-		t.y = 302.64;
+		t.x = 332.5;
+		t.y = 298.05;
 		return t;
 	};
-	_proto.BrushText_i = function () {
+	_proto.CarveText_i = function () {
 		var t = new eui.Group();
-		this.BrushText = t;
-		t.alpha = 1;
-		t.bottom = 0;
-		t.left = 0;
-		t.right = 0;
-		t.top = 0;
-		t.x = 10;
-		t.y = 10;
-		t.elementsContent = [this._Image3_i(),this._Label5_i(),this._Label6_i()];
+		this.CarveText = t;
+		t.alpha = 0;
+		t.x = 0;
+		t.y = 0;
+		t.elementsContent = [this._Image2_i(),this._Label5_i(),this._Label6_i(),this._Label7_i()];
 		return t;
 	};
-	_proto._Image3_i = function () {
+	_proto._Image2_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0.5;
 		t.source = "blackbg_jpg";
@@ -921,10 +906,11 @@ var egret = window.egret;window.skins={};
 		var t = new eui.Label();
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
 		t.height = 563.34;
-		t.text = "刷";
+		t.text = "刻时斜口弹道，以刀向木，直刻而下";
 		t.width = 43.69;
-		t.x = 443.48;
+		t.x = 392.82;
 		t.y = 302.64;
 		return t;
 	};
@@ -932,14 +918,163 @@ var egret = window.egret;window.skins={};
 		var t = new eui.Label();
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
 		t.height = 563.34;
 		t.text = "深刻半厘米以上";
 		t.width = 43.69;
-		t.x = 399.79;
+		t.x = 335.83;
 		t.y = 302.64;
 		return t;
 	};
+	_proto._Label7_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
+		t.height = 563.34;
+		t.text = "刻";
+		t.width = 43.69;
+		t.x = 444.16;
+		t.y = 302;
+		return t;
+	};
+	_proto.PrintText_i = function () {
+		var t = new eui.Group();
+		this.PrintText = t;
+		t.alpha = 0;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.elementsContent = [this._Image3_i(),this._Label8_i(),this._Label9_i(),this._Label10_i(),this._Label11_i()];
+		return t;
+	};
+	_proto._Image3_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0.5;
+		t.source = "blackbg_jpg";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Label8_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
+		t.height = 563.34;
+		t.text = "印";
+		t.width = 43.69;
+		t.x = 443.48;
+		t.y = 302.64;
+		return t;
+	};
+	_proto._Label9_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
+		t.height = 563.34;
+		t.text = "印稿时使纸的中心与桌边记号对齐，";
+		t.width = 43.69;
+		t.x = 395.8;
+		t.y = 302.64;
+		return t;
+	};
+	_proto._Label10_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
+		t.height = 563.34;
+		t.text = "再用棕毛擦子从左至右、从上往下平抹，";
+		t.width = 43.69;
+		t.x = 336.49;
+		t.y = 304.66;
+		return t;
+	};
+	_proto._Label11_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
+		t.height = 563.34;
+		t.text = "将线条完全平印上去。";
+		t.width = 43.69;
+		t.x = 266.49;
+		t.y = 302.69;
+		return t;
+	};
+	_proto.PaintText_i = function () {
+		var t = new eui.Group();
+		this.PaintText = t;
+		t.alpha = 0;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.x = 10;
+		t.y = 10;
+		t.elementsContent = [this._Image4_i(),this._Label12_i(),this._Label13_i(),this._Label14_i(),this._Label15_i()];
+		return t;
+	};
 	_proto._Image4_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0.5;
+		t.source = "blackbg_jpg";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Label12_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
+		t.height = 563.34;
+		t.text = "彩绘";
+		t.width = 43.69;
+		t.x = 443.48;
+		t.y = 302.64;
+		return t;
+	};
+	_proto._Label13_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
+		t.height = 563.34;
+		t.text = "彩绘是绵竹年画的最大特色，";
+		t.width = 43.69;
+		t.x = 395.8;
+		t.y = 302.64;
+		return t;
+	};
+	_proto._Label14_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
+		t.height = 643.34;
+		t.text = "线板从不套色制作，最后完成全部靠手工彩绘。";
+		t.width = 43.69;
+		t.x = 336.49;
+		t.y = 304.66;
+		return t;
+	};
+	_proto._Label15_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fontFamily = "KaiTi";
+		t.height = 563.34;
+		t.text = "开始体验你的彩绘之旅吧！";
+		t.width = 43.69;
+		t.x = 266.49;
+		t.y = 302.69;
+		return t;
+	};
+	_proto._Image5_i = function () {
 		var t = new eui.Image();
 		t.bottom = 0;
 		t.left = 0;
@@ -1088,12 +1223,12 @@ var egret = window.egret;window.skins={};
 
 	function ColorfulSkin() {
 		_super.call(this);
-		this.skinParts = ["carveLineLarge","SpringGroup","SummerGroup","AutumnGroup","WinterGroup","Numbers","back","save"];
+		this.skinParts = ["carveLineLarge","SpringGroup","SummerGroup","AutumnGroup","WinterGroup","Numbers","back","save","Card","Save"];
 		
 		this.currentState = "衣服绿8_png";
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.carveLineLarge_i(),this.SpringGroup_i(),this.SummerGroup_i(),this.AutumnGroup_i(),this.WinterGroup_i(),this._Scroller1_i(),this.back_i(),this.save_i()];
+		this.elementsContent = [this.carveLineLarge_i(),this._Scroller1_i(),this._Scroller2_i(),this.back_i(),this.Save_i()];
 	}
 	var _proto = ColorfulSkin.prototype;
 
@@ -1108,13 +1243,29 @@ var egret = window.egret;window.skins={};
 		t.right = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "LiqiuXian_png";
+		t.source = "LidongXian_png";
 		t.top = 0;
+		return t;
+	};
+	_proto._Scroller1_i = function () {
+		var t = new eui.Scroller();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.viewport = this._Group67_i();
+		return t;
+	};
+	_proto._Group67_i = function () {
+		var t = new eui.Group();
+		t.elementsContent = [this.SpringGroup_i(),this.SummerGroup_i(),this.AutumnGroup_i(),this.WinterGroup_i()];
 		return t;
 	};
 	_proto.SpringGroup_i = function () {
 		var t = new eui.Group();
 		this.SpringGroup = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
 		t.x = 306;
 		t.y = 74.5;
 		t.elementsContent = [this._Group1_i(),this._Group2_i(),this._Group3_i(),this._Group4_i(),this._Group5_i(),this._Group6_i(),this._Group7_i(),this._Group8_i(),this._Group9_i(),this._Group10_i(),this._Group11_i(),this._Group12_i(),this._Group13_i(),this._Group14_i(),this._Group15_i()];
@@ -2522,8 +2673,12 @@ var egret = window.egret;window.skins={};
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
 		t.top = 0;
-		t.elementsContent = [this._Group16_i(),this._Group17_i(),this._Group18_i()];
+		t.x = 0;
+		t.y = 0;
+		t.elementsContent = [this._Group16_i(),this._Group17_i(),this._Group18_i(),this._Group19_i(),this._Group20_i(),this._Group21_i(),this._Group22_i(),this._Group23_i(),this._Group24_i(),this._Group25_i(),this._Group26_i(),this._Group27_i(),this._Group28_i(),this._Group29_i(),this._Group30_i(),this._Group31_i(),this._Group32_i()];
 		return t;
 	};
 	_proto._Group16_i = function () {
@@ -2545,7 +2700,7 @@ var egret = window.egret;window.skins={};
 		t.source = "右娃脖子2_png";
 		t.width = 21.76;
 		t.x = 167;
-		t.y = 144.67;
+		t.y = 142.17;
 		return t;
 	};
 	_proto._Image104_i = function () {
@@ -2557,7 +2712,7 @@ var egret = window.egret;window.skins={};
 		t.source = "右娃脸2_png";
 		t.width = 163.09;
 		t.x = 113.67;
-		t.y = -15.33;
+		t.y = -17.83;
 		return t;
 	};
 	_proto._Image105_i = function () {
@@ -2569,7 +2724,7 @@ var egret = window.egret;window.skins={};
 		t.source = "右娃右手_png";
 		t.width = 53.09;
 		t.x = 238.24;
-		t.y = 128.86;
+		t.y = 126.36;
 		return t;
 	};
 	_proto._Image106_i = function () {
@@ -2581,7 +2736,7 @@ var egret = window.egret;window.skins={};
 		t.source = "右娃左手2_png";
 		t.width = 57.09;
 		t.x = 221.58;
-		t.y = 177.52;
+		t.y = 175.02;
 		return t;
 	};
 	_proto._Image107_i = function () {
@@ -2593,7 +2748,7 @@ var egret = window.egret;window.skins={};
 		t.source = "左娃脖子2_png";
 		t.width = 25.86;
 		t.x = 2.01;
-		t.y = -53.09;
+		t.y = -55.59;
 		return t;
 	};
 	_proto._Image108_i = function () {
@@ -2605,7 +2760,7 @@ var egret = window.egret;window.skins={};
 		t.source = "左娃脸_png";
 		t.width = 163.06;
 		t.x = -56.64;
-		t.y = -87.69;
+		t.y = -90.19;
 		return t;
 	};
 	_proto._Image109_i = function () {
@@ -2617,19 +2772,19 @@ var egret = window.egret;window.skins={};
 		t.source = "左娃右手2_png";
 		t.width = 71.06;
 		t.x = 161.38;
-		t.y = -35.68;
+		t.y = -38.18;
 		return t;
 	};
 	_proto._Image110_i = function () {
 		var t = new eui.Image();
-		t.alpha = 0;
+		t.alpha = 1;
 		t.anchorOffsetX = 14.87;
 		t.anchorOffsetY = 15.73;
 		t.height = 32.26;
 		t.source = "左娃右手臂_png";
 		t.width = 28.26;
 		t.x = 132.08;
-		t.y = -12.56;
+		t.y = -15.06;
 		return t;
 	};
 	_proto._Image111_i = function () {
@@ -2641,7 +2796,7 @@ var egret = window.egret;window.skins={};
 		t.source = "左娃左手_png";
 		t.width = 84.26;
 		t.x = 116.75;
-		t.y = -48.89;
+		t.y = -51.39;
 		return t;
 	};
 	_proto._Image112_i = function () {
@@ -2653,7 +2808,7 @@ var egret = window.egret;window.skins={};
 		t.source = "左娃左手臂_png";
 		t.width = 42.66;
 		t.x = 77.26;
-		t.y = 0.81;
+		t.y = -1.69;
 		return t;
 	};
 	_proto._Group17_i = function () {
@@ -2674,8 +2829,8 @@ var egret = window.egret;window.skins={};
 		t.height = 52.36;
 		t.source = "右娃右腮红2_png";
 		t.width = 66.96;
-		t.x = 162.24;
-		t.y = 112.12;
+		t.x = 160.24;
+		t.y = 106.12;
 		return t;
 	};
 	_proto._Image114_i = function () {
@@ -2686,8 +2841,8 @@ var egret = window.egret;window.skins={};
 		t.height = 35.96;
 		t.source = "右娃左腮红_png";
 		t.width = 26.96;
-		t.x = 112.79;
-		t.y = 77.91;
+		t.x = 115.29;
+		t.y = 71.91;
 		return t;
 	};
 	_proto._Image115_i = function () {
@@ -2698,8 +2853,8 @@ var egret = window.egret;window.skins={};
 		t.height = 44.36;
 		t.source = "左娃右腮红2_png";
 		t.width = 32.16;
-		t.x = -4.63;
-		t.y = -89.07;
+		t.x = -6.63;
+		t.y = -95.07;
 		return t;
 	};
 	_proto._Image116_i = function () {
@@ -2710,8 +2865,8 @@ var egret = window.egret;window.skins={};
 		t.height = 21.96;
 		t.source = "左娃右眼皮2_png";
 		t.width = 14.16;
-		t.x = -27.57;
-		t.y = -113.51;
+		t.x = -29.57;
+		t.y = -119.51;
 		return t;
 	};
 	_proto._Image117_i = function () {
@@ -2722,8 +2877,8 @@ var egret = window.egret;window.skins={};
 		t.height = 50.36;
 		t.source = "左娃左腮红2_png";
 		t.width = 70.96;
-		t.x = -44.57;
-		t.y = -48.86;
+		t.x = -46.57;
+		t.y = -54.86;
 		return t;
 	};
 	_proto._Image118_i = function () {
@@ -2734,8 +2889,8 @@ var egret = window.egret;window.skins={};
 		t.height = 27.56;
 		t.source = "左娃左眼皮2_png";
 		t.width = 19.36;
-		t.x = -69.78;
-		t.y = -76.71;
+		t.x = -71.78;
+		t.y = -82.71;
 		return t;
 	};
 	_proto._Group18_i = function () {
@@ -2757,19 +2912,19 @@ var egret = window.egret;window.skins={};
 		t.source = "右娃上嘴唇_png";
 		t.width = 18.76;
 		t.x = 122.61;
-		t.y = 82.06;
+		t.y = 79.56;
 		return t;
 	};
 	_proto._Image120_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
-		t.anchorOffsetX = 14.07;
-		t.anchorOffsetY = 29.45;
-		t.height = 58.76;
+		t.anchorOffsetX = 11.34;
+		t.anchorOffsetY = 19.93;
+		t.height = 39.76;
 		t.source = "右娃头绳_png";
-		t.width = 28.36;
-		t.x = 242.17;
-		t.y = 47.92;
+		t.width = 22.86;
+		t.x = 251.94;
+		t.y = 50.9;
 		return t;
 	};
 	_proto._Image121_i = function () {
@@ -2781,7 +2936,7 @@ var egret = window.egret;window.skins={};
 		t.source = "右娃下嘴唇_png";
 		t.width = 15.56;
 		t.x = 118.22;
-		t.y = 86.07;
+		t.y = 83.57;
 		return t;
 	};
 	_proto._Image122_i = function () {
@@ -2793,7 +2948,7 @@ var egret = window.egret;window.skins={};
 		t.source = "右娃右鞋红_png";
 		t.width = 46.36;
 		t.x = 198.69;
-		t.y = 378.72;
+		t.y = 376.22;
 		return t;
 	};
 	_proto._Image123_i = function () {
@@ -2805,7 +2960,7 @@ var egret = window.egret;window.skins={};
 		t.source = "右娃左鞋红_png";
 		t.width = 57.56;
 		t.x = 94.24;
-		t.y = 432.95;
+		t.y = 430.45;
 		return t;
 	};
 	_proto._Image124_i = function () {
@@ -2817,7 +2972,7 @@ var egret = window.egret;window.skins={};
 		t.source = "左娃上嘴唇_png";
 		t.width = 16.36;
 		t.x = -30.99;
-		t.y = -81.33;
+		t.y = -83.83;
 		return t;
 	};
 	_proto._Image125_i = function () {
@@ -2829,7 +2984,7 @@ var egret = window.egret;window.skins={};
 		t.source = "左娃头绳1_png";
 		t.width = 23.96;
 		t.x = -151.22;
-		t.y = -74.26;
+		t.y = -76.76;
 		return t;
 	};
 	_proto._Image126_i = function () {
@@ -2841,7 +2996,7 @@ var egret = window.egret;window.skins={};
 		t.source = "左娃头绳2_png";
 		t.width = 36.36;
 		t.x = -74.67;
-		t.y = -178.92;
+		t.y = -181.92;
 		return t;
 	};
 	_proto._Image127_i = function () {
@@ -2852,8 +3007,8 @@ var egret = window.egret;window.skins={};
 		t.height = 11.16;
 		t.source = "左娃下嘴唇_png";
 		t.width = 18.36;
-		t.x = -28.39;
-		t.y = -79.52;
+		t.x = -27.89;
+		t.y = -82.52;
 		return t;
 	};
 	_proto._Image128_i = function () {
@@ -2864,8 +3019,8 @@ var egret = window.egret;window.skins={};
 		t.height = 67.56;
 		t.source = "左娃衣服红3_png";
 		t.width = 63.56;
-		t.x = 28.85;
-		t.y = -57.17;
+		t.x = 29.35;
+		t.y = -60.17;
 		return t;
 	};
 	_proto._Image129_i = function () {
@@ -2876,8 +3031,8 @@ var egret = window.egret;window.skins={};
 		t.height = 57.96;
 		t.source = "左娃衣服红2_png";
 		t.width = 22.76;
-		t.x = 12.99;
-		t.y = -66.4;
+		t.x = 13.49;
+		t.y = -69.4;
 		return t;
 	};
 	_proto._Image130_i = function () {
@@ -2888,8 +3043,8 @@ var egret = window.egret;window.skins={};
 		t.height = 92.36;
 		t.source = "左娃衣服红4_png";
 		t.width = 100.36;
-		t.x = -19.72;
-		t.y = 23.68;
+		t.x = -19.22;
+		t.y = 20.68;
 		return t;
 	};
 	_proto._Image131_i = function () {
@@ -2900,20 +3055,20 @@ var egret = window.egret;window.skins={};
 		t.height = 31.96;
 		t.source = "左娃衣服红1_png";
 		t.width = 74.76;
-		t.x = -30.81;
-		t.y = -22.67;
+		t.x = -30.31;
+		t.y = -25.67;
 		return t;
 	};
 	_proto._Image132_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
-		t.anchorOffsetX = 7.5;
+		t.anchorOffsetX = 7.66;
 		t.anchorOffsetY = 29.78;
 		t.height = 76.76;
 		t.source = "左娃衣服红5_png";
-		t.width = 46.76;
-		t.x = 78.8;
-		t.y = -18.15;
+		t.width = 47.76;
+		t.x = 77.96;
+		t.y = -21.15;
 		return t;
 	};
 	_proto._Image133_i = function () {
@@ -2924,8 +3079,8 @@ var egret = window.egret;window.skins={};
 		t.height = 112.76;
 		t.source = "左娃衣服红6_png";
 		t.width = 126.36;
-		t.x = -64.84;
-		t.y = 134.22;
+		t.x = -64.34;
+		t.y = 131.22;
 		return t;
 	};
 	_proto._Image134_i = function () {
@@ -2936,8 +3091,8 @@ var egret = window.egret;window.skins={};
 		t.height = 135.96;
 		t.source = "左娃衣服红7_png";
 		t.width = 49.96;
-		t.x = 51.3;
-		t.y = 113.62;
+		t.x = 51.8;
+		t.y = 110.62;
 		return t;
 	};
 	_proto._Image135_i = function () {
@@ -2948,8 +3103,1125 @@ var egret = window.egret;window.skins={};
 		t.height = 25.56;
 		t.source = "左娃衣服红8_png";
 		t.width = 89.96;
-		t.x = -30.28;
-		t.y = 72.78;
+		t.x = -29.78;
+		t.y = 69.78;
+		return t;
+	};
+	_proto._Group19_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image136_i(),this._Image137_i(),this._Image138_i(),this._Image139_i(),this._Image140_i(),this._Image141_i(),this._Image142_i(),this._Image143_i(),this._Image144_i(),this._Image145_i(),this._Image146_i(),this._Image147_i(),this._Image148_i(),this._Image149_i(),this._Image150_i()];
+		return t;
+	};
+	_proto._Image136_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 37.11;
+		t.anchorOffsetY = 25.22;
+		t.height = 62.36;
+		t.source = "右娃裤脚黑_png";
+		t.width = 74.76;
+		t.x = 350.35;
+		t.y = 825.04;
+		return t;
+	};
+	_proto._Image137_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 24.21;
+		t.anchorOffsetY = 11.47;
+		t.height = 28.36;
+		t.source = "右娃头发1_png";
+		t.width = 48.76;
+		t.x = 437.21;
+		t.y = 408.79;
+		return t;
+	};
+	_proto._Image138_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 17.25;
+		t.anchorOffsetY = 13.49;
+		t.height = 33.36;
+		t.source = "右娃头发22_png";
+		t.width = 34.76;
+		t.x = 379.87;
+		t.y = 407.81;
+		return t;
+	};
+	_proto._Image139_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 15.76;
+		t.anchorOffsetY = 16.33;
+		t.height = 40.36;
+		t.source = "右娃头发32_png";
+		t.width = 31.76;
+		t.x = 514.38;
+		t.y = 480.65;
+		return t;
+	};
+	_proto._Image140_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 15.26;
+		t.anchorOffsetY = 23.62;
+		t.height = 58.36;
+		t.source = "右娃头发42_png";
+		t.width = 30.76;
+		t.x = 491.88;
+		t.y = 472.94;
+		return t;
+	};
+	_proto._Image141_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 29.89;
+		t.anchorOffsetY = 17.79;
+		t.height = 43.86;
+		t.source = "右娃左眼2_png";
+		t.width = 60.16;
+		t.x = 388.91;
+		t.y = 478.76;
+		return t;
+	};
+	_proto._Image142_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 15.17;
+		t.anchorOffsetY = 4.32;
+		t.height = 10.66;
+		t.source = "右娃右眼2_png";
+		t.width = 30.56;
+		t.x = 412.89;
+		t.y = 495.02;
+		return t;
+	};
+	_proto._Image143_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 20.97;
+		t.anchorOffsetY = 23.3;
+		t.height = 57.46;
+		t.source = "左娃裤脚黑_png";
+		t.width = 42.16;
+		t.x = 129.59;
+		t.y = 611.47;
+		return t;
+	};
+	_proto._Image144_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 52.15;
+		t.anchorOffsetY = 42.23;
+		t.height = 104.13;
+		t.source = "左娃裤脚黑1_png";
+		t.width = 104.82;
+		t.x = 258.49;
+		t.y = 739.11;
+		return t;
+	};
+	_proto._Image145_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 24.13;
+		t.anchorOffsetY = 15.72;
+		t.height = 42.79;
+		t.source = "左娃头发12_png";
+		t.width = 52.16;
+		t.x = 177.39;
+		t.y = 230.47;
+		return t;
+	};
+	_proto._Image146_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 21.66;
+		t.anchorOffsetY = 19.39;
+		t.height = 52.8;
+		t.source = "左娃头发22_png";
+		t.width = 46.83;
+		t.x = 78.99;
+		t.y = 354.04;
+		return t;
+	};
+	_proto._Image147_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 17.34;
+		t.anchorOffsetY = 12.05;
+		t.height = 32.81;
+		t.source = "左娃头发32_png";
+		t.width = 37.5;
+		t.x = 131.93;
+		t.y = 268.7;
+		return t;
+	};
+	_proto._Image148_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 16.41;
+		t.anchorOffsetY = 20.63;
+		t.height = 56.14;
+		t.source = "左娃头发42_png";
+		t.width = 35.5;
+		t.x = 102.33;
+		t.y = 341.94;
+		return t;
+	};
+	_proto._Image149_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 4.52;
+		t.anchorOffsetY = 4.22;
+		t.height = 11.47;
+		t.source = "左娃右眼2_png";
+		t.width = 9.77;
+		t.x = 211.23;
+		t.y = 303.97;
+		return t;
+	};
+	_proto._Image150_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 5.52;
+		t.anchorOffsetY = 5.04;
+		t.height = 10.67;
+		t.source = "左娃左眼2_png";
+		t.width = 10.97;
+		t.x = 173.2;
+		t.y = 339.29;
+		return t;
+	};
+	_proto._Group20_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image151_i(),this._Image152_i(),this._Image153_i(),this._Image154_i(),this._Image155_i(),this._Image156_i(),this._Image157_i(),this._Image158_i(),this._Image159_i(),this._Image160_i()];
+		return t;
+	};
+	_proto._Image151_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 22.97;
+		t.anchorOffsetY = 29.06;
+		t.height = 71.86;
+		t.source = "荷花1_png";
+		t.width = 46.26;
+		t.x = 446.92;
+		t.y = 174.72;
+		return t;
+	};
+	_proto._Image152_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 7.82;
+		t.anchorOffsetY = 9.64;
+		t.height = 23.86;
+		t.source = "荷花10_png";
+		t.width = 15.76;
+		t.x = 496.65;
+		t.y = 157.29;
+		return t;
+	};
+	_proto._Image153_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 24.2;
+		t.anchorOffsetY = 18.53;
+		t.height = 45.86;
+		t.source = "荷花2_png";
+		t.width = 48.76;
+		t.x = 483.15;
+		t.y = 187.62;
+		return t;
+	};
+	_proto._Image154_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 20.23;
+		t.anchorOffsetY = 24.59;
+		t.height = 60.86;
+		t.source = "荷花3_png";
+		t.width = 40.76;
+		t.x = 415.42;
+		t.y = 175.24;
+		return t;
+	};
+	_proto._Image155_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 17.26;
+		t.anchorOffsetY = 10.25;
+		t.height = 25.36;
+		t.source = "荷花4_png";
+		t.width = 34.76;
+		t.x = 507.09;
+		t.y = 197.34;
+		return t;
+	};
+	_proto._Image156_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 15.03;
+		t.anchorOffsetY = 11.87;
+		t.height = 29.36;
+		t.source = "荷花5_png";
+		t.width = 30.26;
+		t.x = 437.1;
+		t.y = 147.35;
+		return t;
+	};
+	_proto._Image157_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 6.4;
+		t.anchorOffsetY = 10.83;
+		t.height = 21.36;
+		t.source = "荷花6_png";
+		t.width = 12.26;
+		t.x = 452.35;
+		t.y = 141.98;
+		return t;
+	};
+	_proto._Image158_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 9.28;
+		t.anchorOffsetY = 14.63;
+		t.height = 28.86;
+		t.source = "荷花7_png";
+		t.width = 17.76;
+		t.x = 462.73;
+		t.y = 152.78;
+		return t;
+	};
+	_proto._Image159_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 6.93;
+		t.anchorOffsetY = 11.84;
+		t.height = 23.36;
+		t.source = "荷花8_png";
+		t.width = 13.26;
+		t.x = 475;
+		t.y = 146.32;
+		return t;
+	};
+	_proto._Image160_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 12.67;
+		t.anchorOffsetY = 19.95;
+		t.height = 39.36;
+		t.source = "荷花9_png";
+		t.width = 24.26;
+		t.x = 476.74;
+		t.y = 167.93;
+		return t;
+	};
+	_proto._Group21_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image161_i(),this._Image162_i(),this._Image163_i(),this._Image164_i()];
+		return t;
+	};
+	_proto._Image161_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 67.16;
+		t.anchorOffsetY = 77.37;
+		t.height = 191.36;
+		t.source = "荷叶1_png";
+		t.width = 135.26;
+		t.x = 522.16;
+		t.y = 288.33;
+		return t;
+	};
+	_proto._Image162_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 21.98;
+		t.anchorOffsetY = 8.43;
+		t.height = 20.86;
+		t.source = "荷叶2_png";
+		t.width = 44.26;
+		t.x = 480.73;
+		t.y = 347.25;
+		return t;
+	};
+	_proto._Image163_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 61.2;
+		t.anchorOffsetY = 63.38;
+		t.height = 156.86;
+		t.source = "荷叶3_png";
+		t.width = 123.26;
+		t.x = 392.94;
+		t.y = 262.27;
+		return t;
+	};
+	_proto._Image164_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 9.57;
+		t.anchorOffsetY = 6.8;
+		t.height = 16.86;
+		t.source = "荷叶4_png";
+		t.width = 19.26;
+		t.x = 444.56;
+		t.y = 344.62;
+		return t;
+	};
+	_proto._Group22_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image165_i(),this._Image166_i(),this._Image167_i(),this._Image168_i(),this._Image169_i(),this._Image170_i(),this._Image171_i(),this._Image172_i(),this._Image173_i(),this._Image174_i(),this._Image175_i()];
+		return t;
+	};
+	_proto._Image165_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 10.28;
+		t.anchorOffsetY = 75.34;
+		t.height = 186.36;
+		t.source = "荷根1_png";
+		t.width = 20.76;
+		t.x = 457.48;
+		t.y = 291.29;
+		return t;
+	};
+	_proto._Image166_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 4.47;
+		t.anchorOffsetY = 17.71;
+		t.height = 43.83;
+		t.source = "荷根2_png";
+		t.width = 9.03;
+		t.x = 452.07;
+		t.y = 373;
+		return t;
+	};
+	_proto._Image167_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 4.12;
+		t.anchorOffsetY = 7.6;
+		t.height = 18.83;
+		t.source = "荷根3_png";
+		t.width = 8.33;
+		t.x = 477.07;
+		t.y = 525.55;
+		return t;
+	};
+	_proto._Image168_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 7.87;
+		t.anchorOffsetY = 11.8;
+		t.height = 29.23;
+		t.source = "荷根4_png";
+		t.width = 15.93;
+		t.x = 482.19;
+		t.y = 572.55;
+		return t;
+	};
+	_proto._Image169_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 14.99;
+		t.anchorOffsetY = 21;
+		t.height = 52.03;
+		t.source = "荷根5_png";
+		t.width = 30.33;
+		t.x = 499.68;
+		t.y = 640.83;
+		return t;
+	};
+	_proto._Image170_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 10.85;
+		t.anchorOffsetY = 16.15;
+		t.height = 40.03;
+		t.source = "右娃右手镯2_png";
+		t.width = 21.93;
+		t.x = 514.91;
+		t.y = 549.49;
+		return t;
+	};
+	_proto._Image171_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 11.65;
+		t.anchorOffsetY = 17.6;
+		t.height = 43.63;
+		t.source = "右娃左手镯2_png";
+		t.width = 23.53;
+		t.x = 452.8;
+		t.y = 611.81;
+		return t;
+	};
+	_proto._Image172_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 53.84;
+		t.anchorOffsetY = 14.54;
+		t.height = 36.03;
+		t.source = "左娃项圈绿1_png";
+		t.width = 108.73;
+		t.x = 210.64;
+		t.y = 403.44;
+		return t;
+	};
+	_proto._Image173_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 14.23;
+		t.anchorOffsetY = 25.35;
+		t.height = 62.83;
+		t.source = "左娃项圈绿2_png";
+		t.width = 28.73;
+		t.x = 262.96;
+		t.y = 353.85;
+		return t;
+	};
+	_proto._Image174_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 15.62;
+		t.anchorOffsetY = 6.63;
+		t.height = 16.43;
+		t.source = "左娃右手镯2_png";
+		t.width = 31.53;
+		t.x = 363.39;
+		t.y = 387.31;
+		return t;
+	};
+	_proto._Image175_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 14.63;
+		t.anchorOffsetY = 10.18;
+		t.height = 25.23;
+		t.source = "左娃左手镯2_png";
+		t.width = 29.53;
+		t.x = 315;
+		t.y = 371.17;
+		return t;
+	};
+	_proto._Group23_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image176_i(),this._Image177_i(),this._Image178_i(),this._Image179_i(),this._Image180_i(),this._Image181_i(),this._Image182_i()];
+		return t;
+	};
+	_proto._Image176_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 50.65;
+		t.anchorOffsetY = 46.05;
+		t.height = 113.86;
+		t.source = "右娃右鞋绿1_png";
+		t.width = 102.26;
+		t.x = 415.14;
+		t.y = 747.7;
+		return t;
+	};
+	_proto._Image177_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 7.81;
+		t.anchorOffsetY = 6.82;
+		t.height = 16.86;
+		t.source = "右娃右鞋绿2_png";
+		t.width = 15.76;
+		t.x = 463.54;
+		t.y = 819.15;
+		return t;
+	};
+	_proto._Image178_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 26.14;
+		t.anchorOffsetY = 86.92;
+		t.height = 214.86;
+		t.source = "右娃左鞋绿1_png";
+		t.width = 52.76;
+		t.x = 359.71;
+		t.y = 746.25;
+		return t;
+	};
+	_proto._Image179_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 72.96;
+		t.anchorOffsetY = 95.42;
+		t.height = 235.86;
+		t.source = "右娃左鞋绿2_png";
+		t.width = 147.26;
+		t.x = 419.53;
+		t.y = 752.25;
+		return t;
+	};
+	_proto._Image180_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 17.21;
+		t.anchorOffsetY = 5.2;
+		t.height = 12.86;
+		t.source = "左娃右鞋绿色1_png";
+		t.width = 34.76;
+		t.x = 254.12;
+		t.y = 800.79;
+		return t;
+	};
+	_proto._Image181_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 9.12;
+		t.anchorOffsetY = 11.94;
+		t.height = 29.52;
+		t.source = "左娃左鞋绿色1_png";
+		t.width = 18.42;
+		t.x = 92.55;
+		t.y = 633.35;
+		return t;
+	};
+	_proto._Image182_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 5.16;
+		t.anchorOffsetY = 6.82;
+		t.height = 16.85;
+		t.source = "左娃左鞋绿色2_png";
+		t.width = 10.42;
+		t.x = 106.79;
+		t.y = 625.15;
+		return t;
+	};
+	_proto._Group24_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image183_i(),this._Image184_i()];
+		return t;
+	};
+	_proto._Image183_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 12.02;
+		t.anchorOffsetY = 3.66;
+		t.height = 9.06;
+		t.source = "盒子_png";
+		t.width = 24.26;
+		t.x = 370.37;
+		t.y = 291.46;
+		return t;
+	};
+	_proto._Image184_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 70.33;
+		t.anchorOffsetY = 4.09;
+		t.height = 10.05;
+		t.source = "盒子缝_png";
+		t.width = 141.93;
+		t.x = 368.68;
+		t.y = 321.54;
+		return t;
+	};
+	_proto._Group25_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image185_i(),this._Image186_i(),this._Image187_i(),this._Image188_i(),this._Image189_i()];
+		return t;
+	};
+	_proto._Image185_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 69;
+		t.anchorOffsetY = 10.32;
+		t.height = 25.56;
+		t.source = "盒子盖_png";
+		t.width = 139.26;
+		t.x = 368.87;
+		t.y = 308.24;
+		return t;
+	};
+	_proto._Image186_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 70.99;
+		t.anchorOffsetY = 17.59;
+		t.height = 43.56;
+		t.source = "盒子身_png";
+		t.width = 143.26;
+		t.x = 368.01;
+		t.y = 339.4;
+		return t;
+	};
+	_proto._Image187_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 17.48;
+		t.anchorOffsetY = 35.75;
+		t.height = 88.56;
+		t.source = "左娃衣服黄1_png";
+		t.width = 35.26;
+		t.x = 311.37;
+		t.y = 449.19;
+		return t;
+	};
+	_proto._Image188_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 50.19;
+		t.anchorOffsetY = 17.99;
+		t.height = 44.56;
+		t.source = "左娃衣服黄2_png";
+		t.width = 101.26;
+		t.x = 272.09;
+		t.y = 498.91;
+		return t;
+	};
+	_proto._Image189_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 18.96;
+		t.anchorOffsetY = 29.69;
+		t.height = 73.56;
+		t.source = "左娃衣服黄3_png";
+		t.width = 38.26;
+		t.x = 257.86;
+		t.y = 589.61;
+		return t;
+	};
+	_proto._Group26_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image190_i(),this._Image191_i(),this._Image192_i(),this._Image193_i(),this._Image194_i(),this._Image195_i()];
+		return t;
+	};
+	_proto._Image190_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 41.74;
+		t.anchorOffsetY = 9.5;
+		t.height = 23.56;
+		t.source = "盒子花纹1_png";
+		t.width = 84.26;
+		t.x = 390.26;
+		t.y = 334.31;
+		return t;
+	};
+	_proto._Image191_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 23.16;
+		t.anchorOffsetY = 6.68;
+		t.height = 16.56;
+		t.source = "盒子花纹2_png";
+		t.width = 46.76;
+		t.x = 327.43;
+		t.y = 334.99;
+		return t;
+	};
+	_proto._Image192_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 14.24;
+		t.anchorOffsetY = 14.95;
+		t.height = 37.06;
+		t.source = "右娃领橙1_png";
+		t.width = 28.76;
+		t.x = 390.51;
+		t.y = 565.42;
+		return t;
+	};
+	_proto._Image193_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 15.73;
+		t.anchorOffsetY = 16.16;
+		t.height = 40.06;
+		t.source = "右娃领橙2_png";
+		t.width = 31.76;
+		t.x = 426.1;
+		t.y = 557.55;
+		return t;
+	};
+	_proto._Image194_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 27.37;
+		t.anchorOffsetY = 25.24;
+		t.height = 62.56;
+		t.source = "左娃衣服橙1_png";
+		t.width = 55.26;
+		t.x = 139.99;
+		t.y = 615.44;
+		return t;
+	};
+	_proto._Image195_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 38.77;
+		t.anchorOffsetY = 19.39;
+		t.height = 48.06;
+		t.source = "左娃衣服橙2_png";
+		t.width = 78.26;
+		t.x = 252.01;
+		t.y = 765.87;
+		return t;
+	};
+	_proto._Group27_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image196_i(),this._Image197_i(),this._Image198_i(),this._Image199_i()];
+		return t;
+	};
+	_proto._Image196_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 18.21;
+		t.anchorOffsetY = 45.78;
+		t.height = 113.56;
+		t.source = "左娃衣服蓝1_png";
+		t.width = 36.76;
+		t.x = 285.71;
+		t.y = 433.92;
+		return t;
+	};
+	_proto._Image197_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 18.7;
+		t.anchorOffsetY = 24.02;
+		t.height = 59.56;
+		t.source = "左娃衣服蓝2_png";
+		t.width = 37.76;
+		t.x = 351.89;
+		t.y = 404.31;
+		return t;
+	};
+	_proto._Image198_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 90.52;
+		t.anchorOffsetY = 67.57;
+		t.height = 167.56;
+		t.source = "左娃衣服蓝3_png";
+		t.width = 182.76;
+		t.x = 201.65;
+		t.y = 610.8;
+		return t;
+	};
+	_proto._Image199_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 57.83;
+		t.anchorOffsetY = 61.52;
+		t.height = 152.56;
+		t.source = "左娃衣服蓝4_png";
+		t.width = 116.76;
+		t.x = 276.33;
+		t.y = 690.5;
+		return t;
+	};
+	_proto._Group28_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image200_i(),this._Image201_i(),this._Image202_i()];
+		return t;
+	};
+	_proto._Image200_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 39.02;
+		t.anchorOffsetY = 35.1;
+		t.height = 87.06;
+		t.source = "右娃衣服蓝1_png";
+		t.width = 78.76;
+		t.x = 343.66;
+		t.y = 551.46;
+		return t;
+	};
+	_proto._Image201_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 39.1;
+		t.anchorOffsetY = 25.02;
+		t.height = 62.06;
+		t.source = "右娃衣服蓝2_png";
+		t.width = 81.76;
+		t.x = 429.59;
+		t.y = 558.44;
+		return t;
+	};
+	_proto._Image202_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 11.37;
+		t.anchorOffsetY = 13.73;
+		t.height = 34.06;
+		t.source = "右娃衣服蓝3_png";
+		t.width = 23.76;
+		t.x = 492.32;
+		t.y = 516.4;
+		return t;
+	};
+	_proto._Group29_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image203_i(),this._Image204_i()];
+		return t;
+	};
+	_proto._Image203_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 29.35;
+		t.anchorOffsetY = 33.49;
+		t.height = 83.06;
+		t.source = "右娃右裤_png";
+		t.width = 59.26;
+		t.x = 464.13;
+		t.y = 702.35;
+		return t;
+	};
+	_proto._Image204_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 66;
+		t.anchorOffsetY = 55.47;
+		t.height = 137.56;
+		t.source = "右娃左裤_png";
+		t.width = 133.26;
+		t.x = 387.43;
+		t.y = 765.26;
+		return t;
+	};
+	_proto._Group30_i = function () {
+		var t = new eui.Group();
+		t.alpha = 0;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image205_i(),this._Image206_i(),this._Image207_i(),this._Image208_i()];
+		return t;
+	};
+	_proto._Image205_i = function () {
+		var t = new eui.Image();
+		t.alpha = 1;
+		t.anchorOffsetX = 56.34;
+		t.anchorOffsetY = 36.31;
+		t.height = 90.06;
+		t.source = "右娃衣服粉_png";
+		t.width = 113.76;
+		t.x = 374.95;
+		t.y = 610.81;
+		return t;
+	};
+	_proto._Image206_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 32.32;
+		t.anchorOffsetY = 28.24;
+		t.height = 70.06;
+		t.source = "右娃衣服粉22_png";
+		t.width = 65.26;
+		t.x = 524.53;
+		t.y = 525.35;
+		return t;
+	};
+	_proto._Image207_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 16.97;
+		t.anchorOffsetY = 9.9;
+		t.height = 24.56;
+		t.source = "右娃衣服粉32_png";
+		t.width = 34.26;
+		t.x = 342.66;
+		t.y = 644.9;
+		return t;
+	};
+	_proto._Image208_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 94.98;
+		t.anchorOffsetY = 46.58;
+		t.height = 115.56;
+		t.source = "右娃衣服粉4_png";
+		t.width = 191.76;
+		t.x = 382.84;
+		t.y = 683.96;
+		return t;
+	};
+	_proto._Group31_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image209_i(),this._Image210_i(),this._Image211_i(),this._Image212_i()];
+		return t;
+	};
+	_proto._Image209_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 56.34;
+		t.anchorOffsetY = 36.31;
+		t.height = 90.06;
+		t.source = "右娃衣服粉_png";
+		t.width = 113.76;
+		t.x = 374.95;
+		t.y = 610.81;
+		return t;
+	};
+	_proto._Image210_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 32.32;
+		t.anchorOffsetY = 28.24;
+		t.height = 70.06;
+		t.source = "右娃衣服粉22_png";
+		t.width = 65.26;
+		t.x = 524.53;
+		t.y = 525.35;
+		return t;
+	};
+	_proto._Image211_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 16.97;
+		t.anchorOffsetY = 9.9;
+		t.height = 24.56;
+		t.source = "右娃衣服粉32_png";
+		t.width = 34.26;
+		t.x = 342.66;
+		t.y = 644.9;
+		return t;
+	};
+	_proto._Image212_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 94.98;
+		t.anchorOffsetY = 46.58;
+		t.height = 115.56;
+		t.source = "右娃衣服粉4_png";
+		t.width = 191.76;
+		t.x = 382.84;
+		t.y = 683.96;
+		return t;
+	};
+	_proto._Group32_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image213_i(),this._Image214_i()];
+		return t;
+	};
+	_proto._Image213_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 23.41;
+		t.anchorOffsetY = 13.32;
+		t.height = 33.06;
+		t.source = "左娃右鞋土色_png";
+		t.width = 47.26;
+		t.x = 252.82;
+		t.y = 805.24;
+		return t;
+	};
+	_proto._Image214_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 30.1;
+		t.anchorOffsetY = 25.61;
+		t.height = 63.56;
+		t.source = "左娃左鞋土色_png";
+		t.width = 60.76;
+		t.x = 114.59;
+		t.y = 612.31;
 		return t;
 	};
 	_proto.AutumnGroup_i = function () {
@@ -2958,21 +4230,25 @@ var egret = window.egret;window.skins={};
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
 		t.top = 0;
-		t.elementsContent = [this._Group19_i(),this._Group20_i(),this._Group21_i(),this._Group22_i(),this._Group23_i(),this._Group24_i(),this._Group25_i(),this._Group26_i(),this._Group27_i(),this._Group28_i(),this._Group29_i(),this._Group30_i(),this._Group31_i(),this._Group32_i(),this._Group33_i(),this._Group34_i(),this._Group35_i(),this._Group36_i(),this._Group37_i()];
+		t.x = 0;
+		t.y = 0;
+		t.elementsContent = [this._Group33_i(),this._Group34_i(),this._Group35_i(),this._Group36_i(),this._Group37_i(),this._Group38_i(),this._Group39_i(),this._Group40_i(),this._Group41_i(),this._Group42_i(),this._Group43_i(),this._Group44_i(),this._Group45_i(),this._Group46_i(),this._Group47_i(),this._Group48_i(),this._Group49_i(),this._Group50_i(),this._Group51_i()];
 		return t;
 	};
-	_proto._Group19_i = function () {
+	_proto._Group33_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image136_i(),this._Image137_i(),this._Image138_i(),this._Image139_i(),this._Image140_i(),this._Image141_i(),this._Image142_i(),this._Image143_i(),this._Image144_i(),this._Image145_i(),this._Image146_i(),this._Image147_i(),this._Image148_i(),this._Image149_i()];
+		t.elementsContent = [this._Image215_i(),this._Image216_i(),this._Image217_i(),this._Image218_i(),this._Image219_i(),this._Image220_i(),this._Image221_i(),this._Image222_i(),this._Image223_i(),this._Image224_i(),this._Image225_i(),this._Image226_i(),this._Image227_i(),this._Image228_i()];
 		return t;
 	};
-	_proto._Image136_i = function () {
+	_proto._Image215_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -2986,7 +4262,7 @@ var egret = window.egret;window.skins={};
 		t.y = 304;
 		return t;
 	};
-	_proto._Image137_i = function () {
+	_proto._Image216_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3000,7 +4276,7 @@ var egret = window.egret;window.skins={};
 		t.y = 427.17;
 		return t;
 	};
-	_proto._Image138_i = function () {
+	_proto._Image217_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3014,7 +4290,7 @@ var egret = window.egret;window.skins={};
 		t.y = 439.5;
 		return t;
 	};
-	_proto._Image139_i = function () {
+	_proto._Image218_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3028,7 +4304,7 @@ var egret = window.egret;window.skins={};
 		t.y = 474.85;
 		return t;
 	};
-	_proto._Image140_i = function () {
+	_proto._Image219_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3042,7 +4318,7 @@ var egret = window.egret;window.skins={};
 		t.y = 444.83;
 		return t;
 	};
-	_proto._Image141_i = function () {
+	_proto._Image220_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3056,7 +4332,7 @@ var egret = window.egret;window.skins={};
 		t.y = 468.83;
 		return t;
 	};
-	_proto._Image142_i = function () {
+	_proto._Image221_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3070,7 +4346,7 @@ var egret = window.egret;window.skins={};
 		t.y = 469.49;
 		return t;
 	};
-	_proto._Image143_i = function () {
+	_proto._Image222_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3084,7 +4360,7 @@ var egret = window.egret;window.skins={};
 		t.y = 322.83;
 		return t;
 	};
-	_proto._Image144_i = function () {
+	_proto._Image223_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3098,7 +4374,7 @@ var egret = window.egret;window.skins={};
 		t.y = 446.83;
 		return t;
 	};
-	_proto._Image145_i = function () {
+	_proto._Image224_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3112,7 +4388,7 @@ var egret = window.egret;window.skins={};
 		t.y = 433.5;
 		return t;
 	};
-	_proto._Image146_i = function () {
+	_proto._Image225_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3126,7 +4402,7 @@ var egret = window.egret;window.skins={};
 		t.y = 412.83;
 		return t;
 	};
-	_proto._Image147_i = function () {
+	_proto._Image226_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3140,7 +4416,7 @@ var egret = window.egret;window.skins={};
 		t.y = 463.5;
 		return t;
 	};
-	_proto._Image148_i = function () {
+	_proto._Image227_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3154,7 +4430,7 @@ var egret = window.egret;window.skins={};
 		t.y = 441.5;
 		return t;
 	};
-	_proto._Image149_i = function () {
+	_proto._Image228_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3168,17 +4444,17 @@ var egret = window.egret;window.skins={};
 		t.y = 468.17;
 		return t;
 	};
-	_proto._Group20_i = function () {
+	_proto._Group34_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image150_i(),this._Image151_i(),this._Image152_i(),this._Image153_i(),this._Image154_i(),this._Image155_i(),this._Image156_i(),this._Image157_i()];
+		t.elementsContent = [this._Image229_i(),this._Image230_i(),this._Image231_i(),this._Image232_i(),this._Image233_i(),this._Image234_i(),this._Image235_i(),this._Image236_i()];
 		return t;
 	};
-	_proto._Image150_i = function () {
+	_proto._Image229_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3192,7 +4468,7 @@ var egret = window.egret;window.skins={};
 		t.y = 391.33;
 		return t;
 	};
-	_proto._Image151_i = function () {
+	_proto._Image230_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3206,7 +4482,7 @@ var egret = window.egret;window.skins={};
 		t.y = 374.66;
 		return t;
 	};
-	_proto._Image152_i = function () {
+	_proto._Image231_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3220,7 +4496,7 @@ var egret = window.egret;window.skins={};
 		t.y = 328.65;
 		return t;
 	};
-	_proto._Image153_i = function () {
+	_proto._Image232_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3234,7 +4510,7 @@ var egret = window.egret;window.skins={};
 		t.y = 355.98;
 		return t;
 	};
-	_proto._Image154_i = function () {
+	_proto._Image233_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3248,7 +4524,7 @@ var egret = window.egret;window.skins={};
 		t.y = 394.64;
 		return t;
 	};
-	_proto._Image155_i = function () {
+	_proto._Image234_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3262,7 +4538,7 @@ var egret = window.egret;window.skins={};
 		t.y = 414.34;
 		return t;
 	};
-	_proto._Image156_i = function () {
+	_proto._Image235_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3276,7 +4552,7 @@ var egret = window.egret;window.skins={};
 		t.y = 423.66;
 		return t;
 	};
-	_proto._Image157_i = function () {
+	_proto._Image236_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3290,17 +4566,17 @@ var egret = window.egret;window.skins={};
 		t.y = 400.34;
 		return t;
 	};
-	_proto._Group21_i = function () {
+	_proto._Group35_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image158_i(),this._Image159_i(),this._Image160_i(),this._Image161_i(),this._Image162_i(),this._Image163_i(),this._Image164_i(),this._Image165_i(),this._Image166_i(),this._Image167_i(),this._Image168_i(),this._Image169_i(),this._Image170_i(),this._Image171_i(),this._Image172_i(),this._Image173_i(),this._Image174_i(),this._Image175_i(),this._Image176_i(),this._Image177_i(),this._Image178_i(),this._Image179_i(),this._Image180_i(),this._Image181_i(),this._Image182_i(),this._Image183_i(),this._Image184_i(),this._Image185_i(),this._Image186_i(),this._Image187_i(),this._Image188_i(),this._Image189_i(),this._Image190_i(),this._Image191_i(),this._Image192_i(),this._Image193_i(),this._Image194_i(),this._Image195_i(),this._Image196_i(),this._Image197_i(),this._Image198_i(),this._Image199_i(),this._Image200_i(),this._Image201_i(),this._Image202_i()];
+		t.elementsContent = [this._Image237_i(),this._Image238_i(),this._Image239_i(),this._Image240_i(),this._Image241_i(),this._Image242_i(),this._Image243_i(),this._Image244_i(),this._Image245_i(),this._Image246_i(),this._Image247_i(),this._Image248_i(),this._Image249_i(),this._Image250_i(),this._Image251_i(),this._Image252_i(),this._Image253_i(),this._Image254_i(),this._Image255_i(),this._Image256_i(),this._Image257_i(),this._Image258_i(),this._Image259_i(),this._Image260_i(),this._Image261_i(),this._Image262_i(),this._Image263_i(),this._Image264_i(),this._Image265_i(),this._Image266_i(),this._Image267_i(),this._Image268_i(),this._Image269_i(),this._Image270_i(),this._Image271_i(),this._Image272_i(),this._Image273_i(),this._Image274_i(),this._Image275_i(),this._Image276_i(),this._Image277_i(),this._Image278_i(),this._Image279_i(),this._Image280_i(),this._Image281_i()];
 		return t;
 	};
-	_proto._Image158_i = function () {
+	_proto._Image237_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3314,7 +4590,7 @@ var egret = window.egret;window.skins={};
 		t.y = 577.33;
 		return t;
 	};
-	_proto._Image159_i = function () {
+	_proto._Image238_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3328,7 +4604,7 @@ var egret = window.egret;window.skins={};
 		t.y = 584;
 		return t;
 	};
-	_proto._Image160_i = function () {
+	_proto._Image239_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3342,7 +4618,7 @@ var egret = window.egret;window.skins={};
 		t.y = 523.34;
 		return t;
 	};
-	_proto._Image161_i = function () {
+	_proto._Image240_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3356,7 +4632,7 @@ var egret = window.egret;window.skins={};
 		t.y = 488.01;
 		return t;
 	};
-	_proto._Image162_i = function () {
+	_proto._Image241_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3370,7 +4646,7 @@ var egret = window.egret;window.skins={};
 		t.y = 556.67;
 		return t;
 	};
-	_proto._Image163_i = function () {
+	_proto._Image242_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3384,7 +4660,7 @@ var egret = window.egret;window.skins={};
 		t.y = 576.33;
 		return t;
 	};
-	_proto._Image164_i = function () {
+	_proto._Image243_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3398,7 +4674,7 @@ var egret = window.egret;window.skins={};
 		t.y = 357.25;
 		return t;
 	};
-	_proto._Image165_i = function () {
+	_proto._Image244_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3412,7 +4688,7 @@ var egret = window.egret;window.skins={};
 		t.y = 397.5;
 		return t;
 	};
-	_proto._Image166_i = function () {
+	_proto._Image245_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3426,7 +4702,7 @@ var egret = window.egret;window.skins={};
 		t.y = 399.18;
 		return t;
 	};
-	_proto._Image167_i = function () {
+	_proto._Image246_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3440,7 +4716,7 @@ var egret = window.egret;window.skins={};
 		t.y = 404.68;
 		return t;
 	};
-	_proto._Image168_i = function () {
+	_proto._Image247_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3454,7 +4730,7 @@ var egret = window.egret;window.skins={};
 		t.y = 417.19;
 		return t;
 	};
-	_proto._Image169_i = function () {
+	_proto._Image248_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3468,7 +4744,7 @@ var egret = window.egret;window.skins={};
 		t.y = 482;
 		return t;
 	};
-	_proto._Image170_i = function () {
+	_proto._Image249_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3482,7 +4758,7 @@ var egret = window.egret;window.skins={};
 		t.y = 458;
 		return t;
 	};
-	_proto._Image171_i = function () {
+	_proto._Image250_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3496,7 +4772,7 @@ var egret = window.egret;window.skins={};
 		t.y = 516.5;
 		return t;
 	};
-	_proto._Image172_i = function () {
+	_proto._Image251_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3510,7 +4786,7 @@ var egret = window.egret;window.skins={};
 		t.y = 534.5;
 		return t;
 	};
-	_proto._Image173_i = function () {
+	_proto._Image252_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3524,7 +4800,7 @@ var egret = window.egret;window.skins={};
 		t.y = 445.21;
 		return t;
 	};
-	_proto._Image174_i = function () {
+	_proto._Image253_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3538,7 +4814,7 @@ var egret = window.egret;window.skins={};
 		t.y = 647.67;
 		return t;
 	};
-	_proto._Image175_i = function () {
+	_proto._Image254_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3552,7 +4828,7 @@ var egret = window.egret;window.skins={};
 		t.y = 655.8;
 		return t;
 	};
-	_proto._Image176_i = function () {
+	_proto._Image255_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3566,7 +4842,7 @@ var egret = window.egret;window.skins={};
 		t.y = 661.5;
 		return t;
 	};
-	_proto._Image177_i = function () {
+	_proto._Image256_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3580,7 +4856,7 @@ var egret = window.egret;window.skins={};
 		t.y = 673.39;
 		return t;
 	};
-	_proto._Image178_i = function () {
+	_proto._Image257_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3594,7 +4870,7 @@ var egret = window.egret;window.skins={};
 		t.y = 670.61;
 		return t;
 	};
-	_proto._Image179_i = function () {
+	_proto._Image258_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3608,7 +4884,7 @@ var egret = window.egret;window.skins={};
 		t.y = 684.36;
 		return t;
 	};
-	_proto._Image180_i = function () {
+	_proto._Image259_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3622,7 +4898,7 @@ var egret = window.egret;window.skins={};
 		t.y = 472.11;
 		return t;
 	};
-	_proto._Image181_i = function () {
+	_proto._Image260_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3636,7 +4912,7 @@ var egret = window.egret;window.skins={};
 		t.y = 387.57;
 		return t;
 	};
-	_proto._Image182_i = function () {
+	_proto._Image261_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3650,7 +4926,7 @@ var egret = window.egret;window.skins={};
 		t.y = 756.95;
 		return t;
 	};
-	_proto._Image183_i = function () {
+	_proto._Image262_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3664,7 +4940,7 @@ var egret = window.egret;window.skins={};
 		t.y = 749.95;
 		return t;
 	};
-	_proto._Image184_i = function () {
+	_proto._Image263_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3678,7 +4954,7 @@ var egret = window.egret;window.skins={};
 		t.y = 769.28;
 		return t;
 	};
-	_proto._Image185_i = function () {
+	_proto._Image264_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3692,7 +4968,7 @@ var egret = window.egret;window.skins={};
 		t.y = 766.95;
 		return t;
 	};
-	_proto._Image186_i = function () {
+	_proto._Image265_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3706,7 +4982,7 @@ var egret = window.egret;window.skins={};
 		t.y = 767.32;
 		return t;
 	};
-	_proto._Image187_i = function () {
+	_proto._Image266_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3720,7 +4996,7 @@ var egret = window.egret;window.skins={};
 		t.y = 759.7;
 		return t;
 	};
-	_proto._Image188_i = function () {
+	_proto._Image267_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3734,7 +5010,7 @@ var egret = window.egret;window.skins={};
 		t.y = 756.83;
 		return t;
 	};
-	_proto._Image189_i = function () {
+	_proto._Image268_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3748,7 +5024,7 @@ var egret = window.egret;window.skins={};
 		t.y = 752.41;
 		return t;
 	};
-	_proto._Image190_i = function () {
+	_proto._Image269_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3762,7 +5038,7 @@ var egret = window.egret;window.skins={};
 		t.y = 626.67;
 		return t;
 	};
-	_proto._Image191_i = function () {
+	_proto._Image270_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3776,7 +5052,7 @@ var egret = window.egret;window.skins={};
 		t.y = 426.2;
 		return t;
 	};
-	_proto._Image192_i = function () {
+	_proto._Image271_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3790,7 +5066,7 @@ var egret = window.egret;window.skins={};
 		t.y = 457.2;
 		return t;
 	};
-	_proto._Image193_i = function () {
+	_proto._Image272_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3804,7 +5080,7 @@ var egret = window.egret;window.skins={};
 		t.y = 488.01;
 		return t;
 	};
-	_proto._Image194_i = function () {
+	_proto._Image273_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3818,7 +5094,7 @@ var egret = window.egret;window.skins={};
 		t.y = 417.19;
 		return t;
 	};
-	_proto._Image195_i = function () {
+	_proto._Image274_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3832,7 +5108,7 @@ var egret = window.egret;window.skins={};
 		t.y = 487.19;
 		return t;
 	};
-	_proto._Image196_i = function () {
+	_proto._Image275_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3846,7 +5122,7 @@ var egret = window.egret;window.skins={};
 		t.y = 527.69;
 		return t;
 	};
-	_proto._Image197_i = function () {
+	_proto._Image276_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3860,7 +5136,7 @@ var egret = window.egret;window.skins={};
 		t.y = 322.74;
 		return t;
 	};
-	_proto._Image198_i = function () {
+	_proto._Image277_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3874,7 +5150,7 @@ var egret = window.egret;window.skins={};
 		t.y = 513.94;
 		return t;
 	};
-	_proto._Image199_i = function () {
+	_proto._Image278_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3888,7 +5164,7 @@ var egret = window.egret;window.skins={};
 		t.y = 571.58;
 		return t;
 	};
-	_proto._Image200_i = function () {
+	_proto._Image279_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3902,7 +5178,7 @@ var egret = window.egret;window.skins={};
 		t.y = 588.33;
 		return t;
 	};
-	_proto._Image201_i = function () {
+	_proto._Image280_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3916,7 +5192,7 @@ var egret = window.egret;window.skins={};
 		t.y = 443.46;
 		return t;
 	};
-	_proto._Image202_i = function () {
+	_proto._Image281_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3930,17 +5206,17 @@ var egret = window.egret;window.skins={};
 		t.y = 336.24;
 		return t;
 	};
-	_proto._Group22_i = function () {
+	_proto._Group36_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image203_i(),this._Image204_i(),this._Image205_i(),this._Image206_i(),this._Image207_i(),this._Image208_i(),this._Image209_i(),this._Image210_i(),this._Image211_i(),this._Image212_i(),this._Image213_i(),this._Image214_i(),this._Image215_i(),this._Image216_i()];
+		t.elementsContent = [this._Image282_i(),this._Image283_i(),this._Image284_i(),this._Image285_i(),this._Image286_i(),this._Image287_i(),this._Image288_i(),this._Image289_i(),this._Image290_i(),this._Image291_i(),this._Image292_i(),this._Image293_i(),this._Image294_i(),this._Image295_i()];
 		return t;
 	};
-	_proto._Image203_i = function () {
+	_proto._Image282_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3954,7 +5230,7 @@ var egret = window.egret;window.skins={};
 		t.y = 645.61;
 		return t;
 	};
-	_proto._Image204_i = function () {
+	_proto._Image283_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3968,7 +5244,7 @@ var egret = window.egret;window.skins={};
 		t.y = 285.59;
 		return t;
 	};
-	_proto._Image205_i = function () {
+	_proto._Image284_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3982,7 +5258,7 @@ var egret = window.egret;window.skins={};
 		t.y = 314.59;
 		return t;
 	};
-	_proto._Image206_i = function () {
+	_proto._Image285_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -3996,7 +5272,7 @@ var egret = window.egret;window.skins={};
 		t.y = 301.84;
 		return t;
 	};
-	_proto._Image207_i = function () {
+	_proto._Image286_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4010,7 +5286,7 @@ var egret = window.egret;window.skins={};
 		t.y = 380.34;
 		return t;
 	};
-	_proto._Image208_i = function () {
+	_proto._Image287_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4024,7 +5300,7 @@ var egret = window.egret;window.skins={};
 		t.y = 387.14;
 		return t;
 	};
-	_proto._Image209_i = function () {
+	_proto._Image288_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4038,7 +5314,7 @@ var egret = window.egret;window.skins={};
 		t.y = 351.54;
 		return t;
 	};
-	_proto._Image210_i = function () {
+	_proto._Image289_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4052,7 +5328,7 @@ var egret = window.egret;window.skins={};
 		t.y = 412.25;
 		return t;
 	};
-	_proto._Image211_i = function () {
+	_proto._Image290_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4066,7 +5342,7 @@ var egret = window.egret;window.skins={};
 		t.y = 420.21;
 		return t;
 	};
-	_proto._Image212_i = function () {
+	_proto._Image291_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4080,7 +5356,7 @@ var egret = window.egret;window.skins={};
 		t.y = 335;
 		return t;
 	};
-	_proto._Image213_i = function () {
+	_proto._Image292_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4094,7 +5370,7 @@ var egret = window.egret;window.skins={};
 		t.y = 353;
 		return t;
 	};
-	_proto._Image214_i = function () {
+	_proto._Image293_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4108,7 +5384,7 @@ var egret = window.egret;window.skins={};
 		t.y = 334.24;
 		return t;
 	};
-	_proto._Image215_i = function () {
+	_proto._Image294_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4122,7 +5398,7 @@ var egret = window.egret;window.skins={};
 		t.y = 312.09;
 		return t;
 	};
-	_proto._Image216_i = function () {
+	_proto._Image295_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4136,17 +5412,17 @@ var egret = window.egret;window.skins={};
 		t.y = 347.55;
 		return t;
 	};
-	_proto._Group23_i = function () {
+	_proto._Group37_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image217_i(),this._Image218_i(),this._Image219_i(),this._Image220_i(),this._Image221_i(),this._Image222_i(),this._Image223_i(),this._Image224_i()];
+		t.elementsContent = [this._Image296_i(),this._Image297_i(),this._Image298_i(),this._Image299_i(),this._Image300_i(),this._Image301_i(),this._Image302_i(),this._Image303_i()];
 		return t;
 	};
-	_proto._Image217_i = function () {
+	_proto._Image296_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4160,7 +5436,7 @@ var egret = window.egret;window.skins={};
 		t.y = 746.28;
 		return t;
 	};
-	_proto._Image218_i = function () {
+	_proto._Image297_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4174,7 +5450,7 @@ var egret = window.egret;window.skins={};
 		t.y = 764.68;
 		return t;
 	};
-	_proto._Image219_i = function () {
+	_proto._Image298_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4188,7 +5464,7 @@ var egret = window.egret;window.skins={};
 		t.y = 745.08;
 		return t;
 	};
-	_proto._Image220_i = function () {
+	_proto._Image299_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4202,7 +5478,7 @@ var egret = window.egret;window.skins={};
 		t.y = 795.78;
 		return t;
 	};
-	_proto._Image221_i = function () {
+	_proto._Image300_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4216,7 +5492,7 @@ var egret = window.egret;window.skins={};
 		t.y = 743.48;
 		return t;
 	};
-	_proto._Image222_i = function () {
+	_proto._Image301_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 5.18;
@@ -4230,7 +5506,7 @@ var egret = window.egret;window.skins={};
 		t.y = 264.44;
 		return t;
 	};
-	_proto._Image223_i = function () {
+	_proto._Image302_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4244,7 +5520,7 @@ var egret = window.egret;window.skins={};
 		t.y = 253.98;
 		return t;
 	};
-	_proto._Image224_i = function () {
+	_proto._Image303_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4258,17 +5534,17 @@ var egret = window.egret;window.skins={};
 		t.y = 414.48;
 		return t;
 	};
-	_proto._Group24_i = function () {
+	_proto._Group38_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image225_i()];
+		t.elementsContent = [this._Image304_i()];
 		return t;
 	};
-	_proto._Image225_i = function () {
+	_proto._Image304_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4282,17 +5558,17 @@ var egret = window.egret;window.skins={};
 		t.y = 658.78;
 		return t;
 	};
-	_proto._Group25_i = function () {
+	_proto._Group39_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image226_i(),this._Image227_i(),this._Image228_i(),this._Image229_i(),this._Image230_i(),this._Image231_i()];
+		t.elementsContent = [this._Image305_i(),this._Image306_i(),this._Image307_i(),this._Image308_i(),this._Image309_i(),this._Image310_i()];
 		return t;
 	};
-	_proto._Image226_i = function () {
+	_proto._Image305_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4306,7 +5582,7 @@ var egret = window.egret;window.skins={};
 		t.y = 287.1;
 		return t;
 	};
-	_proto._Image227_i = function () {
+	_proto._Image306_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4320,7 +5596,7 @@ var egret = window.egret;window.skins={};
 		t.y = 262.6;
 		return t;
 	};
-	_proto._Image228_i = function () {
+	_proto._Image307_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4334,7 +5610,7 @@ var egret = window.egret;window.skins={};
 		t.y = 340;
 		return t;
 	};
-	_proto._Image229_i = function () {
+	_proto._Image308_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4348,7 +5624,7 @@ var egret = window.egret;window.skins={};
 		t.y = 381;
 		return t;
 	};
-	_proto._Image230_i = function () {
+	_proto._Image309_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4362,7 +5638,7 @@ var egret = window.egret;window.skins={};
 		t.y = 447;
 		return t;
 	};
-	_proto._Image231_i = function () {
+	_proto._Image310_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4376,17 +5652,17 @@ var egret = window.egret;window.skins={};
 		t.y = 420.8;
 		return t;
 	};
-	_proto._Group26_i = function () {
+	_proto._Group40_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image232_i(),this._Image233_i(),this._Image234_i(),this._Image235_i(),this._Image236_i(),this._Image237_i(),this._Image238_i()];
+		t.elementsContent = [this._Image311_i(),this._Image312_i(),this._Image313_i(),this._Image314_i(),this._Image315_i(),this._Image316_i(),this._Image317_i()];
 		return t;
 	};
-	_proto._Image232_i = function () {
+	_proto._Image311_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4400,7 +5676,7 @@ var egret = window.egret;window.skins={};
 		t.y = 785.76;
 		return t;
 	};
-	_proto._Image233_i = function () {
+	_proto._Image312_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4414,7 +5690,7 @@ var egret = window.egret;window.skins={};
 		t.y = 636.33;
 		return t;
 	};
-	_proto._Image234_i = function () {
+	_proto._Image313_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4428,7 +5704,7 @@ var egret = window.egret;window.skins={};
 		t.y = 615.33;
 		return t;
 	};
-	_proto._Image235_i = function () {
+	_proto._Image314_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4442,7 +5718,7 @@ var egret = window.egret;window.skins={};
 		t.y = 649.33;
 		return t;
 	};
-	_proto._Image236_i = function () {
+	_proto._Image315_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4456,7 +5732,7 @@ var egret = window.egret;window.skins={};
 		t.y = 663.37;
 		return t;
 	};
-	_proto._Image237_i = function () {
+	_proto._Image316_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4470,7 +5746,7 @@ var egret = window.egret;window.skins={};
 		t.y = 438.33;
 		return t;
 	};
-	_proto._Image238_i = function () {
+	_proto._Image317_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4484,17 +5760,17 @@ var egret = window.egret;window.skins={};
 		t.y = 455.57;
 		return t;
 	};
-	_proto._Group27_i = function () {
+	_proto._Group41_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image239_i(),this._Image240_i(),this._Image241_i(),this._Image242_i(),this._Image243_i(),this._Image244_i(),this._Image245_i(),this._Image246_i()];
+		t.elementsContent = [this._Image318_i(),this._Image319_i(),this._Image320_i(),this._Image321_i(),this._Image322_i(),this._Image323_i(),this._Image324_i(),this._Image325_i()];
 		return t;
 	};
-	_proto._Image239_i = function () {
+	_proto._Image318_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4508,7 +5784,7 @@ var egret = window.egret;window.skins={};
 		t.y = 375.05;
 		return t;
 	};
-	_proto._Image240_i = function () {
+	_proto._Image319_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4522,7 +5798,7 @@ var egret = window.egret;window.skins={};
 		t.y = 375.05;
 		return t;
 	};
-	_proto._Image241_i = function () {
+	_proto._Image320_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4536,7 +5812,7 @@ var egret = window.egret;window.skins={};
 		t.y = 490;
 		return t;
 	};
-	_proto._Image242_i = function () {
+	_proto._Image321_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4550,7 +5826,7 @@ var egret = window.egret;window.skins={};
 		t.y = 516.5;
 		return t;
 	};
-	_proto._Image243_i = function () {
+	_proto._Image322_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4564,7 +5840,7 @@ var egret = window.egret;window.skins={};
 		t.y = 469.5;
 		return t;
 	};
-	_proto._Image244_i = function () {
+	_proto._Image323_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4578,7 +5854,7 @@ var egret = window.egret;window.skins={};
 		t.y = 443;
 		return t;
 	};
-	_proto._Image245_i = function () {
+	_proto._Image324_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4592,7 +5868,7 @@ var egret = window.egret;window.skins={};
 		t.y = 468.3;
 		return t;
 	};
-	_proto._Image246_i = function () {
+	_proto._Image325_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4606,17 +5882,17 @@ var egret = window.egret;window.skins={};
 		t.y = 462;
 		return t;
 	};
-	_proto._Group28_i = function () {
+	_proto._Group42_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image247_i()];
+		t.elementsContent = [this._Image326_i()];
 		return t;
 	};
-	_proto._Image247_i = function () {
+	_proto._Image326_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4630,17 +5906,17 @@ var egret = window.egret;window.skins={};
 		t.y = 637.55;
 		return t;
 	};
-	_proto._Group29_i = function () {
+	_proto._Group43_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image248_i(),this._Image249_i(),this._Image250_i(),this._Image251_i(),this._Image252_i(),this._Image253_i(),this._Image254_i(),this._Image255_i(),this._Image256_i(),this._Image257_i(),this._Image258_i(),this._Image259_i()];
+		t.elementsContent = [this._Image327_i(),this._Image328_i(),this._Image329_i(),this._Image330_i(),this._Image331_i(),this._Image332_i(),this._Image333_i(),this._Image334_i(),this._Image335_i(),this._Image336_i(),this._Image337_i(),this._Image338_i()];
 		return t;
 	};
-	_proto._Image248_i = function () {
+	_proto._Image327_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4654,7 +5930,7 @@ var egret = window.egret;window.skins={};
 		t.y = 650.55;
 		return t;
 	};
-	_proto._Image249_i = function () {
+	_proto._Image328_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4668,7 +5944,7 @@ var egret = window.egret;window.skins={};
 		t.y = 349.05;
 		return t;
 	};
-	_proto._Image250_i = function () {
+	_proto._Image329_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4682,7 +5958,7 @@ var egret = window.egret;window.skins={};
 		t.y = 386.55;
 		return t;
 	};
-	_proto._Image251_i = function () {
+	_proto._Image330_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4696,7 +5972,7 @@ var egret = window.egret;window.skins={};
 		t.y = 392.1;
 		return t;
 	};
-	_proto._Image252_i = function () {
+	_proto._Image331_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4710,7 +5986,7 @@ var egret = window.egret;window.skins={};
 		t.y = 416.6;
 		return t;
 	};
-	_proto._Image253_i = function () {
+	_proto._Image332_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4724,7 +6000,7 @@ var egret = window.egret;window.skins={};
 		t.y = 389.3;
 		return t;
 	};
-	_proto._Image254_i = function () {
+	_proto._Image333_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4738,7 +6014,7 @@ var egret = window.egret;window.skins={};
 		t.y = 410.1;
 		return t;
 	};
-	_proto._Image255_i = function () {
+	_proto._Image334_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4752,7 +6028,7 @@ var egret = window.egret;window.skins={};
 		t.y = 474.5;
 		return t;
 	};
-	_proto._Image256_i = function () {
+	_proto._Image335_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4766,7 +6042,7 @@ var egret = window.egret;window.skins={};
 		t.y = 528.9;
 		return t;
 	};
-	_proto._Image257_i = function () {
+	_proto._Image336_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4780,7 +6056,7 @@ var egret = window.egret;window.skins={};
 		t.y = 508.75;
 		return t;
 	};
-	_proto._Image258_i = function () {
+	_proto._Image337_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4794,7 +6070,7 @@ var egret = window.egret;window.skins={};
 		t.y = 631.95;
 		return t;
 	};
-	_proto._Image259_i = function () {
+	_proto._Image338_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4808,17 +6084,17 @@ var egret = window.egret;window.skins={};
 		t.y = 614.35;
 		return t;
 	};
-	_proto._Group30_i = function () {
+	_proto._Group44_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image260_i(),this._Image261_i()];
+		t.elementsContent = [this._Image339_i(),this._Image340_i()];
 		return t;
 	};
-	_proto._Image260_i = function () {
+	_proto._Image339_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4832,7 +6108,7 @@ var egret = window.egret;window.skins={};
 		t.y = 598.55;
 		return t;
 	};
-	_proto._Image261_i = function () {
+	_proto._Image340_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4846,17 +6122,17 @@ var egret = window.egret;window.skins={};
 		t.y = 599.05;
 		return t;
 	};
-	_proto._Group31_i = function () {
+	_proto._Group45_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image262_i(),this._Image263_i()];
+		t.elementsContent = [this._Image341_i(),this._Image342_i()];
 		return t;
 	};
-	_proto._Image262_i = function () {
+	_proto._Image341_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4870,7 +6146,7 @@ var egret = window.egret;window.skins={};
 		t.y = 672.05;
 		return t;
 	};
-	_proto._Image263_i = function () {
+	_proto._Image342_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4884,17 +6160,17 @@ var egret = window.egret;window.skins={};
 		t.y = 679.8;
 		return t;
 	};
-	_proto._Group32_i = function () {
+	_proto._Group46_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image264_i(),this._Image265_i(),this._Image266_i(),this._Image267_i(),this._Image268_i(),this._Image269_i(),this._Image270_i(),this._Image271_i(),this._Image272_i(),this._Image273_i()];
+		t.elementsContent = [this._Image343_i(),this._Image344_i(),this._Image345_i(),this._Image346_i(),this._Image347_i(),this._Image348_i(),this._Image349_i(),this._Image350_i(),this._Image351_i(),this._Image352_i()];
 		return t;
 	};
-	_proto._Image264_i = function () {
+	_proto._Image343_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4908,7 +6184,7 @@ var egret = window.egret;window.skins={};
 		t.y = 627.05;
 		return t;
 	};
-	_proto._Image265_i = function () {
+	_proto._Image344_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4922,7 +6198,7 @@ var egret = window.egret;window.skins={};
 		t.y = 584.05;
 		return t;
 	};
-	_proto._Image266_i = function () {
+	_proto._Image345_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4936,7 +6212,7 @@ var egret = window.egret;window.skins={};
 		t.y = 658.89;
 		return t;
 	};
-	_proto._Image267_i = function () {
+	_proto._Image346_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4950,7 +6226,7 @@ var egret = window.egret;window.skins={};
 		t.y = 649.77;
 		return t;
 	};
-	_proto._Image268_i = function () {
+	_proto._Image347_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4964,7 +6240,7 @@ var egret = window.egret;window.skins={};
 		t.y = 662.33;
 		return t;
 	};
-	_proto._Image269_i = function () {
+	_proto._Image348_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4978,7 +6254,7 @@ var egret = window.egret;window.skins={};
 		t.y = 672.89;
 		return t;
 	};
-	_proto._Image270_i = function () {
+	_proto._Image349_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -4992,7 +6268,7 @@ var egret = window.egret;window.skins={};
 		t.y = 688.37;
 		return t;
 	};
-	_proto._Image271_i = function () {
+	_proto._Image350_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5006,7 +6282,7 @@ var egret = window.egret;window.skins={};
 		t.y = 758.77;
 		return t;
 	};
-	_proto._Image272_i = function () {
+	_proto._Image351_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5020,7 +6296,7 @@ var egret = window.egret;window.skins={};
 		t.y = 750.37;
 		return t;
 	};
-	_proto._Image273_i = function () {
+	_proto._Image352_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5034,17 +6310,17 @@ var egret = window.egret;window.skins={};
 		t.y = 508.09;
 		return t;
 	};
-	_proto._Group33_i = function () {
+	_proto._Group47_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image274_i()];
+		t.elementsContent = [this._Image353_i()];
 		return t;
 	};
-	_proto._Image274_i = function () {
+	_proto._Image353_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5058,17 +6334,17 @@ var egret = window.egret;window.skins={};
 		t.y = 621.55;
 		return t;
 	};
-	_proto._Group34_i = function () {
+	_proto._Group48_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image275_i(),this._Image276_i()];
+		t.elementsContent = [this._Image354_i(),this._Image355_i()];
 		return t;
 	};
-	_proto._Image275_i = function () {
+	_proto._Image354_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5082,7 +6358,7 @@ var egret = window.egret;window.skins={};
 		t.y = 611.55;
 		return t;
 	};
-	_proto._Image276_i = function () {
+	_proto._Image355_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5096,17 +6372,17 @@ var egret = window.egret;window.skins={};
 		t.y = 631;
 		return t;
 	};
-	_proto._Group35_i = function () {
+	_proto._Group49_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image277_i(),this._Image278_i(),this._Image279_i(),this._Image280_i(),this._Image281_i(),this._Image282_i(),this._Image283_i(),this._Image284_i(),this._Image285_i()];
+		t.elementsContent = [this._Image356_i(),this._Image357_i(),this._Image358_i(),this._Image359_i(),this._Image360_i(),this._Image361_i(),this._Image362_i(),this._Image363_i(),this._Image364_i()];
 		return t;
 	};
-	_proto._Image277_i = function () {
+	_proto._Image356_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5120,7 +6396,7 @@ var egret = window.egret;window.skins={};
 		t.y = 405.05;
 		return t;
 	};
-	_proto._Image278_i = function () {
+	_proto._Image357_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5134,7 +6410,7 @@ var egret = window.egret;window.skins={};
 		t.y = 491;
 		return t;
 	};
-	_proto._Image279_i = function () {
+	_proto._Image358_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5148,7 +6424,7 @@ var egret = window.egret;window.skins={};
 		t.y = 485.9;
 		return t;
 	};
-	_proto._Image280_i = function () {
+	_proto._Image359_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5162,7 +6438,7 @@ var egret = window.egret;window.skins={};
 		t.y = 448.6;
 		return t;
 	};
-	_proto._Image281_i = function () {
+	_proto._Image360_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5176,7 +6452,7 @@ var egret = window.egret;window.skins={};
 		t.y = 540.2;
 		return t;
 	};
-	_proto._Image282_i = function () {
+	_proto._Image361_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5190,7 +6466,7 @@ var egret = window.egret;window.skins={};
 		t.y = 474.7;
 		return t;
 	};
-	_proto._Image283_i = function () {
+	_proto._Image362_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5204,7 +6480,7 @@ var egret = window.egret;window.skins={};
 		t.y = 531;
 		return t;
 	};
-	_proto._Image284_i = function () {
+	_proto._Image363_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5218,7 +6494,7 @@ var egret = window.egret;window.skins={};
 		t.y = 625.4;
 		return t;
 	};
-	_proto._Image285_i = function () {
+	_proto._Image364_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5232,17 +6508,17 @@ var egret = window.egret;window.skins={};
 		t.y = 649.4;
 		return t;
 	};
-	_proto._Group36_i = function () {
+	_proto._Group50_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image286_i(),this._Image287_i(),this._Image288_i()];
+		t.elementsContent = [this._Image365_i(),this._Image366_i(),this._Image367_i()];
 		return t;
 	};
-	_proto._Image286_i = function () {
+	_proto._Image365_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5256,7 +6532,7 @@ var egret = window.egret;window.skins={};
 		t.y = 435.55;
 		return t;
 	};
-	_proto._Image287_i = function () {
+	_proto._Image366_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5270,7 +6546,7 @@ var egret = window.egret;window.skins={};
 		t.y = 464.05;
 		return t;
 	};
-	_proto._Image288_i = function () {
+	_proto._Image367_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5284,17 +6560,17 @@ var egret = window.egret;window.skins={};
 		t.y = 542.05;
 		return t;
 	};
-	_proto._Group37_i = function () {
+	_proto._Group51_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
 		t.visible = false;
-		t.elementsContent = [this._Image289_i(),this._Image290_i(),this._Image291_i()];
+		t.elementsContent = [this._Image368_i(),this._Image369_i(),this._Image370_i()];
 		return t;
 	};
-	_proto._Image289_i = function () {
+	_proto._Image368_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5308,7 +6584,7 @@ var egret = window.egret;window.skins={};
 		t.y = 711.05;
 		return t;
 	};
-	_proto._Image290_i = function () {
+	_proto._Image369_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5322,7 +6598,7 @@ var egret = window.egret;window.skins={};
 		t.y = 652.55;
 		return t;
 	};
-	_proto._Image291_i = function () {
+	_proto._Image370_i = function () {
 		var t = new eui.Image();
 		t.alpha = 0;
 		t.anchorOffsetX = 0;
@@ -5342,10 +6618,1490 @@ var egret = window.egret;window.skins={};
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
 		t.top = 0;
+		t.x = 0;
+		t.y = 0;
+		t.elementsContent = [this._Group52_i(),this._Group53_i(),this._Group54_i(),this._Group55_i(),this._Group56_i(),this._Group57_i(),this._Group58_i(),this._Group59_i(),this._Group60_i(),this._Group61_i(),this._Group62_i(),this._Group63_i(),this._Group64_i(),this._Group65_i(),this._Group66_i()];
 		return t;
 	};
-	_proto._Scroller1_i = function () {
+	_proto._Group52_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image371_i(),this._Image372_i(),this._Image373_i(),this._Image374_i(),this._Image375_i()];
+		return t;
+	};
+	_proto._Image371_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 124.67;
+		t.source = "脸_png";
+		t.width = 86;
+		t.x = 163;
+		t.y = 361.83;
+		return t;
+	};
+	_proto._Image372_i = function () {
+		var t = new eui.Image();
+		t.alpha = 1;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 23.83;
+		t.source = "右手1_png";
+		t.width = 19.34;
+		t.x = 380;
+		t.y = 513.67;
+		return t;
+	};
+	_proto._Image373_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 46.5;
+		t.source = "左手1_png";
+		t.width = 32;
+		t.x = 167.26;
+		t.y = 481.42;
+		return t;
+	};
+	_proto._Image374_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 69.83;
+		t.source = "右手2_png";
+		t.width = 224.34;
+		t.x = 178.76;
+		t.y = 463.25;
+		return t;
+	};
+	_proto._Image375_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 23.83;
+		t.source = "左手2_png";
+		t.width = 19.34;
+		t.x = 161.33;
+		t.y = 516.01;
+		return t;
+	};
+	_proto._Group53_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image376_i(),this._Image377_i(),this._Image378_i(),this._Image379_i()];
+		return t;
+	};
+	_proto._Image376_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 43.67;
+		t.source = "右腮红_png";
+		t.width = 27;
+		t.x = 224.5;
+		t.y = 429.83;
+		return t;
+	};
+	_proto._Image377_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 63.17;
+		t.source = "左腮红_png";
+		t.width = 57;
+		t.x = 163.66;
+		t.y = 425.83;
+		return t;
+	};
+	_proto._Image378_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 24.57;
+		t.source = "右眼皮_png";
+		t.width = 28.6;
+		t.x = 229.7;
+		t.y = 404.06;
+		return t;
+	};
+	_proto._Image379_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 31.37;
+		t.source = "左眼皮_png";
+		t.width = 66.2;
+		t.x = 176.9;
+		t.y = 403.66;
+		return t;
+	};
+	_proto._Group54_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image380_i()];
+		return t;
+	};
+	_proto._Image380_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 37.27;
+		t.source = "脖子_png";
+		t.width = 29.4;
+		t.x = 155.9;
+		t.y = 448.13;
+		return t;
+	};
+	_proto._Group55_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image381_i(),this._Image382_i(),this._Image383_i(),this._Image384_i(),this._Image385_i(),this._Image386_i(),this._Image387_i(),this._Image388_i(),this._Image389_i(),this._Image390_i(),this._Image391_i()];
+		return t;
+	};
+	_proto._Image381_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 77.27;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "头发_png";
+		t.width = 114.4;
+		t.x = 140.3;
+		t.y = 344.08;
+		return t;
+	};
+	_proto._Image382_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 44.27;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣服黑2_png";
+		t.width = 51.4;
+		t.x = 216.59999999999997;
+		t.y = 525.01;
+		return t;
+	};
+	_proto._Image383_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 136.27;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣服黑3_png";
+		t.width = 138.4;
+		t.x = 270;
+		t.y = 688.87;
+		return t;
+	};
+	_proto._Image384_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 28.27;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣领黑_png";
+		t.width = 14.9;
+		t.x = 155;
+		t.y = 482;
+		return t;
+	};
+	_proto._Image385_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 41.27;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右裤黑_png";
+		t.width = 93.9;
+		t.x = 427.05;
+		t.y = 886.78;
+		return t;
+	};
+	_proto._Image386_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 5.77;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右眼_png";
+		t.width = 8.4;
+		t.x = 238.34999999999997;
+		t.y = 419.10999999999996;
+		return t;
+	};
+	_proto._Image387_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 143.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右衣袖黑_png";
+		t.width = 52.4;
+		t.x = 322.6;
+		t.y = 547.5;
+		return t;
+	};
+	_proto._Image388_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 81.92;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左裤黑_png";
+		t.width = 60;
+		t.x = 393.34;
+		t.y = 773.85;
+		return t;
+	};
+	_proto._Image389_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 5.45;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左眼v_png";
+		t.width = 11;
+		t.x = 193.19999999999996;
+		t.y = 423.44999999999993;
+		return t;
+	};
+	_proto._Image390_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 122.79;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左衣袖黑_png";
+		t.width = 121;
+		t.x = 112.06;
+		t.y = 584.6099999999999;
+		return t;
+	};
+	_proto._Image391_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 86.79;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "书字_png";
+		t.width = 63.8;
+		t.x = 410.4;
+		t.y = 425.71;
+		return t;
+	};
+	_proto._Group56_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image392_i(),this._Image393_i(),this._Image394_i(),this._Image395_i(),this._Image396_i(),this._Image397_i(),this._Image398_i(),this._Image399_i(),this._Image400_i(),this._Image401_i(),this._Image402_i(),this._Image403_i(),this._Image404_i()];
+		return t;
+	};
+	_proto._Image392_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 7.6;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "5图层 3_png";
+		t.width = 17.73;
+		t.x = 200.93;
+		t.y = 337.36;
+		return t;
+	};
+	_proto._Image393_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 33.93;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "冠绿1_png";
+		t.width = 35.72;
+		t.x = 93.67;
+		t.y = 356.69;
+		return t;
+	};
+	_proto._Image394_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 33.93;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "冠绿2_png";
+		t.width = 33.06;
+		t.x = 151.58;
+		t.y = 306.9;
+		return t;
+	};
+	_proto._Image395_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 34.26;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "冠绿3_png";
+		t.width = 33.39;
+		t.x = 226.02;
+		t.y = 302.74;
+		return t;
+	};
+	_proto._Image396_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 30.59;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右耳花绿1_png";
+		t.width = 22.73;
+		t.x = 247;
+		t.y = 446.21;
+		return t;
+	};
+	_proto._Image397_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 11.86;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右耳花绿2_png";
+		t.width = 5.06;
+		t.x = 256.28;
+		t.y = 454.07;
+		return t;
+	};
+	_proto._Image398_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 10.46;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右耳花绿3_png";
+		t.width = 5.46;
+		t.x = 262.6;
+		t.y = 456.57;
+		return t;
+	};
+	_proto._Image399_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 9.13;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右冠带绿_png";
+		t.width = 10.79;
+		t.x = 239.58;
+		t.y = 472.5;
+		return t;
+	};
+	_proto._Image400_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 19.8;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右手镯_png";
+		t.width = 24.47;
+		t.x = 379.66;
+		t.y = 500.87;
+		return t;
+	};
+	_proto._Image401_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 15.31;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左耳环绿_png";
+		t.width = 4.97;
+		t.x = 160.74;
+		t.y = 458.73;
+		return t;
+	};
+	_proto._Image402_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 8.56;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左冠带绿2_png";
+		t.width = 8.97;
+		t.x = 131.87;
+		t.y = 477.35;
+		return t;
+	};
+	_proto._Image403_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 8.56;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左冠带绿1_png";
+		t.width = 8.97;
+		t.x = 129.39;
+		t.y = 444.35;
+		return t;
+	};
+	_proto._Image404_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 21.81;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左手镯_png";
+		t.width = 19.22;
+		t.x = 161.53;
+		t.y = 497.17;
+		return t;
+	};
+	_proto._Group57_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image405_i(),this._Image406_i(),this._Image407_i(),this._Image408_i(),this._Image409_i(),this._Image410_i(),this._Image411_i(),this._Image412_i(),this._Image413_i(),this._Image414_i()];
+		return t;
+	};
+	_proto._Image405_i = function () {
+		var t = new eui.Image();
+		t.alpha = 1;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 33.85;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "冠红1_png";
+		t.width = 32.98;
+		t.x = 120.51;
+		t.y = 330.08;
+		return t;
+	};
+	_proto._Image406_i = function () {
+		var t = new eui.Image();
+		t.alpha = 1;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 39.1;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "冠红2_png";
+		t.width = 36.48;
+		t.x = 187.75;
+		t.y = 298.08;
+		return t;
+	};
+	_proto._Image407_i = function () {
+		var t = new eui.Image();
+		t.alpha = 1;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 32.35;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "冠红3_png";
+		t.width = 33.23;
+		t.x = 249.75;
+		t.y = 327.87;
+		return t;
+	};
+	_proto._Image408_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 11.85;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右耳红_png";
+		t.width = 6.23;
+		t.x = 226.48;
+		t.y = 477.08;
+		return t;
+	};
+	_proto._Image409_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 9.6;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右冠带红1_png";
+		t.width = 7.98;
+		t.x = 239.02;
+		t.y = 464.5;
+		return t;
+	};
+	_proto._Image410_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 9.6;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右冠带红2_png";
+		t.width = 9.98;
+		t.x = 242.52;
+		t.y = 480.85;
+		return t;
+	};
+	_proto._Image411_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 8.02;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "嘴_png";
+		t.width = 11.32;
+		t.x = 217.49;
+		t.y = 459.29;
+		return t;
+	};
+	_proto._Image412_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 18.68;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左耳花红_png";
+		t.width = 18.98;
+		t.x = 145.58;
+		t.y = 424.35;
+		return t;
+	};
+	_proto._Image413_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 8.04;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左冠带红1_png";
+		t.width = 8.07;
+		t.x = 130.99;
+		t.y = 468.78;
+		return t;
+	};
+	_proto._Image414_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 5.59;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左冠带红2_png";
+		t.width = 7.9;
+		t.x = 132.4;
+		t.y = 485.4;
+		return t;
+	};
+	_proto._Group58_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image415_i(),this._Image416_i(),this._Image417_i(),this._Image418_i(),this._Image419_i(),this._Image420_i(),this._Image421_i(),this._Image422_i()];
+		return t;
+	};
+	_proto._Image415_i = function () {
+		var t = new eui.Image();
+		t.alpha = 1;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 13.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "7图层 2_png";
+		t.width = 28.31;
+		t.x = 193.76;
+		t.y = 332.44;
+		return t;
+	};
+	_proto._Image416_i = function () {
+		var t = new eui.Image();
+		t.alpha = 1;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 234.19;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "冠条1_png";
+		t.width = 194.97;
+		t.x = 191;
+		t.y = 117.51;
+		return t;
+	};
+	_proto._Image417_i = function () {
+		var t = new eui.Image();
+		t.alpha = 1;
+		t.anchorOffsetX = 4.67;
+		t.anchorOffsetY = 7.2;
+		t.height = 144.19;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "冠条2_png";
+		t.width = 112.57;
+		t.x = 384.67;
+		t.y = 161.06;
+		return t;
+	};
+	_proto._Image418_i = function () {
+		var t = new eui.Image();
+		t.alpha = 1;
+		t.anchorOffsetX = 13.2;
+		t.anchorOffsetY = 8.9;
+		t.height = 178.19;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "冠条3_png";
+		t.width = 318.57;
+		t.x = 237;
+		t.y = 149.38;
+		return t;
+	};
+	_proto._Image419_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 3.58;
+		t.anchorOffsetY = 4.2;
+		t.height = 84.06;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣服橙1_png";
+		t.width = 86.7;
+		t.x = 116.42;
+		t.y = 617.51;
+		return t;
+	};
+	_proto._Image420_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 5.76;
+		t.anchorOffsetY = 11.83;
+		t.height = 236.72;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣服橙2_png";
+		t.width = 139.37;
+		t.x = 243.05;
+		t.y = 556.25;
+		return t;
+	};
+	_proto._Image421_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 2.15;
+		t.anchorOffsetY = 2.64;
+		t.height = 52.71;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右裤橙_png";
+		t.width = 52.03;
+		t.x = 375.32;
+		t.y = 846.68;
+		return t;
+	};
+	_proto._Image422_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 2.15;
+		t.anchorOffsetY = 2.54;
+		t.height = 50.71;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右裤橙_png";
+		t.width = 52.03;
+		t.x = 473.21;
+		t.y = 944.82;
+		return t;
+	};
+	_proto._Group59_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image423_i(),this._Image424_i(),this._Image425_i(),this._Image426_i(),this._Image427_i(),this._Image428_i(),this._Image429_i(),this._Image430_i(),this._Image431_i(),this._Image432_i(),this._Image433_i(),this._Image434_i(),this._Image435_i()];
+		return t;
+	};
+	_proto._Image423_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 84.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "凳子黄1_png";
+		t.width = 80.81;
+		t.x = 165.06;
+		t.y = 723.62;
+		return t;
+	};
+	_proto._Image424_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 73.02;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "凳子黄2_png";
+		t.width = 69.31;
+		t.x = 172.06;
+		t.y = 729.62;
+		return t;
+	};
+	_proto._Image425_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 23.18;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "凳子黄3_png";
+		t.width = 19.14;
+		t.x = 212.75;
+		t.y = 770.05;
+		return t;
+	};
+	_proto._Image426_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 22.18;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "凳子黄4_png";
+		t.width = 25.14;
+		t.x = 181.06;
+		t.y = 771.05;
+		return t;
+	};
+	_proto._Image427_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 19.18;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "凳子黄4_png";
+		t.width = 20.47;
+		t.x = 208.34;
+		t.y = 738.83;
+		return t;
+	};
+	_proto._Image428_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 21.18;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "凳子黄6_png";
+		t.width = 16.8;
+		t.x = 180.57;
+		t.y = 741.16;
+		return t;
+	};
+	_proto._Image429_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 58.18;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "凳子黄7_png";
+		t.width = 53.14;
+		t.x = 178.9;
+		t.y = 737.49;
+		return t;
+	};
+	_proto._Image430_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 51.68;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右冠带黄_png";
+		t.width = 39.14;
+		t.x = 242.79;
+		t.y = 491.58;
+		return t;
+	};
+	_proto._Image431_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 63.68;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左冠带黄_png";
+		t.width = 13.14;
+		t.x = 133.51;
+		t.y = 490.45;
+		return t;
+	};
+	_proto._Image432_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 7.01;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左耳花黄_png";
+		t.width = 7.47;
+		t.x = 151.26;
+		t.y = 430.19;
+		return t;
+	};
+	_proto._Image433_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 7.76;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右耳花黄_png";
+		t.width = 4.22;
+		t.x = 247.25;
+		t.y = 419.42;
+		return t;
+	};
+	_proto._Image434_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 84.16;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "黄点_png";
+		t.width = 176.27;
+		t.x = 99.88;
+		t.y = 310.97;
+		return t;
+	};
+	_proto._Image435_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 71.82;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "皇冠_png";
+		t.width = 158.27;
+		t.x = 118.22;
+		t.y = 328.31;
+		return t;
+	};
+	_proto._Group60_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image436_i(),this._Image437_i(),this._Image438_i(),this._Image439_i(),this._Image440_i(),this._Image441_i()];
+		return t;
+	};
+	_proto._Image436_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 41.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣服肩蓝1_png";
+		t.width = 21.31;
+		t.x = 143.88;
+		t.y = 498.32;
+		return t;
+	};
+	_proto._Image437_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 32.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣服肩蓝2_png";
+		t.width = 15.81;
+		t.x = 121.21;
+		t.y = 522.08;
+		return t;
+	};
+	_proto._Image438_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 52.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣服肩蓝3_png";
+		t.width = 69.31;
+		t.x = 183.1;
+		t.y = 497.08;
+		return t;
+	};
+	_proto._Image439_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 195.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣服蓝_png";
+		t.width = 175.31;
+		t.x = 274.85;
+		t.y = 684.05;
+		return t;
+	};
+	_proto._Image440_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 166.02;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣服右袖蓝_png";
+		t.width = 75.31;
+		t.x = 347.5;
+		t.y = 522.7;
+		return t;
+	};
+	_proto._Image441_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 166.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "衣服左袖蓝_png";
+		t.width = 145.31;
+		t.x = 125.99;
+		t.y = 545.01;
+		return t;
+	};
+	_proto._Group61_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image442_i(),this._Image443_i()];
+		return t;
+	};
+	_proto._Image442_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 109.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右裤粉_png";
+		t.width = 72.81;
+		t.x = 434.06;
+		t.y = 787.04;
+		return t;
+	};
+	_proto._Image443_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 127.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左裤粉_png";
+		t.width = 73.81;
+		t.x = 408.9;
+		t.y = 701.23;
+		return t;
+	};
+	_proto._Group62_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image444_i(),this._Image445_i()];
+		return t;
+	};
+	_proto._Image444_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 87.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右裤绿_png";
+		t.width = 124.31;
+		t.x = 432.92;
+		t.y = 916.66;
+		return t;
+	};
+	_proto._Image445_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 127.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左裤绿_png";
+		t.width = 94.31;
+		t.x = 349;
+		t.y = 794.23;
+		return t;
+	};
+	_proto._Group63_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image446_i(),this._Image447_i()];
+		return t;
+	};
+	_proto._Image446_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 30.85;
+		t.anchorOffsetY = 9.14;
+		t.height = 22.52;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右鞋_png";
+		t.width = 50.81;
+		t.x = 526.39;
+		t.y = 1010.63;
+		return t;
+	};
+	_proto._Image447_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 4.11;
+		t.anchorOffsetY = 5.28;
+		t.height = 56.02;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "左鞋_png";
+		t.width = 25.81;
+		t.x = 370.47;
+		t.y = 884.77;
+		return t;
+	};
+	_proto._Group64_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image448_i(),this._Image449_i(),this._Image450_i(),this._Image451_i(),this._Image452_i(),this._Image453_i(),this._Image454_i(),this._Image455_i(),this._Image456_i(),this._Image457_i(),this._Image458_i(),this._Image459_i(),this._Image460_i(),this._Image461_i()];
+		return t;
+	};
+	_proto._Image448_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 110.88;
+		t.anchorOffsetY = 89.28;
+		t.height = 220.02;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子9_png";
+		t.width = 182.65;
+		t.x = 226.64;
+		t.y = 925.05;
+		return t;
+	};
+	_proto._Image449_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 23.38;
+		t.anchorOffsetY = 10.13;
+		t.height = 107.35;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子14_png";
+		t.width = 146.81;
+		t.x = 157.63;
+		t.y = 880.12;
+		return t;
+	};
+	_proto._Image450_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 27.42;
+		t.anchorOffsetY = 8.39;
+		t.height = 89.02;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子8_png";
+		t.width = 172.14;
+		t.x = 148.07;
+		t.y = 790.1;
+		return t;
+	};
+	_proto._Image451_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 13.72;
+		t.anchorOffsetY = 4.69;
+		t.height = 49.68;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子10_png";
+		t.width = 86.13;
+		t.x = 291.9;
+		t.y = 861.76;
+		return t;
+	};
+	_proto._Image452_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 4.86;
+		t.anchorOffsetY = 3.24;
+		t.height = 34.35;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子12_png";
+		t.width = 30.46;
+		t.x = 253.22;
+		t.y = 889.52;
+		return t;
+	};
+	_proto._Image453_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 2.07;
+		t.anchorOffsetY = 5.74;
+		t.height = 60.85;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子15_png";
+		t.width = 12.96;
+		t.x = 230.34;
+		t.y = 888.94;
+		return t;
+	};
+	_proto._Image454_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 11.73;
+		t.anchorOffsetY = 10.03;
+		t.height = 106.35;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子靠背1_png";
+		t.width = 73.46;
+		t.x = 97.73;
+		t.y = 459.06;
+		return t;
+	};
+	_proto._Image455_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 2.71;
+		t.anchorOffsetY = 3;
+		t.height = 31.85;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子靠背2_png";
+		t.width = 16.96;
+		t.x = 121.01;
+		t.y = 487.07;
+		return t;
+	};
+	_proto._Image456_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 2.95;
+		t.anchorOffsetY = 3;
+		t.height = 31.85;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子靠背3_png";
+		t.width = 18.46;
+		t.x = 142.29;
+		t.y = 470.08;
+		return t;
+	};
+	_proto._Image457_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 21.57;
+		t.anchorOffsetY = 13.78;
+		t.height = 146.35;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子1_png";
+		t.width = 134.96;
+		t.x = 157.59;
+		t.y = 697;
+		return t;
+	};
+	_proto._Image458_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 3.98;
+		t.anchorOffsetY = 2.57;
+		t.height = 27.35;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子11_png";
+		t.width = 24.96;
+		t.x = 140.73;
+		t.y = 863.89;
+		return t;
+	};
+	_proto._Image459_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 19.76;
+		t.anchorOffsetY = 10.65;
+		t.height = 113.35;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子16_png";
+		t.width = 123.96;
+		t.x = 316.05;
+		t.y = 927.16;
+		return t;
+	};
+	_proto._Image460_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 2.94;
+		t.anchorOffsetY = 3.75;
+		t.height = 39.85;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子17_png";
+		t.width = 18.46;
+		t.x = 417.73;
+		t.y = 923.76;
+		return t;
+	};
+	_proto._Image461_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 18.23;
+		t.anchorOffsetY = 11.95;
+		t.height = 126.85;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "椅子背后_png";
+		t.width = 114.46;
+		t.x = 166.54;
+		t.y = 714.1;
+		return t;
+	};
+	_proto._Group65_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image462_i()];
+		return t;
+	};
+	_proto._Image462_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 12.13;
+		t.anchorOffsetY = 7.31;
+		t.height = 18.03;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "右耳花粉_png";
+		t.width = 19.98;
+		t.x = 277.46;
+		t.y = 460.18;
+		return t;
+	};
+	_proto._Group66_i = function () {
+		var t = new eui.Group();
+		t.alpha = 1;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image463_i(),this._Image464_i(),this._Image465_i()];
+		return t;
+	};
+	_proto._Image463_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 15.57;
+		t.anchorOffsetY = 45.29;
+		t.height = 111.7;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "书1_png";
+		t.width = 25.65;
+		t.x = 407.48;
+		t.y = 451.96;
+		return t;
+	};
+	_proto._Image464_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 35.19;
+		t.anchorOffsetY = 38.92;
+		t.height = 96.03;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "书2_png";
+		t.width = 57.99;
+		t.x = 449.33;
+		t.y = 466.92;
+		return t;
+	};
+	_proto._Image465_i = function () {
+		var t = new eui.Image();
+		t.alpha = 0;
+		t.anchorOffsetX = 40.24;
+		t.anchorOffsetY = 60.13;
+		t.height = 148.37;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "书3_png";
+		t.width = 66.33;
+		t.x = 454.06;
+		t.y = 471.46;
+		return t;
+	};
+	_proto._Scroller2_i = function () {
 		var t = new eui.Scroller();
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
@@ -5375,16 +8131,37 @@ var egret = window.egret;window.skins={};
 		t.skinName = ColorfulSkin$Skin5;
 		return t;
 	};
+	_proto.Save_i = function () {
+		var t = new eui.Group();
+		this.Save = t;
+		t.visible = false;
+		t.x = 160;
+		t.y = 284;
+		t.elementsContent = [this.save_i(),this.Card_i()];
+		return t;
+	};
 	_proto.save_i = function () {
 		var t = new eui.Image();
 		this.save = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.bottom = 80;
 		t.height = 80;
-		t.right = 12;
 		t.source = "down_png";
 		t.width = 80;
+		t.x = 365.32;
+		t.y = 661.34;
+		return t;
+	};
+	_proto.Card_i = function () {
+		var t = new eui.Image();
+		this.Card = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 568;
+		t.source = "down_png";
+		t.width = 320;
+		t.x = 0;
+		t.y = 0;
 		return t;
 	};
 	return ColorfulSkin;

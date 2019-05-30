@@ -36,8 +36,10 @@ class LoadingUI extends egret.Sprite implements RES.PromiseTaskReporter {
 
      private loadingImg1:eui.Image;
      private loadingImg2:eui.Image;
+     private textField:egret.TextField;
 
     private createView(): void {
+        this.textField=new egret.TextField();
          this.loadingImg1=new eui.Image();
          this.loadingImg2=new eui.Image();
 
@@ -57,14 +59,21 @@ class LoadingUI extends egret.Sprite implements RES.PromiseTaskReporter {
         this.loadingImg2.left=0;
         this.loadingImg2.right=0;
 
+        this.textField.y = 1000;
+        this.textField.width = 480;
+        this.textField.height = 100;
+        this.textField.textAlign="center";
+        this.textField.textColor=0x000000;
+
          this.addChild(this.loadingImg1);
          this.addChild(this.loadingImg2);
+         this.addChild(this.textField);
 
         
     }
 
     public onProgress(current: number, total: number): void {
-        //this.textField.text = `Loading...${current}/${total}`;
+        this.textField.text = `Loading...${current}/${total}`;
         var divide=current/total;
         if (divide*2<1){
             this.loadingImg1.alpha=divide*2;
@@ -77,6 +86,7 @@ class LoadingUI extends egret.Sprite implements RES.PromiseTaskReporter {
         {
             this.removeChild(this.loadingImg1);
             this.removeChild(this.loadingImg2);
+            this.removeChild(this.textField);
         }
     }
 }

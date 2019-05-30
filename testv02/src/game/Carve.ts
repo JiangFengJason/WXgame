@@ -18,6 +18,7 @@ class Carve extends eui.Component implements  eui.UIComponent {
 	public CarveText:eui.Group;
 	public PrintText:eui.Group;
 	public BrushText:eui.Group;
+	public PaintText:eui.Group;
 
 	private static shared:Carve;
 	public static getInstance(){
@@ -38,9 +39,7 @@ class Carve extends eui.Component implements  eui.UIComponent {
 	protected childrenCreated():void
 	{
 		super.childrenCreated();
-		//播放刻的说明
-		this.setChildIndex(this.CarveText,this.numChildren-1);
-		egret.Tween.get(this.CarveText,{loop:false}).to({ alpha: 1}, 200).to({ alpha: 0}, 4000).call(this.close, this, [this.CarveText]);
+		
 
 		this.toCarve.addEventListener(egret.TouchEvent.TOUCH_TAP,this.toGetCarve,this);
 		this.toPrint.addEventListener(egret.TouchEvent.TOUCH_TAP,this.toGetPrint,this);
@@ -51,16 +50,13 @@ class Carve extends eui.Component implements  eui.UIComponent {
 		this.Wintersuccess=false;
 		
 	}
-	private close(group:eui.Group){
+	public close(group:eui.Group){
 		this.setChildIndex(group,0);
 	}
 	private jump(){
-		var timer:egret.Timer = new egret.Timer(1500,1);
-        //注册事件侦听器
-        timer.addEventListener(egret.TimerEvent.TIMER,this.timerFunc,this);
-        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.tolarge,this);
-        //开始计时
-        timer.start();
+		//播放画的说明
+		this.setChildIndex(this.PaintText,this.numChildren-1);
+		egret.Tween.get(this.PaintText,{loop:false}).to({alpha:0}).to({ alpha: 1}, 4000).to({ alpha: 0}, 4000).call(this.close, this, [this.PaintText]).call(this.tolarge,this);
 	}
 	private timerFunc(){
 		//console.log("start");
@@ -76,7 +72,7 @@ class Carve extends eui.Component implements  eui.UIComponent {
 	private toPut(){
 		//播放印的说明
 		this.setChildIndex(this.PrintText,this.numChildren-1);
-		egret.Tween.get(this.PrintText,{loop:false}).to({ alpha: 1}, 200).to({ alpha: 0}, 4000).call(this.close, this, [this.PrintText]).call(this.toYin,this);
+		egret.Tween.get(this.PrintText,{loop:false}).to({alpha:0}).to({ alpha: 1}, 4000).to({ alpha: 0}, 4000).call(this.close, this, [this.PrintText]).call(this.toYin,this);
 	}
 	private toYin(){
 		var data = RES.getRes("yin_json");
@@ -100,27 +96,31 @@ class Carve extends eui.Component implements  eui.UIComponent {
 	private toGetXian(){
 		//播放刷的说明
 		this.setChildIndex(this.BrushText,this.numChildren-1);
-		egret.Tween.get(this.BrushText,{loop:false}).to({ alpha: 1}, 200).to({ alpha: 0}, 4000).call(this.close, this, [this.BrushText]);
+		egret.Tween.get(this.BrushText,{loop:false}).to({alpha:0}).to({ alpha: 1}, 4000).to({ alpha: 0}, 4000).call(this.close, this, [this.BrushText]);
 		this.toPrint.visible=true;
 	}
 	private tolarge(){
 		this.initData();
 		this.addChild(Colorful.getInstance());
-		Colorful.getInstance().save.visible=false;
+		Colorful.getInstance().Save.visible=false;
 		this.removeChild(this.mc);
 		Colorful.getInstance().carveLineLarge.source=this.carveLine.source;
 		switch(this.carveLine.source){
 			case "Xiangaozip_jpg":
-				this.toDifferentlarge("resource/assets/game/Spring/Lichun/Number/",15,Colorful.getInstance().SpringGroup);
+				this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Spring/Lichun/Number/",15,Colorful.getInstance().SpringGroup);
+				Colorful.getInstance().Card.source="LichunCard_png";
 				break;
 			case "LixiaXian_png":
-				this.toDifferentlarge("resource/assets/game/Summer/Lixia/Number/",2,Colorful.getInstance().SummerGroup);
+				this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Summer/Lixia/Number/",16,Colorful.getInstance().SummerGroup);
+				Colorful.getInstance().Card.source="LixiaCard_png";
 				break;
 			case "LiqiuXian_png":
-				this.toDifferentlarge("resource/assets/game/Autumn/Liqiu/Number/",2,Colorful.getInstance().AutumnGroup);
+				this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Autumn/Liqiu/Number/",19,Colorful.getInstance().AutumnGroup);
+				Colorful.getInstance().Card.source="LiqiuCard_png";
 				break;
 			case "LidongXian_png":
-				this.toDifferentlarge("resource/assets/game/Winter/Lidong/Number/",2,Colorful.getInstance().WinterGroup);
+				this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Winter/Lidong/Number/",15,Colorful.getInstance().WinterGroup);
+				Colorful.getInstance().Card.source="LidongCard_png";
 				break;
 		}
 	}
@@ -141,7 +141,9 @@ class Carve extends eui.Component implements  eui.UIComponent {
 			nb++;
 		}
 		group.getChildAt(0).visible=true;
-		Colorful.getInstance().setChildIndex(group, 4);
+		//设定季节层级
+		//Colorful.getInstance().setChildIndex(group, 4);
+		group.parent.setChildIndex(group,4);
 	}
 
 	private selectPart(part:eui.Image,Seasongroup:eui.Group){
@@ -199,12 +201,9 @@ class Carve extends eui.Component implements  eui.UIComponent {
 			}
 			else 
 			{
-				console.log("successful");
-				Colorful.getInstance().save.visible=true;
+				Colorful.getInstance().Save.visible=true;
 				if (group.parent==Colorful.getInstance().SpringGroup){
 					this.Springsuccess=true;
-					//Colorful.getInstance().save.addEventListener(egret.TouchEvent.TOUCH_TAP,this.savePic.bind(show.getInstance().result,"https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Spring/Lichun/Chun.jpg"),Colorful.getInstance());
-					console.log("Spring");
 				}
 				else if (group.parent==Colorful.getInstance().SummerGroup){
 					this.Summersuccess=true;

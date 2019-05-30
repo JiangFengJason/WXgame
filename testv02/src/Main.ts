@@ -71,8 +71,8 @@ class Main extends eui.UILayer {
     private async loadResource() {
         try {
             
-            //await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
-            await RES.loadConfig("resource/default.res.json","resource/");
+            await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
+            //await RES.loadConfig("resource/default.res.json","resource/");
             const loadingView = new LoadingUI();
             this.stage.addChild(loadingView);
             await this.loadTheme();
@@ -88,8 +88,8 @@ class Main extends eui.UILayer {
         return new Promise((resolve, reject) => {
             // load skin theme configuration file, you can manually modify the file. And replace the default skin.
             //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
-            //let theme = new eui.Theme("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.thm.json", this.stage);
-            let theme = new eui.Theme("resource/default.thm.json", this.stage);
+            let theme = new eui.Theme("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.thm.json", this.stage);
+            //let theme = new eui.Theme("resource/default.thm.json", this.stage);
             theme.addEventListener(eui.UIEvent.COMPLETE, () => {
                 resolve();
             }, this);

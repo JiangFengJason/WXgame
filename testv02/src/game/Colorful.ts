@@ -1,9 +1,10 @@
 class Colorful extends eui.Component implements  eui.UIComponent {
 
 	public carveLineLarge:eui.Image;
-	public save:eui.Image;
+	public Card:eui.Image;
 	public back:eui.Button;
 	public Numbers:eui.Group;
+	public Save:eui.Group;
 	
 	public SpringGroup:eui.Group;
 
@@ -38,7 +39,7 @@ class Colorful extends eui.Component implements  eui.UIComponent {
 		this.back.addEventListener(egret.TouchEvent.TOUCH_TAP,this.timerComFunc,this);
 	}
 	private timerComFunc(){
-		this.save.visible=false;
+		this.Save.visible=false;
 		Carve.getInstance().timerComFunc();
 
 		this.cleanUp(this.SpringGroup);

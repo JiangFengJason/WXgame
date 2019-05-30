@@ -59,9 +59,6 @@ var Carve = (function (_super) {
     };
     Carve.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        //播放刻的说明
-        this.setChildIndex(this.CarveText, this.numChildren - 1);
-        egret.Tween.get(this.CarveText, { loop: false }).to({ alpha: 1 }, 200).to({ alpha: 0 }, 4000).call(this.close, this, [this.CarveText]);
         this.toCarve.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetCarve, this);
         this.toPrint.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toGetPrint, this);
         this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
@@ -74,12 +71,9 @@ var Carve = (function (_super) {
         this.setChildIndex(group, 0);
     };
     Carve.prototype.jump = function () {
-        var timer = new egret.Timer(1500, 1);
-        //注册事件侦听器
-        timer.addEventListener(egret.TimerEvent.TIMER, this.timerFunc, this);
-        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.tolarge, this);
-        //开始计时
-        timer.start();
+        //播放画的说明
+        this.setChildIndex(this.PaintText, this.numChildren - 1);
+        egret.Tween.get(this.PaintText, { loop: false }).to({ alpha: 0 }).to({ alpha: 1 }, 4000).to({ alpha: 0 }, 4000).call(this.close, this, [this.PaintText]).call(this.tolarge, this);
     };
     Carve.prototype.timerFunc = function () {
         //console.log("start");
@@ -94,7 +88,7 @@ var Carve = (function (_super) {
     Carve.prototype.toPut = function () {
         //播放印的说明
         this.setChildIndex(this.PrintText, this.numChildren - 1);
-        egret.Tween.get(this.PrintText, { loop: false }).to({ alpha: 1 }, 200).to({ alpha: 0 }, 4000).call(this.close, this, [this.PrintText]).call(this.toYin, this);
+        egret.Tween.get(this.PrintText, { loop: false }).to({ alpha: 0 }).to({ alpha: 1 }, 4000).to({ alpha: 0 }, 4000).call(this.close, this, [this.PrintText]).call(this.toYin, this);
     };
     Carve.prototype.toYin = function () {
         var data = RES.getRes("yin_json");
@@ -116,27 +110,31 @@ var Carve = (function (_super) {
     Carve.prototype.toGetXian = function () {
         //播放刷的说明
         this.setChildIndex(this.BrushText, this.numChildren - 1);
-        egret.Tween.get(this.BrushText, { loop: false }).to({ alpha: 1 }, 200).to({ alpha: 0 }, 4000).call(this.close, this, [this.BrushText]);
+        egret.Tween.get(this.BrushText, { loop: false }).to({ alpha: 0 }).to({ alpha: 1 }, 4000).to({ alpha: 0 }, 4000).call(this.close, this, [this.BrushText]);
         this.toPrint.visible = true;
     };
     Carve.prototype.tolarge = function () {
         this.initData();
         this.addChild(Colorful.getInstance());
-        Colorful.getInstance().save.visible = false;
+        Colorful.getInstance().Save.visible = false;
         this.removeChild(this.mc);
         Colorful.getInstance().carveLineLarge.source = this.carveLine.source;
         switch (this.carveLine.source) {
             case "Xiangaozip_jpg":
-                this.toDifferentlarge("resource/assets/game/Spring/Lichun/Number/", 15, Colorful.getInstance().SpringGroup);
+                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Spring/Lichun/Number/", 15, Colorful.getInstance().SpringGroup);
+                Colorful.getInstance().Card.source = "LichunCard_png";
                 break;
             case "LixiaXian_png":
-                this.toDifferentlarge("resource/assets/game/Summer/Lixia/Number/", 2, Colorful.getInstance().SummerGroup);
+                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Summer/Lixia/Number/", 16, Colorful.getInstance().SummerGroup);
+                Colorful.getInstance().Card.source = "LixiaCard_png";
                 break;
             case "LiqiuXian_png":
-                this.toDifferentlarge("resource/assets/game/Autumn/Liqiu/Number/", 2, Colorful.getInstance().AutumnGroup);
+                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Autumn/Liqiu/Number/", 19, Colorful.getInstance().AutumnGroup);
+                Colorful.getInstance().Card.source = "LiqiuCard_png";
                 break;
             case "LidongXian_png":
-                this.toDifferentlarge("resource/assets/game/Winter/Lidong/Number/", 2, Colorful.getInstance().WinterGroup);
+                this.toDifferentlarge("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Winter/Lidong/Number/", 15, Colorful.getInstance().WinterGroup);
+                Colorful.getInstance().Card.source = "LidongCard_png";
                 break;
         }
     };
@@ -157,7 +155,9 @@ var Carve = (function (_super) {
             nb++;
         }
         group.getChildAt(0).visible = true;
-        Colorful.getInstance().setChildIndex(group, 4);
+        //设定季节层级
+        //Colorful.getInstance().setChildIndex(group, 4);
+        group.parent.setChildIndex(group, 4);
     };
     Carve.prototype.selectPart = function (part, Seasongroup) {
         var group = Seasongroup.getChildAt(Number(part.name) - 1);
@@ -205,12 +205,9 @@ var Carve = (function (_super) {
                 nbimg.touchEnabled = true;
             }
             else {
-                console.log("successful");
-                Colorful.getInstance().save.visible = true;
+                Colorful.getInstance().Save.visible = true;
                 if (group.parent == Colorful.getInstance().SpringGroup) {
                     this.Springsuccess = true;
-                    //Colorful.getInstance().save.addEventListener(egret.TouchEvent.TOUCH_TAP,this.savePic.bind(show.getInstance().result,"https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/assets/game/Spring/Lichun/Chun.jpg"),Colorful.getInstance());
-                    console.log("Spring");
                 }
                 else if (group.parent == Colorful.getInstance().SummerGroup) {
                     this.Summersuccess = true;
@@ -387,10 +384,8 @@ var Main = (function (_super) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 4, , 5]);
-                        //await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
-                        return [4 /*yield*/, RES.loadConfig("resource/default.res.json", "resource/")];
+                        return [4 /*yield*/, RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/")];
                     case 1:
-                        //await RES.loadConfig("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.res.json", "https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/");
                         _a.sent();
                         loadingView = new LoadingUI();
                         this.stage.addChild(loadingView);
@@ -416,8 +411,8 @@ var Main = (function (_super) {
         return new Promise(function (resolve, reject) {
             // load skin theme configuration file, you can manually modify the file. And replace the default skin.
             //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
-            //let theme = new eui.Theme("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.thm.json", this.stage);
-            var theme = new eui.Theme("resource/default.thm.json", _this.stage);
+            var theme = new eui.Theme("https://new-1259278744.cos.ap-chengdu.myqcloud.com/resource/default.thm.json", _this.stage);
+            //let theme = new eui.Theme("resource/default.thm.json", this.stage);
             theme.addEventListener(eui.UIEvent.COMPLETE, function () {
                 resolve();
             }, _this);
@@ -634,6 +629,7 @@ var LoadingUI = (function (_super) {
         return _this;
     }
     LoadingUI.prototype.createView = function () {
+        this.textField = new egret.TextField();
         this.loadingImg1 = new eui.Image();
         this.loadingImg2 = new eui.Image();
         this.loadingImg1.source = "load1_jpg";
@@ -648,11 +644,17 @@ var LoadingUI = (function (_super) {
         this.loadingImg2.bottom = 0;
         this.loadingImg2.left = 0;
         this.loadingImg2.right = 0;
+        this.textField.y = 1000;
+        this.textField.width = 480;
+        this.textField.height = 100;
+        this.textField.textAlign = "center";
+        this.textField.textColor = 0x000000;
         this.addChild(this.loadingImg1);
         this.addChild(this.loadingImg2);
+        this.addChild(this.textField);
     };
     LoadingUI.prototype.onProgress = function (current, total) {
-        //this.textField.text = `Loading...${current}/${total}`;
+        this.textField.text = "Loading..." + current + "/" + total;
         var divide = current / total;
         if (divide * 2 < 1) {
             this.loadingImg1.alpha = divide * 2;
@@ -663,6 +665,7 @@ var LoadingUI = (function (_super) {
         if (current == total) {
             this.removeChild(this.loadingImg1);
             this.removeChild(this.loadingImg2);
+            this.removeChild(this.textField);
         }
     };
     return LoadingUI;
@@ -687,7 +690,7 @@ var Colorful = (function (_super) {
         this.back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.timerComFunc, this);
     };
     Colorful.prototype.timerComFunc = function () {
-        this.save.visible = false;
+        this.Save.visible = false;
         Carve.getInstance().timerComFunc();
         this.cleanUp(this.SpringGroup);
         this.cleanUp(this.SummerGroup);
@@ -734,13 +737,16 @@ var Detail = (function (_super) {
     Detail.prototype.toPass = function () {
         //this.parent.removeChild(this);
         this.addChild(Carve.getInstance());
+        //播放刻的说明
+        Carve.getInstance().setChildIndex(Carve.getInstance().CarveText, Carve.getInstance().numChildren - 1);
+        egret.Tween.get(Carve.getInstance().CarveText, { loop: false }).to({ alpha: 0 }).to({ alpha: 1 }, 4000).to({ alpha: 0 }, 4000).call(Carve.getInstance().close, Carve.getInstance(), [Carve.getInstance().CarveText]);
         switch (this.season_detail.source) {
             case "Lichun_png":
                 this.initPicture("Xiangaozip_jpg", "ChunGold_png", "ChunBlack_png");
                 if (Carve.getInstance().Springsuccess) {
                     this.removeChild(Carve.getInstance());
                     this.addChild(show.getInstance());
-                    show.getInstance().result.source = "Chun_jpg";
+                    show.getInstance().result.source = "LichunCard_png";
                 }
                 break;
             case "Lixia_png":
@@ -748,7 +754,7 @@ var Detail = (function (_super) {
                 if (Carve.getInstance().Summersuccess) {
                     this.removeChild(Carve.getInstance());
                     this.addChild(show.getInstance());
-                    show.getInstance().result.source = "Xia_jpg";
+                    show.getInstance().result.source = "LixiaCard_png";
                 }
                 break;
             case "Liqiu_png":
@@ -756,7 +762,7 @@ var Detail = (function (_super) {
                 if (Carve.getInstance().Autumnsuccess) {
                     this.removeChild(Carve.getInstance());
                     this.addChild(show.getInstance());
-                    show.getInstance().result.source = "Qiu2_png";
+                    show.getInstance().result.source = "LiqiuCard_png";
                 }
                 break;
             case "Lidong_png":
@@ -764,7 +770,7 @@ var Detail = (function (_super) {
                 if (Carve.getInstance().Autumnsuccess) {
                     this.removeChild(Carve.getInstance());
                     this.addChild(show.getInstance());
-                    show.getInstance().result.source = "Dong_jpg";
+                    show.getInstance().result.source = "LidongCard_png";
                 }
                 break;
         }

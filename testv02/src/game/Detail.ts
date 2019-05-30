@@ -35,14 +35,16 @@ class Detail extends eui.Component implements  eui.UIComponent {
 	{
 		//this.parent.removeChild(this);
 		this.addChild(Carve.getInstance());
-		
+		//播放刻的说明
+		Carve.getInstance().setChildIndex(Carve.getInstance().CarveText,Carve.getInstance().numChildren-1);
+		egret.Tween.get(Carve.getInstance().CarveText,{loop:false}).to({alpha:0}).to({ alpha: 1}, 4000).to({ alpha: 0}, 4000).call(Carve.getInstance().close, Carve.getInstance(), [Carve.getInstance().CarveText]);
 		switch (this.season_detail.source){
 			case "Lichun_png":
 				this.initPicture("Xiangaozip_jpg","ChunGold_png","ChunBlack_png");
 				if (Carve.getInstance().Springsuccess){
 					this.removeChild(Carve.getInstance());
 					this.addChild(show.getInstance());
-					show.getInstance().result.source="Chun_jpg";
+					show.getInstance().result.source="LichunCard_png";
 				}
 				break;
 
@@ -51,7 +53,7 @@ class Detail extends eui.Component implements  eui.UIComponent {
 				if (Carve.getInstance().Summersuccess){
 					this.removeChild(Carve.getInstance());
 					this.addChild(show.getInstance());
-					show.getInstance().result.source="Xia_jpg";
+					show.getInstance().result.source="LixiaCard_png";
 				}
 				break;
 
@@ -60,7 +62,7 @@ class Detail extends eui.Component implements  eui.UIComponent {
 				if (Carve.getInstance().Autumnsuccess){
 					this.removeChild(Carve.getInstance());
 					this.addChild(show.getInstance());
-					show.getInstance().result.source="Qiu2_png";
+					show.getInstance().result.source="LiqiuCard_png";
 				}
 				break;
 
@@ -69,7 +71,7 @@ class Detail extends eui.Component implements  eui.UIComponent {
 				if (Carve.getInstance().Autumnsuccess){
 					this.removeChild(Carve.getInstance());
 					this.addChild(show.getInstance());
-					show.getInstance().result.source="Dong_jpg";
+					show.getInstance().result.source="LidongCard_png";
 				}
 				break;
 		}
