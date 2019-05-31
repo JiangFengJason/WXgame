@@ -1,0 +1,3230 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,Chunfen_png,Guyu_png,Jingzhe_png,Lichun_png,Qingming_png,Yushui_png,Mangzhong_png,Xiaoman_png,Xiaoshu_png,Xiazhi_png,Dashu_png,Lixia_png,Hanlu_png,Liqiu_png,Qiufen_png,Shuangjiang_png,Bailu_png,Chushu_png,Dongzhi_png,Lidong_png,Xiaohan_png,Xiaoxue_png,Dahan_png,Daxue_png,abc_json,abc_png,Qiu_png,Qiu_json,yin_png,yin_json,user_png,lock_png,rank_png,setting_png,back_png,Xiangaozip_jpg,Spring_png,Summer_png,Autumn_png,Winter_png,LixiaXian_png,LiqiuXian_png,LidongXian_png,banzi_png,1_png,2_png,3_png,4_png,5_png,6_png,7_png,8_png,9_png,10_png,11_png,12_png,13_png,14_png,15_png,Chun_jpg,110_png,210_png,32_png,42_png,52_png,62_png,72_png,82_png,92_png,102_png,112_png,122_png,132_png,142_png,152_png,162_png,172_png,182_png,192_png,Qiu2_png,ChunGold_png,ChunBlack_png,XiaGold_png,XiaBlack_png,Xia_jpg,111_png,211_png,33_png,43_png,53_png,63_png,73_png,83_png,93_png,103_png,113_png,123_png,133_png,143_png,153_png,163_png,QiuGold_png,QiuBlack_png,DongBlack_png,DongGold_png,Dong_jpg,5图层 3_png,7图层 2_png,脖子_png,凳子黄1_png,凳子黄2_png,凳子黄3_png,凳子黄4_png,凳子黄5_png,凳子黄6_png,凳子黄7_png,冠红1_png,冠红2_png,冠红3_png,冠黄1_png,冠黄2_png,冠黄4_png,冠黄5_png,冠黄6_png,冠黄7_png,冠黄8_png,冠黄9_png,冠黄10_png,冠黄11_png,冠黄12_png,冠黄13_png,冠黄14_png,冠黄15_png,冠黄16_png,冠黄17_png,冠黄18_png,冠黄19_png,冠黄20_png,冠黄21_png,冠黄22_png,冠黄23_png,冠黄24_png,冠黄25_png,冠黄26_png,冠黄27_png,冠黄28_png,冠黄29_png,冠黄30_png,冠黄31_png,冠黄32_png,冠黄33_png,冠黄34_png,冠黄35_png,冠黄36_png,冠黄37_png,冠黄38_png,冠黄39v_png,冠黄40_png,冠绿1_png,冠绿2_png,冠绿3_png,冠条1_png,冠条2_png,冠条3_png,脸_png,书1_png,书2_png,书3_png,书字1_png,书字2_png,书字3_png,书字4_png,书字5_png,书字6_png,书字7_png,书字8_png,书字9_png,书字10_png,书字11_png,书字12_png,书字13_png,书字14_png,书字15_png,书字16_png,书字17_png,书字18_png,书字19_png,头发_png,衣服橙1_png,衣服橙2_png,衣服黑1_png,衣服黑2_png,衣服黑3_png,衣服肩蓝1_png,衣服肩蓝2_png,衣服肩蓝3_png,衣服蓝_png,衣服右袖蓝_png,衣服左袖蓝_png,衣领黑_png,椅子1_png,椅子2_png,椅子3_png,椅子4_png,椅子5_png,椅子6_png,椅子7_png,椅子8_png,椅子9_png,椅子10_png,椅子11_png,椅子12_png,椅子13_png,椅子14_png,椅子15_png,椅子16_png,椅子17_png,椅子靠背1_png,椅子靠背2_png,椅子靠背3_png,右耳红_png,右耳花粉_png,右耳花黄_png,右耳花绿1_png,右耳花绿2_png,右耳花绿3_png,右冠带红1_png,右冠带红2_png,右冠带黄_png,右冠带绿_png,右裤橙_png,右裤粉_png,右裤黑_png,右裤绿_png,右腮红_png,右手1_png,右手2_png,右手镯_png,右鞋_png,右眼_png,右眼皮_png,右衣袖黑_png,嘴_png,左耳红_png,左耳花红_png,左耳花黄_png,左耳环绿_png,左冠带红1_png,左冠带红2_png,左冠带黄_png,左冠带绿1_png,左冠带绿2_png,左裤橙_png,左裤粉_png,左裤黑_png,左裤绿_png,左腮红_png,左手1_png,左手2_png,左手镯_png,左鞋_png,左眼v_png,左眼皮_png,左衣袖黑_png,154_png,114_png,212_png,34_png,44_png,54_png,64_png,74_png,84_png,94_png,104_png,115_png,124_png,134_png,144_png,knif_png,brush_png,脖子2_png,脸2_png,右手12_png,右手22_png,左手12_png,左手22_png,左手3_png,右眼影_png,左腮红2_png,左眼影_png,右腮红2_png,bgofBz_jpg,右手花_png,头绳1_png,头绳2_png,头绳3_png,腰带红1_png,腰带红2_png,腰带红3_png,腰带红4_png,腰带红5_png,腰带红6_png,腰带红7_png,腰带红8_png,衣服花纹红1_png,衣服花纹红2_png,衣服花纹红3_png,衣服花纹红4_png,衣服花纹红5_png,衣服花纹红6_png,衣服花纹红7_png,衣服花纹红8_png,衣服花纹红10_png,衣服花纹红11_png,衣服花纹红12_png,衣服花纹红13_png,衣服花纹红14_png,衣服花纹红15_png,衣服花纹红16_png,衣服花纹红17_png,衣服花纹红18_png,衣服花纹红19_png,衣服花纹红20_png,衣服花纹红21_png,衣服花纹红22_png,衣服花纹红23_png,衣服花纹红25_png,衣服花纹红26_png,衣服花纹红27_png,衣服花纹红28_png,衣服花纹红29_png,衣服花纹红30_png,衣服花纹红31_png,衣服花纹红32_png,衣服花纹红33_png,衣服花纹红34_png,衣服花纹红35_png,衣服花纹红36_png,衣服花纹红37_png,左眼_png,头发1_png,头发2_png,头发3_png,头发4_png,右眼2_png,右领_png,左领_png,左鞋2_png,右鞋2_png,衣服绿26_png,衣服绿1_png,衣服绿2_png,衣服绿3_png,衣服绿4_png,衣服绿5_png,衣服绿6_png,衣服绿7_png,衣服绿8_png,衣服绿9_png,衣服绿10_png,衣服绿11_png,衣服绿12_png,衣服绿13_png,衣服绿14_png,衣服绿15_png,衣服绿16_png,衣服绿17_png,衣服绿18_png,衣服绿19_png,衣服绿20_png,衣服绿21_png,衣服绿22_png,衣服绿23_png,衣服绿24_png,衣服绿25_png,左袖_png,右袖_png,右边上花_png,右边花_png,左边花_png,右边上花叶1_png,左边花叶3_png,右边花叶1_png,右边花叶2_png,右边花叶3_png,右边花叶4_png,右边花叶5 _png,右边上花叶2_png,左边花叶1_png,左边花叶2_png,右手花根_png,右边上花根1_png,右边上花根2_png,右边上花根3_png,左裤_png,右裤_png,bg_jpg,左娃左手臂_png,右娃脖子2_png,右娃脸2_png,右娃右手_png,右娃右手臂_png,右娃左手2_png,右娃左手臂_png,左娃脖子2_png,左娃脸_png,左娃右手2_png,左娃右手臂_png,左娃左手_png,右娃右腮红2_png,右娃左腮红_png,左娃右眼皮2_png,左娃右腮红2_png,左娃左眼皮2_png,左娃左腮红2_png,16_png,左娃右鞋土色_png,左娃左鞋土色_png,右娃上嘴唇_png,右娃下嘴唇_png,右娃右鞋红_png,右娃头绳_png,右娃左鞋红_png,左娃上嘴唇_png,左娃下嘴唇_png,左娃头绳1_png,左娃头绳2_png,左娃衣服红1_png,左娃衣服红2_png,左娃衣服红3_png,左娃衣服红4_png,左娃衣服红5_png,左娃衣服红6_png,左娃衣服红7_png,左娃衣服红8_png,45_png,右娃右眼2_png,右娃头发1_png,右娃头发22_png,右娃头发32_png,右娃头发42_png,右娃左眼2_png,右娃裤脚黑_png,左娃右眼2_png,左娃头发12_png,左娃头发22_png,左娃头发32_png,左娃头发42_png,左娃左眼2_png,左娃裤脚黑_png,左娃裤脚黑1_png,55_png,荷花1_png,荷花10_png,荷花2_png,荷花3_png,荷花4_png,荷花5_png,荷花6_png,荷花7_png,荷花8_png,荷花9_png,65_png,荷叶1_png,荷叶2_png,荷叶3_png,荷叶4_png,75_png,右娃右手镯2_png,右娃左手镯2_png,左娃右手镯2_png,左娃左手镯2_png,左娃项圈绿1_png,左娃项圈绿2_png,荷根1_png,荷根2_png,荷根3_png,荷根4_png,荷根5_png,85_png,右娃右鞋绿1_png,右娃右鞋绿2_png,右娃左鞋绿1_png,右娃左鞋绿2_png,左娃右鞋绿色1_png,左娃左鞋绿色1_png,左娃左鞋绿色2_png,95_png,盒子_png,盒子缝_png,105_png,左娃衣服黄1_png,左娃衣服黄2_png,左娃衣服黄3_png,盒子盖_png,盒子身_png,116_png,右娃领橙1_png,右娃领橙2_png,左娃衣服橙1_png,左娃衣服橙2_png,盒子花纹1_png,盒子花纹2_png,125_png,左娃衣服蓝1_png,左娃衣服蓝2_png,左娃衣服蓝3_png,左娃衣服蓝4_png,135_png,右娃衣服蓝1_png,右娃衣服蓝2_png,右娃衣服蓝3_png,145_png,右娃右裤_png,右娃左裤_png,155_png,右娃衣服粉_png,右娃衣服粉22_png,右娃衣服粉32_png,右娃衣服粉4_png,左娃左手3_png,右娃脖子_png,右娃脸_png,右娃右手1_png,右娃右手2_png,右娃左手_png,左娃脖子_png,左娃脸1_png,左娃脸2_png,左娃右手_png,左娃左耳_png,左娃左手1_png,左娃左手2_png,右娃右眼皮_png,右娃右腮红_png,右娃左眼皮_png,左娃右眼皮_png,左娃右腮红_png,左娃左眼皮_png,左娃左腮红_png,右娃右袖_png,右娃右鞋红1_png,右娃右鞋红2_png,右娃右鞋红3_png,右娃右鞋红4_png,右娃右鞋红5_png,右娃右鞋红6_png,右娃右鞋红7_png,右娃右鞋红8_png,右娃嘴唇_png,右娃左鞋红1_png,右娃左鞋红2_png,右娃左鞋红3_png,右娃左鞋红4_png,右娃左鞋红5_png,右娃左鞋红6_png,右娃左鞋红7_png,右娃左鞋红8_png,右娃左鞋红9_png,右娃权杖红1_png,右娃权杖红2_png,右娃美人痣_png,右娃花带1_png,右娃花带2_png,右娃花带3_png,右娃花带4_png,右娃衣左袖_png,右娃衣领1_png,右娃衣领2_png,右娃衣领3_png,右娃衣领4_png,右娃衣领5_png,左娃右头绳_png,左娃嘴唇_png,左娃左头绳_png,左娃竹子3_png,左娃竹子4_png,左娃竹子5_png,左娃美人痣_png,左娃衣服1_png,左娃衣服2_png,左娃衣服3_png,左娃衣服4_png,左娃衣服5_png,左娃衣服6_png,左娃鞋1_png,水果红1_png,水果红2_png,右娃右眼_png,右娃头发1v_png,右娃头发2_png,右娃头发3_png,右娃头发4_png,右娃左眼_png,左娃右眼_png,左娃头发1_png,左娃头发2_png,左娃头发3_png,左娃头发4_png,左娃头发5_png,左娃左眼_png,橙子黑点_png,右娃花1_png,右娃花2_png,右娃花3_png,荷花叶1_png,荷花叶2_png,荷花叶3_png,荷花叶4_png,荷花叶5_png,苹果_png,右娃右袖绿_png,右娃叶子1_png,右娃叶子2_png,右娃叶子3_png,右娃叶子4_png,右娃左袖绿_png,左娃竹子1_png,左娃竹子2_png,水果叶子1_png,水果叶子2_png,水果叶子3_png,水果叶子4_png,水果叶子5_png,荷花根_png,右娃右手镯_png,右娃左手镯_png,右娃权杖蓝1_png,右娃权杖蓝2_png,右娃权杖蓝3_png,右娃权杖蓝4_png,左娃右手镯_png,左娃左手镯_png,左娃鞋2_png,右娃权杖橙1_png,右娃权杖橙2_png,右娃权杖橙3_png,右娃权杖橙4_png,右娃权杖橙5_png,右娃权杖橙6_png,右娃权杖橙7_png,右娃权杖橙8_png,右娃权杖橙9_png,右娃群边橙1_png,右娃群边橙2_png,石榴_png,水果心黄1_png,水果心黄2_png,苹果心1_png,苹果心2_png,右娃右鞋黄1_png,右娃右鞋黄2_png,右娃右鞋黄3_png,右娃右鞋黄4_png,右娃右鞋黄5_png,右娃左鞋黄1_png,右娃左鞋黄2_png,右娃衣服黄_png,左娃裤子_png,水果黄_png,橙子_png,葡萄1_png,葡萄2_png,葡萄3_png,右娃右裤子_png,右娃左裤子_png,右娃衣服1_png,右娃衣服2_png,右娃衣服3_png,右娃衣服4_png,右娃衣服5_png,右娃衣服6_png,右娃衣服7_png,右娃衣服粉1_png,右娃衣服粉2_png,右娃衣服粉3_png,果篮子_png,苹果把_png,葡萄把_png,load2_jpg,load1_jpg,yanZi_png,chan_json,chan_png,yanZi_json,blackbg_jpg,down_png,LichunCard_png,LixiaCard_png,LiqiuCard_png,LidongCard_png,椅子背后_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/game/Spring/Chunfen.png",
+			"type": "image",
+			"name": "Chunfen_png"
+		},
+		{
+			"url": "assets/game/Spring/Guyu.png",
+			"type": "image",
+			"name": "Guyu_png"
+		},
+		{
+			"url": "assets/game/Spring/Jingzhe.png",
+			"type": "image",
+			"name": "Jingzhe_png"
+		},
+		{
+			"url": "assets/game/Spring/Lichun.png",
+			"type": "image",
+			"name": "Lichun_png"
+		},
+		{
+			"url": "assets/game/Spring/Qingming.png",
+			"type": "image",
+			"name": "Qingming_png"
+		},
+		{
+			"url": "assets/game/Spring/Yushui.png",
+			"type": "image",
+			"name": "Yushui_png"
+		},
+		{
+			"url": "assets/game/Summer/Mangzhong.png",
+			"type": "image",
+			"name": "Mangzhong_png"
+		},
+		{
+			"url": "assets/game/Summer/Xiaoman.png",
+			"type": "image",
+			"name": "Xiaoman_png"
+		},
+		{
+			"url": "assets/game/Summer/Xiaoshu.png",
+			"type": "image",
+			"name": "Xiaoshu_png"
+		},
+		{
+			"url": "assets/game/Summer/Xiazhi.png",
+			"type": "image",
+			"name": "Xiazhi_png"
+		},
+		{
+			"url": "assets/game/Summer/Dashu.png",
+			"type": "image",
+			"name": "Dashu_png"
+		},
+		{
+			"url": "assets/game/Summer/Lixia.png",
+			"type": "image",
+			"name": "Lixia_png"
+		},
+		{
+			"url": "assets/game/Autumn/Hanlu.png",
+			"type": "image",
+			"name": "Hanlu_png"
+		},
+		{
+			"url": "assets/game/Autumn/Liqiu.png",
+			"type": "image",
+			"name": "Liqiu_png"
+		},
+		{
+			"url": "assets/game/Autumn/Qiufen.png",
+			"type": "image",
+			"name": "Qiufen_png"
+		},
+		{
+			"url": "assets/game/Autumn/Shuangjiang.png",
+			"type": "image",
+			"name": "Shuangjiang_png"
+		},
+		{
+			"url": "assets/game/Autumn/Bailu.png",
+			"type": "image",
+			"name": "Bailu_png"
+		},
+		{
+			"url": "assets/game/Autumn/Chushu.png",
+			"type": "image",
+			"name": "Chushu_png"
+		},
+		{
+			"url": "assets/game/Winter/Dongzhi.png",
+			"type": "image",
+			"name": "Dongzhi_png"
+		},
+		{
+			"url": "assets/game/Winter/Lidong.png",
+			"type": "image",
+			"name": "Lidong_png"
+		},
+		{
+			"url": "assets/game/Winter/Xiaohan.png",
+			"type": "image",
+			"name": "Xiaohan_png"
+		},
+		{
+			"url": "assets/game/Winter/Xiaoxue.png",
+			"type": "image",
+			"name": "Xiaoxue_png"
+		},
+		{
+			"url": "assets/game/Winter/Dahan.png",
+			"type": "image",
+			"name": "Dahan_png"
+		},
+		{
+			"url": "assets/game/Winter/Daxue.png",
+			"type": "image",
+			"name": "Daxue_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"name": "abc_json",
+			"type": "json",
+			"url": "abc.json"
+		},
+		{
+			"name": "abc_png",
+			"type": "image",
+			"url": "abc.png"
+		},
+		{
+			"name": "Qiu_png",
+			"type": "image",
+			"url": "Qiu.png"
+		},
+		{
+			"name": "Qiu_json",
+			"type": "json",
+			"url": "Qiu.json"
+		},
+		{
+			"name": "yin_png",
+			"type": "image",
+			"url": "yin.png"
+		},
+		{
+			"name": "yin_json",
+			"type": "json",
+			"url": "yin.json"
+		},
+		{
+			"name": "user_png",
+			"type": "image",
+			"url": "assets/game/user.png"
+		},
+		{
+			"name": "lock_png",
+			"type": "image",
+			"url": "assets/game/lock.png"
+		},
+		{
+			"name": "rank_png",
+			"type": "image",
+			"url": "assets/game/rank.png"
+		},
+		{
+			"name": "setting_png",
+			"type": "image",
+			"url": "assets/game/setting.png"
+		},
+		{
+			"name": "back_png",
+			"type": "image",
+			"url": "assets/game/back.png"
+		},
+		{
+			"name": "Xiangaozip_jpg",
+			"type": "image",
+			"url": "assets/game/Spring/Xiangaozip.jpg"
+		},
+		{
+			"name": "Spring_png",
+			"type": "image",
+			"url": "assets/game/Spring/Spring.png"
+		},
+		{
+			"name": "Summer_png",
+			"type": "image",
+			"url": "assets/game/Summer/Summer.png"
+		},
+		{
+			"name": "Autumn_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Autumn.png"
+		},
+		{
+			"name": "Winter_png",
+			"type": "image",
+			"url": "assets/game/Winter/Winter.png"
+		},
+		{
+			"name": "LiqiuXian_png",
+			"type": "image",
+			"url": "assets/game/Autumn/LiqiuXian.png"
+		},
+		{
+			"name": "LidongXian_png",
+			"type": "image",
+			"url": "assets/game/Winter/LidongXian.png"
+		},
+		{
+			"name": "banzi_png",
+			"type": "image",
+			"url": "assets/game/banzi.png"
+		},
+		{
+			"name": "1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/1.png"
+		},
+		{
+			"name": "2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/2.png"
+		},
+		{
+			"name": "3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/3.png"
+		},
+		{
+			"name": "4_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/4.png"
+		},
+		{
+			"name": "5_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/5.png"
+		},
+		{
+			"name": "6_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/6.png"
+		},
+		{
+			"name": "7_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/7.png"
+		},
+		{
+			"name": "8_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/8.png"
+		},
+		{
+			"name": "9_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/9.png"
+		},
+		{
+			"name": "10_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/10.png"
+		},
+		{
+			"name": "11_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/11.png"
+		},
+		{
+			"name": "12_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/12.png"
+		},
+		{
+			"name": "13_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/13.png"
+		},
+		{
+			"name": "14_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/14.png"
+		},
+		{
+			"name": "15_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Number/15.png"
+		},
+		{
+			"name": "Chun_jpg",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Chun.jpg"
+		},
+		{
+			"name": "110_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/1.png"
+		},
+		{
+			"name": "210_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/2.png"
+		},
+		{
+			"name": "32_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/3.png"
+		},
+		{
+			"name": "42_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/4.png"
+		},
+		{
+			"name": "52_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/5.png"
+		},
+		{
+			"name": "62_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/6.png"
+		},
+		{
+			"name": "72_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/7.png"
+		},
+		{
+			"name": "82_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/8.png"
+		},
+		{
+			"name": "92_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/9.png"
+		},
+		{
+			"name": "102_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/10.png"
+		},
+		{
+			"name": "112_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/11.png"
+		},
+		{
+			"name": "122_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/12.png"
+		},
+		{
+			"name": "132_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/13.png"
+		},
+		{
+			"name": "142_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/14.png"
+		},
+		{
+			"name": "152_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/15.png"
+		},
+		{
+			"name": "162_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/16.png"
+		},
+		{
+			"name": "172_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/17.png"
+		},
+		{
+			"name": "182_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/18.png"
+		},
+		{
+			"name": "192_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Number/19.png"
+		},
+		{
+			"name": "Qiu2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Qiu.png"
+		},
+		{
+			"name": "ChunGold_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/ChunGold.png"
+		},
+		{
+			"name": "ChunBlack_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/ChunBlack.png"
+		},
+		{
+			"name": "XiaGold_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/XiaGold.png"
+		},
+		{
+			"name": "XiaBlack_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/XiaBlack.png"
+		},
+		{
+			"name": "Xia_jpg",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Xia.jpg"
+		},
+		{
+			"name": "111_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/1.png"
+		},
+		{
+			"name": "211_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/2.png"
+		},
+		{
+			"name": "33_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/3.png"
+		},
+		{
+			"name": "43_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/4.png"
+		},
+		{
+			"name": "53_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/5.png"
+		},
+		{
+			"name": "63_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/6.png"
+		},
+		{
+			"name": "73_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/7.png"
+		},
+		{
+			"name": "83_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/8.png"
+		},
+		{
+			"name": "93_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/9.png"
+		},
+		{
+			"name": "103_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/10.png"
+		},
+		{
+			"name": "113_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/11.png"
+		},
+		{
+			"name": "123_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/12.png"
+		},
+		{
+			"name": "133_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/13.png"
+		},
+		{
+			"name": "143_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/14.png"
+		},
+		{
+			"name": "153_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/15.png"
+		},
+		{
+			"name": "163_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Number/16.png"
+		},
+		{
+			"name": "QiuGold_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/QiuGold.png"
+		},
+		{
+			"name": "QiuBlack_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/QiuBlack.png"
+		},
+		{
+			"name": "DongBlack_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/DongBlack.png"
+		},
+		{
+			"name": "DongGold_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/DongGold.png"
+		},
+		{
+			"name": "Dong_jpg",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Dong.jpg"
+		},
+		{
+			"name": "154_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/15.png"
+		},
+		{
+			"name": "114_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/1.png"
+		},
+		{
+			"name": "212_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/2.png"
+		},
+		{
+			"name": "34_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/3.png"
+		},
+		{
+			"name": "44_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/4.png"
+		},
+		{
+			"name": "54_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/5.png"
+		},
+		{
+			"name": "64_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/6.png"
+		},
+		{
+			"name": "74_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/7.png"
+		},
+		{
+			"name": "84_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/8.png"
+		},
+		{
+			"name": "94_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/9.png"
+		},
+		{
+			"name": "104_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/10.png"
+		},
+		{
+			"name": "115_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/11.png"
+		},
+		{
+			"name": "124_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/12.png"
+		},
+		{
+			"name": "134_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/13.png"
+		},
+		{
+			"name": "144_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Number/14.png"
+		},
+		{
+			"name": "knif_png",
+			"type": "image",
+			"url": "assets/game/knif.png"
+		},
+		{
+			"name": "brush_png",
+			"type": "image",
+			"url": "assets/game/brush.png"
+		},
+		{
+			"name": "脖子2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/1/脖子.png"
+		},
+		{
+			"name": "脸2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/1/脸.png"
+		},
+		{
+			"name": "右手12_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/1/右手1.png"
+		},
+		{
+			"name": "右手22_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/1/右手2.png"
+		},
+		{
+			"name": "左手12_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/1/左手1.png"
+		},
+		{
+			"name": "左手22_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/1/左手2.png"
+		},
+		{
+			"name": "左手3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/1/左手3.png"
+		},
+		{
+			"name": "右眼影_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/2/右眼影.png"
+		},
+		{
+			"name": "左腮红2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/2/左腮红.png"
+		},
+		{
+			"name": "左眼影_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/2/左眼影.png"
+		},
+		{
+			"name": "右腮红2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/2/右腮红.png"
+		},
+		{
+			"name": "bgofBz_jpg",
+			"type": "image",
+			"url": "assets/game/bgofBz.jpg"
+		},
+		{
+			"name": "右手花_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/右手花.png"
+		},
+		{
+			"name": "头绳1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/头绳1.png"
+		},
+		{
+			"name": "头绳2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/头绳2.png"
+		},
+		{
+			"name": "头绳3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/头绳3.png"
+		},
+		{
+			"name": "腰带红1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/腰带红1.png"
+		},
+		{
+			"name": "腰带红2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/腰带红2.png"
+		},
+		{
+			"name": "腰带红3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/腰带红3.png"
+		},
+		{
+			"name": "腰带红4_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/腰带红4.png"
+		},
+		{
+			"name": "腰带红5_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/腰带红5.png"
+		},
+		{
+			"name": "腰带红6_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/腰带红6.png"
+		},
+		{
+			"name": "腰带红7_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/腰带红7.png"
+		},
+		{
+			"name": "腰带红8_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/腰带红8.png"
+		},
+		{
+			"name": "衣服花纹红1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红1.png"
+		},
+		{
+			"name": "衣服花纹红2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红2.png"
+		},
+		{
+			"name": "衣服花纹红3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红3.png"
+		},
+		{
+			"name": "衣服花纹红4_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红4.png"
+		},
+		{
+			"name": "衣服花纹红5_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红5.png"
+		},
+		{
+			"name": "衣服花纹红6_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红6.png"
+		},
+		{
+			"name": "衣服花纹红7_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红7.png"
+		},
+		{
+			"name": "衣服花纹红8_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红8.png"
+		},
+		{
+			"name": "衣服花纹红10_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红10.png"
+		},
+		{
+			"name": "衣服花纹红11_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红11.png"
+		},
+		{
+			"name": "衣服花纹红12_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红12.png"
+		},
+		{
+			"name": "衣服花纹红13_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红13.png"
+		},
+		{
+			"name": "衣服花纹红14_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红14.png"
+		},
+		{
+			"name": "衣服花纹红15_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红15.png"
+		},
+		{
+			"name": "衣服花纹红16_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红16.png"
+		},
+		{
+			"name": "衣服花纹红17_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红17.png"
+		},
+		{
+			"name": "衣服花纹红18_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红18.png"
+		},
+		{
+			"name": "衣服花纹红19_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红19.png"
+		},
+		{
+			"name": "衣服花纹红20_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红20.png"
+		},
+		{
+			"name": "衣服花纹红21_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红21.png"
+		},
+		{
+			"name": "衣服花纹红22_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红22.png"
+		},
+		{
+			"name": "衣服花纹红23_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红23.png"
+		},
+		{
+			"name": "衣服花纹红25_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红25.png"
+		},
+		{
+			"name": "衣服花纹红26_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红26.png"
+		},
+		{
+			"name": "衣服花纹红27_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红27.png"
+		},
+		{
+			"name": "衣服花纹红28_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红28.png"
+		},
+		{
+			"name": "衣服花纹红29_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红29.png"
+		},
+		{
+			"name": "衣服花纹红30_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红30.png"
+		},
+		{
+			"name": "衣服花纹红31_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红31.png"
+		},
+		{
+			"name": "衣服花纹红32_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红32.png"
+		},
+		{
+			"name": "衣服花纹红33_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红33.png"
+		},
+		{
+			"name": "衣服花纹红34_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红34.png"
+		},
+		{
+			"name": "衣服花纹红35_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红35.png"
+		},
+		{
+			"name": "衣服花纹红36_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红36.png"
+		},
+		{
+			"name": "衣服花纹红37_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/3/衣服花纹红37.png"
+		},
+		{
+			"name": "左眼_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/4/左眼.png"
+		},
+		{
+			"name": "头发1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/4/头发1.png"
+		},
+		{
+			"name": "头发2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/4/头发2.png"
+		},
+		{
+			"name": "头发3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/4/头发3.png"
+		},
+		{
+			"name": "头发4_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/4/头发4.png"
+		},
+		{
+			"name": "右眼2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/4/右眼.png"
+		},
+		{
+			"name": "右领_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/5/右领.png"
+		},
+		{
+			"name": "左领_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/5/左领.png"
+		},
+		{
+			"name": "左鞋2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/6/左鞋.png"
+		},
+		{
+			"name": "右鞋2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/6/右鞋.png"
+		},
+		{
+			"name": "衣服绿26_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿26.png"
+		},
+		{
+			"name": "衣服绿1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿1.png"
+		},
+		{
+			"name": "衣服绿2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿2.png"
+		},
+		{
+			"name": "衣服绿3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿3.png"
+		},
+		{
+			"name": "衣服绿4_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿4.png"
+		},
+		{
+			"name": "衣服绿5_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿5.png"
+		},
+		{
+			"name": "衣服绿6_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿6.png"
+		},
+		{
+			"name": "衣服绿7_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿7.png"
+		},
+		{
+			"name": "衣服绿8_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿8.png"
+		},
+		{
+			"name": "衣服绿9_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿9.png"
+		},
+		{
+			"name": "衣服绿10_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿10.png"
+		},
+		{
+			"name": "衣服绿11_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿11.png"
+		},
+		{
+			"name": "衣服绿12_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿12.png"
+		},
+		{
+			"name": "衣服绿13_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿13.png"
+		},
+		{
+			"name": "衣服绿14_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿14.png"
+		},
+		{
+			"name": "衣服绿15_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿15.png"
+		},
+		{
+			"name": "衣服绿16_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿16.png"
+		},
+		{
+			"name": "衣服绿17_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿17.png"
+		},
+		{
+			"name": "衣服绿18_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿18.png"
+		},
+		{
+			"name": "衣服绿19_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿19.png"
+		},
+		{
+			"name": "衣服绿20_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿20.png"
+		},
+		{
+			"name": "衣服绿21_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿21.png"
+		},
+		{
+			"name": "衣服绿22_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿22.png"
+		},
+		{
+			"name": "衣服绿23_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿23.png"
+		},
+		{
+			"name": "衣服绿24_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿24.png"
+		},
+		{
+			"name": "衣服绿25_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/7/衣服绿25.png"
+		},
+		{
+			"name": "左袖_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/8/左袖.png"
+		},
+		{
+			"name": "右袖_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/8/右袖.png"
+		},
+		{
+			"name": "右边上花_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/9/右边上花.png"
+		},
+		{
+			"name": "右边花_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/10/右边花.png"
+		},
+		{
+			"name": "左边花_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/11/左边花.png"
+		},
+		{
+			"name": "右边上花叶1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/12/右边上花叶1.png"
+		},
+		{
+			"name": "左边花叶3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/13/左边花叶3.png"
+		},
+		{
+			"name": "右边花叶1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/13/右边花叶1.png"
+		},
+		{
+			"name": "右边花叶2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/13/右边花叶2.png"
+		},
+		{
+			"name": "右边花叶3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/13/右边花叶3.png"
+		},
+		{
+			"name": "右边花叶4_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/13/右边花叶4.png"
+		},
+		{
+			"name": "右边花叶5 _png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/13/右边花叶5 .png"
+		},
+		{
+			"name": "右边上花叶2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/13/右边上花叶2.png"
+		},
+		{
+			"name": "左边花叶1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/13/左边花叶1.png"
+		},
+		{
+			"name": "左边花叶2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/13/左边花叶2.png"
+		},
+		{
+			"name": "右手花根_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/14/右手花根.png"
+		},
+		{
+			"name": "右边上花根1_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/14/右边上花根1.png"
+		},
+		{
+			"name": "右边上花根2_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/14/右边上花根2.png"
+		},
+		{
+			"name": "右边上花根3_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/14/右边上花根3.png"
+		},
+		{
+			"name": "左裤_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/15/左裤.png"
+		},
+		{
+			"name": "右裤_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/Part/15/右裤.png"
+		},
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "assets/game/bg.jpg"
+		},
+		{
+			"name": "左娃左手臂_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/左娃左手臂.png"
+		},
+		{
+			"name": "右娃脖子2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/右娃脖子.png"
+		},
+		{
+			"name": "右娃脸2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/右娃脸.png"
+		},
+		{
+			"name": "右娃右手_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/右娃右手.png"
+		},
+		{
+			"name": "右娃右手臂_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/右娃右手臂.png"
+		},
+		{
+			"name": "右娃左手2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/右娃左手.png"
+		},
+		{
+			"name": "右娃左手臂_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/右娃左手臂.png"
+		},
+		{
+			"name": "左娃脖子2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/左娃脖子.png"
+		},
+		{
+			"name": "左娃脸_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/左娃脸.png"
+		},
+		{
+			"name": "左娃右手2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/左娃右手.png"
+		},
+		{
+			"name": "左娃右手臂_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/左娃右手臂.png"
+		},
+		{
+			"name": "左娃左手_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/1/左娃左手.png"
+		},
+		{
+			"name": "右娃右腮红2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/2/右娃右腮红.png"
+		},
+		{
+			"name": "右娃左腮红_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/2/右娃左腮红.png"
+		},
+		{
+			"name": "左娃右眼皮2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/2/左娃右眼皮.png"
+		},
+		{
+			"name": "左娃右腮红2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/2/左娃右腮红.png"
+		},
+		{
+			"name": "左娃左眼皮2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/2/左娃左眼皮.png"
+		},
+		{
+			"name": "左娃左腮红2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/2/左娃左腮红.png"
+		},
+		{
+			"name": "左娃右鞋土色_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/16/左娃右鞋土色.png"
+		},
+		{
+			"name": "左娃左鞋土色_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/16/左娃左鞋土色.png"
+		},
+		{
+			"name": "右娃上嘴唇_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/右娃上嘴唇.png"
+		},
+		{
+			"name": "右娃下嘴唇_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/右娃下嘴唇.png"
+		},
+		{
+			"name": "右娃右鞋红_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/右娃右鞋红.png"
+		},
+		{
+			"name": "右娃头绳_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/右娃头绳.png"
+		},
+		{
+			"name": "右娃左鞋红_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/右娃左鞋红.png"
+		},
+		{
+			"name": "左娃上嘴唇_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃上嘴唇.png"
+		},
+		{
+			"name": "左娃下嘴唇_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃下嘴唇.png"
+		},
+		{
+			"name": "左娃头绳1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃头绳1.png"
+		},
+		{
+			"name": "左娃头绳2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃头绳2.png"
+		},
+		{
+			"name": "左娃衣服红1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃衣服红1.png"
+		},
+		{
+			"name": "左娃衣服红2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃衣服红2.png"
+		},
+		{
+			"name": "左娃衣服红3_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃衣服红3.png"
+		},
+		{
+			"name": "左娃衣服红4_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃衣服红4.png"
+		},
+		{
+			"name": "左娃衣服红5_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃衣服红5.png"
+		},
+		{
+			"name": "左娃衣服红6_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃衣服红6.png"
+		},
+		{
+			"name": "左娃衣服红7_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃衣服红7.png"
+		},
+		{
+			"name": "左娃衣服红8_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/3/左娃衣服红8.png"
+		},
+		{
+			"name": "右娃右眼2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/右娃右眼.png"
+		},
+		{
+			"name": "右娃头发1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/右娃头发1.png"
+		},
+		{
+			"name": "右娃头发22_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/右娃头发2.png"
+		},
+		{
+			"name": "右娃头发32_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/右娃头发3.png"
+		},
+		{
+			"name": "右娃头发42_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/右娃头发4.png"
+		},
+		{
+			"name": "右娃左眼2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/右娃左眼.png"
+		},
+		{
+			"name": "右娃裤脚黑_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/右娃裤脚黑.png"
+		},
+		{
+			"name": "左娃右眼2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/左娃右眼.png"
+		},
+		{
+			"name": "左娃头发12_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/左娃头发1.png"
+		},
+		{
+			"name": "左娃头发22_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/左娃头发2.png"
+		},
+		{
+			"name": "左娃头发32_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/左娃头发3.png"
+		},
+		{
+			"name": "左娃头发42_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/左娃头发4.png"
+		},
+		{
+			"name": "左娃左眼2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/左娃左眼.png"
+		},
+		{
+			"name": "左娃裤脚黑_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/左娃裤脚黑.png"
+		},
+		{
+			"name": "左娃裤脚黑1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/4/左娃裤脚黑1.png"
+		},
+		{
+			"name": "荷花1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/5/荷花1.png"
+		},
+		{
+			"name": "荷花10_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/5/荷花10.png"
+		},
+		{
+			"name": "荷花2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/5/荷花2.png"
+		},
+		{
+			"name": "荷花3_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/5/荷花3.png"
+		},
+		{
+			"name": "荷花4_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/5/荷花4.png"
+		},
+		{
+			"name": "荷花5_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/5/荷花5.png"
+		},
+		{
+			"name": "荷花6_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/5/荷花6.png"
+		},
+		{
+			"name": "荷花7_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/5/荷花7.png"
+		},
+		{
+			"name": "荷花8_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/5/荷花8.png"
+		},
+		{
+			"name": "荷花9_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/5/荷花9.png"
+		},
+		{
+			"name": "荷叶1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/6/荷叶1.png"
+		},
+		{
+			"name": "荷叶2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/6/荷叶2.png"
+		},
+		{
+			"name": "荷叶3_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/6/荷叶3.png"
+		},
+		{
+			"name": "荷叶4_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/6/荷叶4.png"
+		},
+		{
+			"name": "右娃右手镯2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/右娃右手镯.png"
+		},
+		{
+			"name": "右娃左手镯2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/右娃左手镯.png"
+		},
+		{
+			"name": "左娃右手镯2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/左娃右手镯.png"
+		},
+		{
+			"name": "左娃左手镯2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/左娃左手镯.png"
+		},
+		{
+			"name": "左娃项圈绿1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/左娃项圈绿1.png"
+		},
+		{
+			"name": "左娃项圈绿2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/左娃项圈绿2.png"
+		},
+		{
+			"name": "荷根1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/荷根1.png"
+		},
+		{
+			"name": "荷根2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/荷根2.png"
+		},
+		{
+			"name": "荷根3_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/荷根3.png"
+		},
+		{
+			"name": "荷根4_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/荷根4.png"
+		},
+		{
+			"name": "荷根5_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/7/荷根5.png"
+		},
+		{
+			"name": "右娃右鞋绿1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/8/右娃右鞋绿1.png"
+		},
+		{
+			"name": "右娃右鞋绿2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/8/右娃右鞋绿2.png"
+		},
+		{
+			"name": "右娃左鞋绿1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/8/右娃左鞋绿1.png"
+		},
+		{
+			"name": "右娃左鞋绿2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/8/右娃左鞋绿2.png"
+		},
+		{
+			"name": "左娃右鞋绿色1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/8/左娃右鞋绿色1.png"
+		},
+		{
+			"name": "左娃左鞋绿色1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/8/左娃左鞋绿色1.png"
+		},
+		{
+			"name": "左娃左鞋绿色2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/8/左娃左鞋绿色2.png"
+		},
+		{
+			"name": "盒子_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/9/盒子.png"
+		},
+		{
+			"name": "盒子缝_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/9/盒子缝.png"
+		},
+		{
+			"name": "左娃衣服黄1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/10/左娃衣服黄1.png"
+		},
+		{
+			"name": "左娃衣服黄2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/10/左娃衣服黄2.png"
+		},
+		{
+			"name": "左娃衣服黄3_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/10/左娃衣服黄3.png"
+		},
+		{
+			"name": "盒子盖_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/10/盒子盖.png"
+		},
+		{
+			"name": "盒子身_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/10/盒子身.png"
+		},
+		{
+			"name": "右娃领橙1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/11/右娃领橙1.png"
+		},
+		{
+			"name": "右娃领橙2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/11/右娃领橙2.png"
+		},
+		{
+			"name": "左娃衣服橙1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/11/左娃衣服橙1.png"
+		},
+		{
+			"name": "左娃衣服橙2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/11/左娃衣服橙2.png"
+		},
+		{
+			"name": "盒子花纹1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/11/盒子花纹1.png"
+		},
+		{
+			"name": "盒子花纹2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/11/盒子花纹2.png"
+		},
+		{
+			"name": "左娃衣服蓝1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/12/左娃衣服蓝1.png"
+		},
+		{
+			"name": "左娃衣服蓝2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/12/左娃衣服蓝2.png"
+		},
+		{
+			"name": "左娃衣服蓝3_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/12/左娃衣服蓝3.png"
+		},
+		{
+			"name": "左娃衣服蓝4_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/12/左娃衣服蓝4.png"
+		},
+		{
+			"name": "右娃衣服蓝1_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/13/右娃衣服蓝1.png"
+		},
+		{
+			"name": "右娃衣服蓝2_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/13/右娃衣服蓝2.png"
+		},
+		{
+			"name": "右娃衣服蓝3_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/13/右娃衣服蓝3.png"
+		},
+		{
+			"name": "右娃右裤_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/14/右娃右裤.png"
+		},
+		{
+			"name": "右娃左裤_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/14/右娃左裤.png"
+		},
+		{
+			"name": "右娃衣服粉_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/15/右娃衣服粉.png"
+		},
+		{
+			"name": "右娃衣服粉22_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/15/右娃衣服粉2.png"
+		},
+		{
+			"name": "右娃衣服粉32_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/15/右娃衣服粉3.png"
+		},
+		{
+			"name": "右娃衣服粉4_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/Part/15/右娃衣服粉4.png"
+		},
+		{
+			"name": "左娃左手3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/左娃左手3.png"
+		},
+		{
+			"name": "右娃脖子_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/右娃脖子.png"
+		},
+		{
+			"name": "右娃脸_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/右娃脸.png"
+		},
+		{
+			"name": "右娃右手1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/右娃右手1.png"
+		},
+		{
+			"name": "右娃右手2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/右娃右手2.png"
+		},
+		{
+			"name": "右娃左手_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/右娃左手.png"
+		},
+		{
+			"name": "左娃脖子_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/左娃脖子.png"
+		},
+		{
+			"name": "左娃脸1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/左娃脸1.png"
+		},
+		{
+			"name": "左娃脸2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/左娃脸2.png"
+		},
+		{
+			"name": "左娃右手_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/左娃右手.png"
+		},
+		{
+			"name": "左娃左耳_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/左娃左耳.png"
+		},
+		{
+			"name": "左娃左手1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/左娃左手1.png"
+		},
+		{
+			"name": "左娃左手2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/1/左娃左手2.png"
+		},
+		{
+			"name": "右娃右眼皮_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/2/右娃右眼皮.png"
+		},
+		{
+			"name": "右娃右腮红_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/2/右娃右腮红.png"
+		},
+		{
+			"name": "右娃左眼皮_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/2/右娃左眼皮.png"
+		},
+		{
+			"name": "左娃右眼皮_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/2/左娃右眼皮.png"
+		},
+		{
+			"name": "左娃右腮红_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/2/左娃右腮红.png"
+		},
+		{
+			"name": "左娃左眼皮_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/2/左娃左眼皮.png"
+		},
+		{
+			"name": "左娃左腮红_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/2/左娃左腮红.png"
+		},
+		{
+			"name": "右娃右袖_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃右袖.png"
+		},
+		{
+			"name": "右娃右鞋红1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃右鞋红1.png"
+		},
+		{
+			"name": "右娃右鞋红2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃右鞋红2.png"
+		},
+		{
+			"name": "右娃右鞋红3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃右鞋红3.png"
+		},
+		{
+			"name": "右娃右鞋红4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃右鞋红4.png"
+		},
+		{
+			"name": "右娃右鞋红5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃右鞋红5.png"
+		},
+		{
+			"name": "右娃右鞋红6_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃右鞋红6.png"
+		},
+		{
+			"name": "右娃右鞋红7_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃右鞋红7.png"
+		},
+		{
+			"name": "右娃右鞋红8_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃右鞋红8.png"
+		},
+		{
+			"name": "右娃嘴唇_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃嘴唇.png"
+		},
+		{
+			"name": "右娃左鞋红1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃左鞋红1.png"
+		},
+		{
+			"name": "右娃左鞋红2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃左鞋红2.png"
+		},
+		{
+			"name": "右娃左鞋红3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃左鞋红3.png"
+		},
+		{
+			"name": "右娃左鞋红4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃左鞋红4.png"
+		},
+		{
+			"name": "右娃左鞋红5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃左鞋红5.png"
+		},
+		{
+			"name": "右娃左鞋红6_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃左鞋红6.png"
+		},
+		{
+			"name": "右娃左鞋红7_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃左鞋红7.png"
+		},
+		{
+			"name": "右娃左鞋红8_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃左鞋红8.png"
+		},
+		{
+			"name": "右娃左鞋红9_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃左鞋红9.png"
+		},
+		{
+			"name": "右娃权杖红1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃权杖红1.png"
+		},
+		{
+			"name": "右娃权杖红2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃权杖红2.png"
+		},
+		{
+			"name": "右娃美人痣_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃美人痣.png"
+		},
+		{
+			"name": "右娃花带1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃花带1.png"
+		},
+		{
+			"name": "右娃花带2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃花带2.png"
+		},
+		{
+			"name": "右娃花带3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃花带3.png"
+		},
+		{
+			"name": "右娃花带4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃花带4.png"
+		},
+		{
+			"name": "右娃衣左袖_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃衣左袖.png"
+		},
+		{
+			"name": "右娃衣领1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃衣领1.png"
+		},
+		{
+			"name": "右娃衣领2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃衣领2.png"
+		},
+		{
+			"name": "右娃衣领3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃衣领3.png"
+		},
+		{
+			"name": "右娃衣领4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃衣领4.png"
+		},
+		{
+			"name": "右娃衣领5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/右娃衣领5.png"
+		},
+		{
+			"name": "左娃右头绳_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃右头绳.png"
+		},
+		{
+			"name": "左娃嘴唇_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃嘴唇.png"
+		},
+		{
+			"name": "左娃左头绳_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃左头绳.png"
+		},
+		{
+			"name": "左娃竹子3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃竹子3.png"
+		},
+		{
+			"name": "左娃竹子4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃竹子4.png"
+		},
+		{
+			"name": "左娃竹子5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃竹子5.png"
+		},
+		{
+			"name": "左娃美人痣_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃美人痣.png"
+		},
+		{
+			"name": "左娃衣服1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃衣服1.png"
+		},
+		{
+			"name": "左娃衣服2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃衣服2.png"
+		},
+		{
+			"name": "左娃衣服3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃衣服3.png"
+		},
+		{
+			"name": "左娃衣服4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃衣服4.png"
+		},
+		{
+			"name": "左娃衣服5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃衣服5.png"
+		},
+		{
+			"name": "左娃衣服6_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃衣服6.png"
+		},
+		{
+			"name": "左娃鞋1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/左娃鞋1.png"
+		},
+		{
+			"name": "水果红1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/水果红1.png"
+		},
+		{
+			"name": "水果红2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/3/水果红2.png"
+		},
+		{
+			"name": "右娃右眼_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/右娃右眼.png"
+		},
+		{
+			"name": "右娃头发1v_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/右娃头发1v.png"
+		},
+		{
+			"name": "右娃头发2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/右娃头发2.png"
+		},
+		{
+			"name": "右娃头发3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/右娃头发3.png"
+		},
+		{
+			"name": "右娃头发4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/右娃头发4.png"
+		},
+		{
+			"name": "右娃左眼_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/右娃左眼.png"
+		},
+		{
+			"name": "左娃右眼_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/左娃右眼.png"
+		},
+		{
+			"name": "左娃头发1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/左娃头发1.png"
+		},
+		{
+			"name": "左娃头发2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/左娃头发2.png"
+		},
+		{
+			"name": "左娃头发3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/左娃头发3.png"
+		},
+		{
+			"name": "左娃头发4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/左娃头发4.png"
+		},
+		{
+			"name": "左娃头发5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/左娃头发5.png"
+		},
+		{
+			"name": "左娃左眼_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/左娃左眼.png"
+		},
+		{
+			"name": "橙子黑点_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/4/橙子黑点.png"
+		},
+		{
+			"name": "右娃花1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/5/右娃花1.png"
+		},
+		{
+			"name": "右娃花2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/5/右娃花2.png"
+		},
+		{
+			"name": "右娃花3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/5/右娃花3.png"
+		},
+		{
+			"name": "荷花叶1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/5/荷花叶1.png"
+		},
+		{
+			"name": "荷花叶2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/5/荷花叶2.png"
+		},
+		{
+			"name": "荷花叶3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/5/荷花叶3.png"
+		},
+		{
+			"name": "荷花叶4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/5/荷花叶4.png"
+		},
+		{
+			"name": "荷花叶5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/5/荷花叶5.png"
+		},
+		{
+			"name": "苹果_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/6/苹果.png"
+		},
+		{
+			"name": "右娃右袖绿_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/7/右娃右袖绿.png"
+		},
+		{
+			"name": "右娃叶子1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/7/右娃叶子1.png"
+		},
+		{
+			"name": "右娃叶子2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/7/右娃叶子2.png"
+		},
+		{
+			"name": "右娃叶子3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/7/右娃叶子3.png"
+		},
+		{
+			"name": "右娃叶子4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/7/右娃叶子4.png"
+		},
+		{
+			"name": "右娃左袖绿_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/7/右娃左袖绿.png"
+		},
+		{
+			"name": "左娃竹子1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/8/左娃竹子1.png"
+		},
+		{
+			"name": "左娃竹子2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/8/左娃竹子2.png"
+		},
+		{
+			"name": "水果叶子1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/8/水果叶子1.png"
+		},
+		{
+			"name": "水果叶子2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/8/水果叶子2.png"
+		},
+		{
+			"name": "水果叶子3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/8/水果叶子3.png"
+		},
+		{
+			"name": "水果叶子4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/8/水果叶子4.png"
+		},
+		{
+			"name": "水果叶子5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/8/水果叶子5.png"
+		},
+		{
+			"name": "荷花根_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/8/荷花根.png"
+		},
+		{
+			"name": "右娃右手镯_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/9/右娃右手镯.png"
+		},
+		{
+			"name": "右娃左手镯_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/9/右娃左手镯.png"
+		},
+		{
+			"name": "右娃权杖蓝1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/9/右娃权杖蓝1.png"
+		},
+		{
+			"name": "右娃权杖蓝2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/9/右娃权杖蓝2.png"
+		},
+		{
+			"name": "右娃权杖蓝3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/9/右娃权杖蓝3.png"
+		},
+		{
+			"name": "右娃权杖蓝4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/9/右娃权杖蓝4.png"
+		},
+		{
+			"name": "左娃右手镯_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/9/左娃右手镯.png"
+		},
+		{
+			"name": "左娃左手镯_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/9/左娃左手镯.png"
+		},
+		{
+			"name": "左娃鞋2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/10/左娃鞋2.png"
+		},
+		{
+			"name": "右娃权杖橙1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃权杖橙1.png"
+		},
+		{
+			"name": "右娃权杖橙2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃权杖橙2.png"
+		},
+		{
+			"name": "右娃权杖橙3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃权杖橙3.png"
+		},
+		{
+			"name": "右娃权杖橙4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃权杖橙4.png"
+		},
+		{
+			"name": "右娃权杖橙5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃权杖橙5.png"
+		},
+		{
+			"name": "右娃权杖橙6_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃权杖橙6.png"
+		},
+		{
+			"name": "右娃权杖橙7_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃权杖橙7.png"
+		},
+		{
+			"name": "右娃权杖橙8_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃权杖橙8.png"
+		},
+		{
+			"name": "右娃权杖橙9_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃权杖橙9.png"
+		},
+		{
+			"name": "右娃群边橙1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃群边橙1.png"
+		},
+		{
+			"name": "右娃群边橙2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/右娃群边橙2.png"
+		},
+		{
+			"name": "石榴_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/11/石榴.png"
+		},
+		{
+			"name": "水果心黄1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/12/水果心黄1.png"
+		},
+		{
+			"name": "水果心黄2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/12/水果心黄2.png"
+		},
+		{
+			"name": "苹果心1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/13/苹果心1.png"
+		},
+		{
+			"name": "苹果心2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/13/苹果心2.png"
+		},
+		{
+			"name": "右娃右鞋黄1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/14/右娃右鞋黄1.png"
+		},
+		{
+			"name": "右娃右鞋黄2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/14/右娃右鞋黄2.png"
+		},
+		{
+			"name": "右娃右鞋黄3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/14/右娃右鞋黄3.png"
+		},
+		{
+			"name": "右娃右鞋黄4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/14/右娃右鞋黄4.png"
+		},
+		{
+			"name": "右娃右鞋黄5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/14/右娃右鞋黄5.png"
+		},
+		{
+			"name": "右娃左鞋黄1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/14/右娃左鞋黄1.png"
+		},
+		{
+			"name": "右娃左鞋黄2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/14/右娃左鞋黄2.png"
+		},
+		{
+			"name": "右娃衣服黄_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/14/右娃衣服黄.png"
+		},
+		{
+			"name": "左娃裤子_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/14/左娃裤子.png"
+		},
+		{
+			"name": "水果黄_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/14/水果黄.png"
+		},
+		{
+			"name": "橙子_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/15/橙子.png"
+		},
+		{
+			"name": "葡萄1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/16/葡萄1.png"
+		},
+		{
+			"name": "葡萄2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/16/葡萄2.png"
+		},
+		{
+			"name": "葡萄3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/16/葡萄3.png"
+		},
+		{
+			"name": "右娃右裤子_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/17/右娃右裤子.png"
+		},
+		{
+			"name": "右娃左裤子_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/17/右娃左裤子.png"
+		},
+		{
+			"name": "右娃衣服1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/17/右娃衣服1.png"
+		},
+		{
+			"name": "右娃衣服2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/17/右娃衣服2.png"
+		},
+		{
+			"name": "右娃衣服3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/17/右娃衣服3.png"
+		},
+		{
+			"name": "右娃衣服4_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/17/右娃衣服4.png"
+		},
+		{
+			"name": "右娃衣服5_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/17/右娃衣服5.png"
+		},
+		{
+			"name": "右娃衣服6_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/17/右娃衣服6.png"
+		},
+		{
+			"name": "右娃衣服7_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/17/右娃衣服7.png"
+		},
+		{
+			"name": "右娃衣服粉1_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/18/右娃衣服粉1.png"
+		},
+		{
+			"name": "右娃衣服粉2_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/18/右娃衣服粉2.png"
+		},
+		{
+			"name": "右娃衣服粉3_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/18/右娃衣服粉3.png"
+		},
+		{
+			"name": "果篮子_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/19/果篮子.png"
+		},
+		{
+			"name": "苹果把_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/19/苹果把.png"
+		},
+		{
+			"name": "葡萄把_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/Part/19/葡萄把.png"
+		},
+		{
+			"name": "LixiaXian_png",
+			"type": "image",
+			"url": "assets/game/Summer/LixiaXian.png"
+		},
+		{
+			"name": "LixiaXian1_png",
+			"type": "image",
+			"url": "assets/game/Summer/LixiaXian1.png"
+		},
+		{
+			"name": "16_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/1/1.png"
+		},
+		{
+			"name": "右手1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/1/右手1.png"
+		},
+		{
+			"name": "右手2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/1/右手2.png"
+		},
+		{
+			"name": "左手1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/1/左手1.png"
+		},
+		{
+			"name": "左手2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/1/左手2.png"
+		},
+		{
+			"name": "脸_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/1/脸.png"
+		},
+		{
+			"name": "22_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/2/2.png"
+		},
+		{
+			"name": "右眼皮_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/2/右眼皮.png"
+		},
+		{
+			"name": "右腮红_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/2/右腮红.png"
+		},
+		{
+			"name": "左眼皮_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/2/左眼皮.png"
+		},
+		{
+			"name": "左腮红_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/2/左腮红.png"
+		},
+		{
+			"name": "35_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/3/3.png"
+		},
+		{
+			"name": "脖子_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/3/脖子.png"
+		},
+		{
+			"name": "45_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/4.png"
+		},
+		{
+			"name": "右眼_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/右眼.png"
+		},
+		{
+			"name": "右衣袖黑_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/右衣袖黑.png"
+		},
+		{
+			"name": "右裤黑_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/右裤黑.png"
+		},
+		{
+			"name": "头发_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/头发.png"
+		},
+		{
+			"name": "左眼v_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/左眼v.png"
+		},
+		{
+			"name": "左衣袖黑_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/左衣袖黑.png"
+		},
+		{
+			"name": "左裤黑_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/左裤黑.png"
+		},
+		{
+			"name": "衣服黑1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/衣服黑1.png"
+		},
+		{
+			"name": "衣服黑2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/衣服黑2.png"
+		},
+		{
+			"name": "衣服黑3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/衣服黑3.png"
+		},
+		{
+			"name": "衣领黑_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/衣领黑.png"
+		},
+		{
+			"name": "55_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/5.png"
+		},
+		{
+			"name": "5图层 3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/5图层 3.png"
+		},
+		{
+			"name": "冠绿1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/冠绿1.png"
+		},
+		{
+			"name": "冠绿2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/冠绿2.png"
+		},
+		{
+			"name": "冠绿3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/冠绿3.png"
+		},
+		{
+			"name": "右冠带绿_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/右冠带绿.png"
+		},
+		{
+			"name": "右手镯_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/右手镯.png"
+		},
+		{
+			"name": "右耳花绿1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/右耳花绿1.png"
+		},
+		{
+			"name": "右耳花绿2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/右耳花绿2.png"
+		},
+		{
+			"name": "右耳花绿3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/右耳花绿3.png"
+		},
+		{
+			"name": "左冠带绿1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/左冠带绿1.png"
+		},
+		{
+			"name": "左冠带绿2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/左冠带绿2.png"
+		},
+		{
+			"name": "左手镯_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/左手镯.png"
+		},
+		{
+			"name": "左耳环绿_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/5/左耳环绿.png"
+		},
+		{
+			"name": "65_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/6.png"
+		},
+		{
+			"name": "冠红1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/冠红1.png"
+		},
+		{
+			"name": "冠红2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/冠红2.png"
+		},
+		{
+			"name": "冠红3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/冠红3.png"
+		},
+		{
+			"name": "右冠带红1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/右冠带红1.png"
+		},
+		{
+			"name": "右冠带红2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/右冠带红2.png"
+		},
+		{
+			"name": "右耳红_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/右耳红.png"
+		},
+		{
+			"name": "嘴_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/嘴.png"
+		},
+		{
+			"name": "左冠带红1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/左冠带红1.png"
+		},
+		{
+			"name": "左冠带红2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/左冠带红2.png"
+		},
+		{
+			"name": "左耳红_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/左耳红.png"
+		},
+		{
+			"name": "左耳花红_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/6/左耳花红.png"
+		},
+		{
+			"name": "75_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/7/7.png"
+		},
+		{
+			"name": "7图层 2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/7/7图层 2.png"
+		},
+		{
+			"name": "冠条1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/7/冠条1.png"
+		},
+		{
+			"name": "冠条2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/7/冠条2.png"
+		},
+		{
+			"name": "冠条3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/7/冠条3.png"
+		},
+		{
+			"name": "右裤橙_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/7/右裤橙.png"
+		},
+		{
+			"name": "左裤橙_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/7/左裤橙.png"
+		},
+		{
+			"name": "衣服橙1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/7/衣服橙1.png"
+		},
+		{
+			"name": "衣服橙2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/7/衣服橙2.png"
+		},
+		{
+			"name": "85_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/8.png"
+		},
+		{
+			"name": "凳子黄1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/凳子黄1.png"
+		},
+		{
+			"name": "凳子黄2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/凳子黄2.png"
+		},
+		{
+			"name": "凳子黄3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/凳子黄3.png"
+		},
+		{
+			"name": "凳子黄4_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/凳子黄4.png"
+		},
+		{
+			"name": "凳子黄5_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/凳子黄5.png"
+		},
+		{
+			"name": "凳子黄6_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/凳子黄6.png"
+		},
+		{
+			"name": "凳子黄7_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/凳子黄7.png"
+		},
+		{
+			"name": "右冠带黄_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/右冠带黄.png"
+		},
+		{
+			"name": "右耳花黄_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/右耳花黄.png"
+		},
+		{
+			"name": "左冠带黄_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/左冠带黄.png"
+		},
+		{
+			"name": "左耳花黄_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/左耳花黄.png"
+		},
+		{
+			"name": "95_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/9/9.png"
+		},
+		{
+			"name": "衣服右袖蓝_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/9/衣服右袖蓝.png"
+		},
+		{
+			"name": "衣服左袖蓝_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/9/衣服左袖蓝.png"
+		},
+		{
+			"name": "衣服肩蓝1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/9/衣服肩蓝1.png"
+		},
+		{
+			"name": "衣服肩蓝2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/9/衣服肩蓝2.png"
+		},
+		{
+			"name": "衣服肩蓝3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/9/衣服肩蓝3.png"
+		},
+		{
+			"name": "衣服蓝_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/9/衣服蓝.png"
+		},
+		{
+			"name": "105_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/10/10.png"
+		},
+		{
+			"name": "右裤粉_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/10/右裤粉.png"
+		},
+		{
+			"name": "左裤粉_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/10/左裤粉.png"
+		},
+		{
+			"name": "116_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/11/11.png"
+		},
+		{
+			"name": "右裤绿_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/11/右裤绿.png"
+		},
+		{
+			"name": "左裤绿_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/11/左裤绿.png"
+		},
+		{
+			"name": "125_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/12/12.png"
+		},
+		{
+			"name": "右鞋_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/12/右鞋.png"
+		},
+		{
+			"name": "左鞋_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/12/左鞋.png"
+		},
+		{
+			"name": "135_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/13.png"
+		},
+		{
+			"name": "椅子1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子1.png"
+		},
+		{
+			"name": "椅子10_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子10.png"
+		},
+		{
+			"name": "椅子11_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子11.png"
+		},
+		{
+			"name": "椅子12_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子12.png"
+		},
+		{
+			"name": "椅子13_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子13.png"
+		},
+		{
+			"name": "椅子14_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子14.png"
+		},
+		{
+			"name": "椅子15_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子15.png"
+		},
+		{
+			"name": "椅子16_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子16.png"
+		},
+		{
+			"name": "椅子17_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子17.png"
+		},
+		{
+			"name": "椅子2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子2.png"
+		},
+		{
+			"name": "椅子3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子3.png"
+		},
+		{
+			"name": "椅子4_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子4.png"
+		},
+		{
+			"name": "椅子5_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子5.png"
+		},
+		{
+			"name": "椅子6_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子6.png"
+		},
+		{
+			"name": "椅子7_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子7.png"
+		},
+		{
+			"name": "椅子8_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子8.png"
+		},
+		{
+			"name": "椅子9_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子9.png"
+		},
+		{
+			"name": "椅子靠背1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子靠背1.png"
+		},
+		{
+			"name": "椅子靠背2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子靠背2.png"
+		},
+		{
+			"name": "椅子靠背3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子靠背3.png"
+		},
+		{
+			"name": "145_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/14/14.png"
+		},
+		{
+			"name": "右耳花粉_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/14/右耳花粉.png"
+		},
+		{
+			"name": "155_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/15/15.png"
+		},
+		{
+			"name": "书1_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/15/书1.png"
+		},
+		{
+			"name": "书2_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/15/书2.png"
+		},
+		{
+			"name": "书3_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/15/书3.png"
+		},
+		{
+			"name": "皇冠_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/皇冠.png"
+		},
+		{
+			"name": "黄点_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/8/黄点.png"
+		},
+		{
+			"name": "书字_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/4/书字.png"
+		},
+		{
+			"name": "load2_jpg",
+			"type": "image",
+			"url": "assets/game/load2.jpg"
+		},
+		{
+			"name": "load1_jpg",
+			"type": "image",
+			"url": "assets/game/load1.jpg"
+		},
+		{
+			"name": "yanZi_png",
+			"type": "image",
+			"url": "yanZi.png"
+		},
+		{
+			"name": "chan_json",
+			"type": "json",
+			"url": "chan.json"
+		},
+		{
+			"name": "chan_png",
+			"type": "image",
+			"url": "chan.png"
+		},
+		{
+			"name": "yanZi_json",
+			"type": "json",
+			"url": "yanZi.json"
+		},
+		{
+			"name": "blackbg_jpg",
+			"type": "image",
+			"url": "assets/game/blackbg.jpg"
+		},
+		{
+			"name": "down_png",
+			"type": "image",
+			"url": "assets/game/down.png"
+		},
+		{
+			"name": "LichunCard_png",
+			"type": "image",
+			"url": "assets/game/Spring/Lichun/LichunCard.png"
+		},
+		{
+			"name": "LixiaCard_png",
+			"type": "image",
+			"url": "assets/game/Summer/Lixia/LixiaCard.png"
+		},
+		{
+			"name": "LiqiuCard_png",
+			"type": "image",
+			"url": "assets/game/Autumn/Liqiu/LiqiuCard.png"
+		},
+		{
+			"name": "LidongCard_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/LidongCard.png"
+		},
+		{
+			"name": "椅子背后_png",
+			"type": "image",
+			"url": "assets/game/Winter/Lidong/Part/13/椅子背后.png"
+		}
+	]
+}

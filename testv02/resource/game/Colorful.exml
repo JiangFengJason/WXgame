@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="ColorfulSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"  currentState="衣服绿8_png">
 	<w:Config id="16ae36977fd" ></w:Config>
-	<e:Image id="carveLineLarge" anchorOffsetX="0" anchorOffsetY="0" alpha="1" scaleX="1" scaleY="1" left="0" right="0" top="0" bottom="0" source="LidongXian_png"/>
+	<e:Image id="carveLineLarge" anchorOffsetX="0" anchorOffsetY="0" alpha="1" scaleX="1" scaleY="1" left="0" right="0" top="0" bottom="0" source="LixiaXian_png"/>
 	<e:Scroller left="0" right="0" top="0" bottom="0">
 		<e:Group>
 		<e:Group id="SpringGroup" x="306" y="74.5" scaleX="1" scaleY="1">
@@ -268,12 +268,6 @@
 			<e:Group scaleX="1" scaleY="1" left="0" right="0" top="0" bottom="0" visible="false">
 			<e:Image width="59.26" height="83.06" x="464.13" y="702.35" anchorOffsetX="29.35" anchorOffsetY="33.49" alpha="0" source="右娃右裤_png"/>
 			<e:Image width="133.26" height="137.56" x="387.43" y="765.26" anchorOffsetX="66" anchorOffsetY="55.47" alpha="0" source="右娃左裤_png"/>
-			</e:Group>
-			<e:Group scaleX="1" scaleY="1" left="0" right="0" top="0" bottom="0" alpha="0" visible="false">
-			<e:Image width="113.76" height="90.06" x="374.95" y="610.81" anchorOffsetX="56.34" anchorOffsetY="36.31" alpha="1" source="右娃衣服粉_png"/>
-			<e:Image width="65.26" height="70.06" x="524.53" y="525.35" anchorOffsetX="32.32" anchorOffsetY="28.24" alpha="0" source="右娃衣服粉22_png"/>
-			<e:Image width="34.26" height="24.56" x="342.66" y="644.9" anchorOffsetX="16.97" anchorOffsetY="9.9" alpha="0" source="右娃衣服粉32_png"/>
-			<e:Image width="191.76" height="115.56" x="382.84" y="683.96" anchorOffsetX="94.98" anchorOffsetY="46.58" alpha="0" source="右娃衣服粉4_png"/>
 			</e:Group>
 			<e:Group scaleX="1" scaleY="1" left="0" right="0" top="0" bottom="0" visible="false">
 			<e:Image width="113.76" height="90.06" x="374.95" y="610.81" anchorOffsetX="56.34" anchorOffsetY="36.31" alpha="0" source="右娃衣服粉_png"/>
@@ -615,6 +609,11 @@
 		<e:Group id="Numbers" anchorOffsetX="0" width="880" height="80">
 		</e:Group>
 	</e:Scroller>
+	<e:Group id="Save" left="0" right="0" top="0" bottom="0" visible="false">
+		<e:Image source="blackbg_jpg" alpha="0.5" left="0" right="0" top="0" bottom="0"/>
+		<e:Image id="save" width="80" height="80" anchorOffsetX="0" anchorOffsetY="0" source="down_png" x="514.62" y="939.99"/>
+		<e:Image id="Card" width="320" height="568" anchorOffsetX="0" anchorOffsetY="0" source="down_png" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
 	<e:Button id="back" label="" width="47" height="34" left="45" top="45">
 		<e:skinName>
 		<e:Skin states="up,down,disabled">
@@ -623,8 +622,4 @@
 		</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Group id="Save" x="160" y="284" visible="false">
-		<e:Image id="save" width="80" height="80" anchorOffsetX="0" anchorOffsetY="0" source="down_png" x="365.32" y="661.34"/>
-		<e:Image id="Card" width="320" height="568" anchorOffsetX="0" anchorOffsetY="0" source="down_png" x="0" y="0"/>
-	</e:Group>
 </e:Skin>
